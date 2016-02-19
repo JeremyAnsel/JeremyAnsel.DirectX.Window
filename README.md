@@ -1,5 +1,7 @@
 # JeremyAnsel.DirectX.Window
 
+[![Build status](https://ci.appveyor.com/api/projects/status/k6ao5vicvgddarm0/branch/master?svg=true)](https://ci.appveyor.com/project/JeremyAnsel/jeremyansel-directx-window/branch/master)
+
 JeremyAnsel.DirectX.Window:
 [![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.Window.svg)](https://www.nuget.org/packages/JeremyAnsel.DirectX.Window)
 [![NuGet Status](http://nugetstatus.com/JeremyAnsel.DirectX.Window.png)](http://nugetstatus.com/packages/JeremyAnsel.DirectX.Window)
