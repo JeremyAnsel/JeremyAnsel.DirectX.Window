@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A WPF window host.</description>
+    <copyright>Copyright © 2015 Jérémy Ansel</copyright>
+    <tags>DirectX Window WPF Host</tags>
+    <dependencies>
+      <dependency id="JeremyAnsel.DirectX.Window" version="$version$" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\$id$.pdb" target="lib\net45\" />
+  </files>
+</package>
