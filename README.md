@@ -3,15 +3,15 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/k6ao5vicvgddarm0/branch/master?svg=true)](https://ci.appveyor.com/project/JeremyAnsel/jeremyansel-directx-window/branch/master)
 
 JeremyAnsel.DirectX.Window:
-[![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.Window.svg)](https://www.nuget.org/packages/JeremyAnsel.DirectX.Window)
+[![NuGet Version](https://buildstats.info/nuget/JeremyAnsel.DirectX.Window)](https://www.nuget.org/packages/JeremyAnsel.DirectX.Window)
 [![NuGet Status](http://nugetstatus.com/JeremyAnsel.DirectX.Window.png)](http://nugetstatus.com/packages/JeremyAnsel.DirectX.Window)
 
 JeremyAnsel.DirectX.Window.Wpf:
-[![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.Window.Wpf.svg)](https://www.nuget.org/packages/JeremyAnsel.DirectX.Window.Wpf)
+[![NuGet Version](https://buildstats.info/nuget/JeremyAnsel.DirectX.Window.Wpf)](https://www.nuget.org/packages/JeremyAnsel.DirectX.Window.Wpf)
 [![NuGet Status](http://nugetstatus.com/JeremyAnsel.DirectX.Window.Wpf.png)](http://nugetstatus.com/packages/JeremyAnsel.DirectX.Window.Wpf)
 
 JeremyAnsel.DirectX.GameWindow:
-[![NuGet Version](https://img.shields.io/nuget/v/JeremyAnsel.DirectX.GameWindow.svg)](https://www.nuget.org/packages/JeremyAnsel.DirectX.GameWindow)
+[![NuGet Version](https://buildstats.info/nuget/JeremyAnsel.DirectX.GameWindow)](https://www.nuget.org/packages/JeremyAnsel.DirectX.GameWindow)
 [![NuGet Status](http://nugetstatus.com/JeremyAnsel.DirectX.GameWindow.png)](http://nugetstatus.com/packages/JeremyAnsel.DirectX.GameWindow)
 
 JeremyAnsel.DirectX.Window contains a managed window.
