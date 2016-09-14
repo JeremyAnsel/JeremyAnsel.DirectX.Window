@@ -235,7 +235,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
                     for (int line = 0; line < textureDescription.Height; line++)
                     {
-                        Marshal.Copy(IntPtr.Add(map.Data, line * (int)map.RowPitch), buffer, line * (int)textureDescription.Width, (int)textureDescription.Width);
+                        Marshal.Copy(IntPtr.Add(map.Data, line * (int)map.RowPitch), buffer, line * (int)textureDescription.Width * 4, (int)textureDescription.Width * 4);
                     }
 
                     return buffer;
