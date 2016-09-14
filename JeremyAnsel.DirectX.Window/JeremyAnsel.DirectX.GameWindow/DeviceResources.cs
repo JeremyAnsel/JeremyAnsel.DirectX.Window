@@ -8,6 +8,7 @@ namespace JeremyAnsel.DirectX.GameWindow
     using System.Drawing;
     using System.Drawing.Imaging;
     using System.Linq;
+    using System.Runtime.InteropServices;
     using JeremyAnsel.DirectX.D2D1;
     using JeremyAnsel.DirectX.D3D11;
     using JeremyAnsel.DirectX.DWrite;
@@ -207,6 +208,37 @@ namespace JeremyAnsel.DirectX.GameWindow
                     {
                         bitmap.Save(fileName, format);
                     }
+                }
+                finally
+                {
+                    this.d3dContext.Unmap(texture, 0);
+                }
+            }
+        }
+
+        public byte[] GetBackBufferContent()
+        {
+            var textureDescription = this.backBuffer.Description;
+            textureDescription.BindOptions = D3D11BindOptions.None;
+            textureDescription.CpuAccessOptions = D3D11CpuAccessOptions.Read | D3D11CpuAccessOptions.Write;
+            textureDescription.Usage = D3D11Usage.Staging;
+
+            using (var texture = this.d3dDevice.CreateTexture2D(textureDescription))
+            {
+                this.d3dContext.CopyResource(texture, this.backBuffer);
+
+                var map = this.d3dContext.Map(texture, 0, D3D11MapCpuPermission.Read, D3D11MapOptions.None);
+
+                try
+                {
+                    byte[] buffer = new byte[textureDescription.Width * textureDescription.Height * 4];
+
+                    for (int line = 0; line < textureDescription.Height; line++)
+                    {
+                        Marshal.Copy(IntPtr.Add(map.Data, line * (int)map.RowPitch), buffer, line * (int)textureDescription.Width, (int)textureDescription.Width);
+                    }
+
+                    return buffer;
                 }
                 finally
                 {
