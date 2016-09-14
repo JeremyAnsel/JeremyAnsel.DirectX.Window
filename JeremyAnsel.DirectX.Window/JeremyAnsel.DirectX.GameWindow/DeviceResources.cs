@@ -197,7 +197,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             using (var texture = this.d3dDevice.CreateTexture2D(textureDescription))
             {
-                d3dContext.CopyResource(texture, backBuffer);
+                this.d3dContext.CopyResource(texture, this.backBuffer);
 
                 var map = this.d3dContext.Map(texture, 0, D3D11MapCpuPermission.Read, D3D11MapOptions.None);
 
@@ -210,7 +210,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                 }
                 finally
                 {
-                    d3dContext.Unmap(texture, 0);
+                    this.d3dContext.Unmap(texture, 0);
                 }
             }
         }
