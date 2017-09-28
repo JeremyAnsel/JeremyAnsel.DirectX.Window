@@ -20,6 +20,6 @@ Description     | Value
 ----------------|----------------
 Source code     | https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window
 Nuget           | https://www.nuget.org/packages/JeremyAnsel.DirectX.Window
-                | https://www.nuget.org/packages/JeremyAnsel.DirectX.Window.Wpf
-                | https://www.nuget.org/packages/JeremyAnsel.DirectX.GameWindow
+Nuget           | https://www.nuget.org/packages/JeremyAnsel.DirectX.Window.Wpf
+Nuget           | https://www.nuget.org/packages/JeremyAnsel.DirectX.GameWindow
 Build           | https://ci.appveyor.com/project/JeremyAnsel/jeremyansel-directx-window/branch/master
