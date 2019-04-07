@@ -70,7 +70,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public uint BackBufferWidth { get { return this.backBufferWidth; } }
 
-        public uint BackBufferHeigth { get { return this.backBufferHeight; } }
+        public uint BackBufferHeight { get { return this.backBufferHeight; } }
 
         public D3D11RenderTargetView D3DRenderTargetView { get { return this.d3dRenderTargetView; } }
 
