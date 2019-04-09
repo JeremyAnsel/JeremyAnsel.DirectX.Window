@@ -90,6 +90,18 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public DxgiSampleDesc D3DSampleDesc { get { return this.d3dSampleDesc; } }
 
+        public DxgiAdapterDesc2 AdapterDescription
+        {
+            get
+            {
+                using (var dxgiDevice = new DxgiDevice2(this.d3dDevice.Handle))
+                using (var dxgiAdapter = dxgiDevice.GetAdapter())
+                {
+                    return dxgiAdapter.Description;
+                }
+            }
+        }
+
         public void RegisterDeviceNotify(IDeviceNotify notify)
         {
             this.deviceNotify = notify;
