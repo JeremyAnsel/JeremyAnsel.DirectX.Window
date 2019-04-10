@@ -52,6 +52,10 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private IDeviceNotify deviceNotify;
 
+        private float dpiX;
+
+        private float dpiY;
+
         protected DeviceResources(D3D11FeatureLevel featureLevel, bool useHighestFeatureLevel, bool preferMultisampling)
         {
             this.d3dFeatureLevel = featureLevel;
@@ -90,6 +94,10 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public DxgiSampleDesc D3DSampleDesc { get { return this.d3dSampleDesc; } }
 
+        public float DpiX { get { return this.dpiX; } }
+
+        public float DpiY { get { return this.dpiY; } }
+
         public DxgiAdapterDesc2 AdapterDescription
         {
             get
@@ -100,6 +108,16 @@ namespace JeremyAnsel.DirectX.GameWindow
                     return dxgiAdapter.Description;
                 }
             }
+        }
+
+        public float ConvertDipsToPixelsX(float dips)
+        {
+            return (float)Math.Floor(dips * 96.0f / this.dpiX + 0.05f);
+        }
+
+        public float ConvertDipsToPixelsY(float dips)
+        {
+            return (float)Math.Floor(dips * 96.0f / this.dpiY + 0.05f);
         }
 
         public void RegisterDeviceNotify(IDeviceNotify notify)
@@ -477,9 +495,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             using (var surface = new DxgiSurface2(this.d3dSampleDesc.Count > 1 ? this.offscreenBuffer.Handle : this.backBuffer.Handle))
             {
-                float dpiX;
-                float dpiY;
-                this.d2dFactory.GetDesktopDpi(out dpiX, out dpiY);
+                this.d2dFactory.GetDesktopDpi(out this.dpiX, out this.dpiY);
 
                 var properties = new D2D1RenderTargetProperties(
                     D2D1RenderTargetType.Default,
