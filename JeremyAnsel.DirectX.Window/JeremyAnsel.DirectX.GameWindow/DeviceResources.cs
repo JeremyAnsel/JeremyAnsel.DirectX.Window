@@ -110,14 +110,24 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
         }
 
+        public float ConvertPixelsToDipsX(float pixels)
+        {
+            return (float)Math.Floor(pixels * 96.0f / this.dpiX + 0.5f);
+        }
+
+        public float ConvertPixelsToDipsY(float pixels)
+        {
+            return (float)Math.Floor(pixels * 96.0f / this.dpiY + 0.5f);
+        }
+
         public float ConvertDipsToPixelsX(float dips)
         {
-            return (float)Math.Floor(dips * 96.0f / this.dpiX + 0.05f);
+            return (float)Math.Floor(dips * this.dpiX / 96.0f + 0.5f);
         }
 
         public float ConvertDipsToPixelsY(float dips)
         {
-            return (float)Math.Floor(dips * 96.0f / this.dpiY + 0.05f);
+            return (float)Math.Floor(dips * this.dpiY / 96.0f + 0.5f);
         }
 
         public void RegisterDeviceNotify(IDeviceNotify notify)
