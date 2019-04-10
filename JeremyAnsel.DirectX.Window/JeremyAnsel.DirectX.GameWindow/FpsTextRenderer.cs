@@ -123,7 +123,7 @@ namespace JeremyAnsel.DirectX.GameWindow
             text.Append(" FPS");
 
             DWriteUtils.DisposeAndNull(ref this.textLayout);
-            this.textLayout = this.deviceResources.DWriteFactory.CreateTextLayout(text.ToString(), this.textFormat, 600, 400);
+            this.textLayout = this.deviceResources.DWriteFactory.CreateTextLayout(text.ToString(), this.textFormat, this.deviceResources.ConvertDipsToPixelsX(600), this.deviceResources.ConvertDipsToPixelsY(400));
 
             this.isInitialized = true;
         }
