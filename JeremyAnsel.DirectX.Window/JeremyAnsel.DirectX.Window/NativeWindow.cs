@@ -252,6 +252,10 @@ namespace JeremyAnsel.DirectX.Window
                         return NativeMethods.DefWindowProc(hWnd, msg, wParam, lParam);
                     }
 
+                case WindowMessageType.DpiChanged:
+                    this.doOnWindowSizeChanged = true;
+                    return NativeMethods.DefWindowProc(hWnd, msg, wParam, lParam);
+
                 case WindowMessageType.Activate:
                     this.window.IsActive = (wParam.ToInt32() & 0xFFFF) != 0;
                     break;
