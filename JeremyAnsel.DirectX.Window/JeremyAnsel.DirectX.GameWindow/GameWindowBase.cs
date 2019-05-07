@@ -67,7 +67,14 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             this.FpsTextRenderer = new FpsTextRenderer(this.PerformanceTime);
 
-            this.DeviceResources = new SwapChainDeviceResources(this, this.RequestedD3DFeatureLevel, this.UseHighestD3DFeatureLevel, this.PreferMultisampling);
+            D3D11FeatureLevel minimalFeatureLevel = this.RequestedD3DFeatureLevel;
+
+            if (this.FpsTextRenderer.MinimalFeatureLevel > minimalFeatureLevel)
+            {
+                minimalFeatureLevel = this.FpsTextRenderer.MinimalFeatureLevel;
+            }
+
+            this.DeviceResources = new SwapChainDeviceResources(this, minimalFeatureLevel, this.UseHighestD3DFeatureLevel, this.PreferMultisampling);
             this.DeviceResources.RegisterDeviceNotify(this);
 
             this.Title = this.DefaultTitle;

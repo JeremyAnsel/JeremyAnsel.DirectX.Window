@@ -4,8 +4,12 @@
 
 namespace JeremyAnsel.DirectX.GameWindow
 {
+    using JeremyAnsel.DirectX.D3D11;
+
     public interface IGameComponent
     {
+        D3D11FeatureLevel MinimalFeatureLevel { get; }
+
         void CreateDeviceDependentResources(DeviceResources resources);
 
         void ReleaseDeviceDependentResources();

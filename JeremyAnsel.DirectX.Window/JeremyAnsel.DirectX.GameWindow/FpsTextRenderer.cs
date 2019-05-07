@@ -9,6 +9,7 @@ namespace JeremyAnsel.DirectX.GameWindow
     using JeremyAnsel.DirectX.D2D1;
     using JeremyAnsel.DirectX.DWrite;
     using JeremyAnsel.DirectX.Window;
+    using D3D11;
 
     public sealed class FpsTextRenderer : IGameComponent
     {
@@ -43,6 +44,8 @@ namespace JeremyAnsel.DirectX.GameWindow
             this.ShowTime = true;
             this.ShowPerformanceTime = true;
         }
+
+        public D3D11FeatureLevel MinimalFeatureLevel { get { return D3D11FeatureLevel.FeatureLevel91; } }
 
         public bool IsEnabled { get; set; }
 
