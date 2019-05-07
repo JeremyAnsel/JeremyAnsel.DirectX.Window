@@ -7,6 +7,7 @@ namespace JeremyAnsel.DirectX.GameWindow
     using JeremyAnsel.DirectX.D3D11;
     using JeremyAnsel.DirectX.Dxgi;
     using System;
+
     public sealed class RenderTargetDeviceResources : DeviceResources
     {
         private uint width;

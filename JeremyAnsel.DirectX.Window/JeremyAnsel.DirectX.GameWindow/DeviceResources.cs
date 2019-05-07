@@ -163,14 +163,14 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void HandleDeviceLost()
         {
-            D3D11Utils.DisposeAndNull(ref this.backBuffer);
-
-            this.OnReleaseBackBuffer();
-
             if (this.deviceNotify != null)
             {
                 this.deviceNotify.OnDeviceLost();
             }
+
+            this.OnReleaseBackBuffer();
+            this.ReleaseWindowSizeDependentResources();
+            this.ReleaseDeviceResources();
 
             this.CreateDeviceResources();
             this.CreateWindowSizeDependentResources();
@@ -183,6 +183,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void OnSizeChanged()
         {
+            this.ReleaseWindowSizeDependentResources();
             this.CreateWindowSizeDependentResources();
         }
 
@@ -414,16 +415,15 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
         }
 
+        private void ReleaseDeviceResources()
+        {
+            D3D11Utils.DisposeAndNull(ref this.d3dContext);
+            D3D11Utils.DisposeAndNull(ref this.d3dDevice);
+        }
+
         private void CreateWindowSizeDependentResources()
         {
-            this.d3dContext.OutputMergerSetRenderTargets(new D3D11RenderTargetView[] { null }, null);
-
-            D3D11Utils.DisposeAndNull(ref this.backBuffer);
-            D3D11Utils.DisposeAndNull(ref this.offscreenBuffer);
-            D3D11Utils.DisposeAndNull(ref this.d3dRenderTargetView);
-            D3D11Utils.DisposeAndNull(ref this.d3dDepthStencilView);
-            D2D1Utils.DisposeAndNull(ref this.d2dRenderTarget);
-
+            //this.ReleaseWindowSizeDependentResources();
             this.d3dContext.Flush();
 
             var createdBackBuffer = this.OnCreateBackBuffer();
@@ -527,6 +527,21 @@ namespace JeremyAnsel.DirectX.GameWindow
             {
                 this.d3dContext.RasterizerStageSetState(rasterizerState);
             }
+        }
+
+        private void ReleaseWindowSizeDependentResources()
+        {
+            if (this.d3dContext)
+            {
+                this.d3dContext.OutputMergerSetRenderTargets(new D3D11RenderTargetView[] { null }, null);
+                this.d3dContext.ClearState();
+            }
+
+            D3D11Utils.DisposeAndNull(ref this.backBuffer);
+            D3D11Utils.DisposeAndNull(ref this.offscreenBuffer);
+            D3D11Utils.DisposeAndNull(ref this.d3dRenderTargetView);
+            D3D11Utils.DisposeAndNull(ref this.d3dDepthStencilView);
+            D2D1Utils.DisposeAndNull(ref this.d2dRenderTarget);
         }
     }
 }

@@ -78,6 +78,11 @@ namespace JeremyAnsel.DirectX.GameWindow
             this.whiteBrush = this.deviceResources.D2DRenderTarget.CreateSolidColorBrush(new D2D1ColorF(D2D1KnownColor.White));
         }
 
+        public void ReleaseWindowSizeDependentResources()
+        {
+            D2D1Utils.DisposeAndNull(ref this.whiteBrush);
+        }
+
         public void Update(StepTimer timer)
         {
             if (!this.IsEnabled)

@@ -59,6 +59,8 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
             else
             {
+                this.OnReleaseBackBuffer();
+
                 DxgiSwapChainDesc1 swapChainDesc = new DxgiSwapChainDesc1
                 {
                     Width = 0,
@@ -73,6 +75,19 @@ namespace JeremyAnsel.DirectX.GameWindow
                     AlphaMode = DxgiAlphaMode.Ignore,
                     Options = DxgiSwapChainOptions.None
                 };
+
+                //DxgiSwapChainFullscreenDesc? swapChainFullscreenDesc = null;
+
+                /*if (this.D3DDriverType == D3D11DriverType.Hardware)
+                {
+                    swapChainFullscreenDesc = new DxgiSwapChainFullscreenDesc
+                    {
+                        IsWindowed = true,
+                        RefreshRate = new DxgiRational(),
+                        Scaling = DxgiModeScaling.Unspecified,
+                        ScanlineOrdering = DxgiModeScanlineOrder.Unspecified
+                    };
+                }*/
 
                 using (var dxgiDevice = new DxgiDevice2(this.D3DDevice.Handle))
                 using (var dxgiAdapter = dxgiDevice.GetAdapter())

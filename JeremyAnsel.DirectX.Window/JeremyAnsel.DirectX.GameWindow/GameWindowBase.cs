@@ -84,13 +84,14 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected override void OnWindowSizeChanged()
         {
+            this.ReleaseWindowSizeDependentResources();
             this.DeviceResources.OnSizeChanged();
-
             this.CreateWindowSizeDependentResources();
         }
 
         public void OnDeviceLost()
         {
+            this.ReleaseWindowSizeDependentResources();
             this.ReleaseDeviceDependentResources();
         }
 
@@ -113,6 +114,11 @@ namespace JeremyAnsel.DirectX.GameWindow
         protected virtual void CreateWindowSizeDependentResources()
         {
             this.FpsTextRenderer.CreateWindowSizeDependentResources();
+        }
+
+        protected virtual void ReleaseWindowSizeDependentResources()
+        {
+            this.FpsTextRenderer.ReleaseWindowSizeDependentResources();
         }
 
         protected override void Update()

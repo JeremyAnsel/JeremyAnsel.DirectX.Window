@@ -16,6 +16,8 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         void CreateWindowSizeDependentResources();
 
+        void ReleaseWindowSizeDependentResources();
+
         void Update(StepTimer timer);
 
         void Render();
