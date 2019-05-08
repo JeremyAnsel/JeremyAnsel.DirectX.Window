@@ -161,6 +161,13 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
         }
 
+        public void Release()
+        {
+            this.OnReleaseBackBuffer();
+            this.ReleaseWindowSizeDependentResources();
+            this.ReleaseDeviceResources();
+        }
+
         public void HandleDeviceLost()
         {
             if (this.deviceNotify != null)

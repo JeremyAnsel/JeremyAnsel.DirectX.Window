@@ -4,6 +4,7 @@
 
 namespace JeremyAnsel.DirectX.GameWindow
 {
+    using System;
     using System.Text;
     using JeremyAnsel.DirectX.D3D11;
     using JeremyAnsel.DirectX.Window;
@@ -133,6 +134,25 @@ namespace JeremyAnsel.DirectX.GameWindow
             this.FpsTextRenderer.Render();
 
             this.DeviceResources.Present();
+        }
+
+        protected override void OnEvent(WindowMessageType msg, IntPtr wParam, IntPtr lParam)
+        {
+            switch (msg)
+            {
+                case WindowMessageType.Destroy:
+                    this.ReleaseWindowSizeDependentResources();
+                    this.ReleaseDeviceDependentResources();
+
+                    if (this.DeviceResources != null)
+                    {
+                        this.DeviceResources.Release();
+                    }
+
+                    break;
+            }
+
+            base.OnEvent(msg, wParam, lParam);
         }
     }
 }
