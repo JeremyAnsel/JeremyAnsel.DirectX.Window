@@ -16,9 +16,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
     public abstract class DeviceResources
     {
-        private bool useHighestFeatureLevel;
-
-        private bool preferMultisampling;
+        private DeviceResourcesOptions options;
 
         private D3D11Device d3dDevice;
 
@@ -56,11 +54,10 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private float dpiY;
 
-        protected DeviceResources(D3D11FeatureLevel featureLevel, bool useHighestFeatureLevel, bool preferMultisampling)
+        protected DeviceResources(D3D11FeatureLevel featureLevel, DeviceResourcesOptions options)
         {
             this.d3dFeatureLevel = featureLevel;
-            this.useHighestFeatureLevel = useHighestFeatureLevel;
-            this.preferMultisampling = preferMultisampling;
+            this.options = options ?? new DeviceResourcesOptions();
 
             this.CreateDeviceIndependentResources();
             this.CreateDeviceResources();
@@ -335,7 +332,14 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private void CreateDeviceIndependentResources()
         {
-            this.d2dFactory = D2D1Factory.Create(D2D1FactoryType.SingleThreaded);
+            if (this.options.Debug)
+            {
+                this.d2dFactory = D2D1Factory.Create(D2D1FactoryType.SingleThreaded, D2D1DebugLevel.Warning);
+            }
+            else
+            {
+                this.d2dFactory = D2D1Factory.Create(D2D1FactoryType.SingleThreaded);
+            }
 
             this.dwriteFactory = DWriteFactory.Create(DWriteFactoryType.Shared);
         }
@@ -344,7 +348,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             D3D11FeatureLevel[] featureLevels;
 
-            if (this.useHighestFeatureLevel)
+            if (this.options.UseHighestFeatureLevel)
             {
                 if (this.d3dFeatureLevel == D3D11FeatureLevel.FeatureLevel91)
                 {
@@ -376,43 +380,64 @@ namespace JeremyAnsel.DirectX.GameWindow
                 };
             }
 
-            D3D11CreateDeviceOptions options = D3D11CreateDeviceOptions.BgraSupport;
+            D3D11CreateDeviceOptions createDeviceOptions = D3D11CreateDeviceOptions.BgraSupport;
 
-            try
+            if (this.options.Debug)
             {
-                this.d3dDriverType = D3D11DriverType.Hardware;
+                createDeviceOptions |= D3D11CreateDeviceOptions.Debug;
+            }
+
+            if (this.options.ForceWarp)
+            {
+                this.d3dDriverType = D3D11DriverType.Warp;
 
                 D3D11Device.CreateDevice(
                     null,
                     this.d3dDriverType,
-                    options,
+                    createDeviceOptions,
                     featureLevels,
                     out this.d3dDevice,
                     out this.d3dFeatureLevel,
                     out this.d3dContext);
             }
-            catch (Exception ex)
+            else
             {
-                if (ex.HResult == DxgiError.Unsupported)
+                try
                 {
-                    this.d3dDriverType = D3D11DriverType.Warp;
+                    this.d3dDriverType = D3D11DriverType.Hardware;
 
                     D3D11Device.CreateDevice(
                         null,
                         this.d3dDriverType,
-                        options,
+                        createDeviceOptions,
                         featureLevels,
                         out this.d3dDevice,
                         out this.d3dFeatureLevel,
                         out this.d3dContext);
                 }
-                else
+                catch (Exception ex)
                 {
-                    throw;
+                    if (ex.HResult == DxgiError.Unsupported)
+                    {
+                        this.d3dDriverType = D3D11DriverType.Warp;
+
+                        D3D11Device.CreateDevice(
+                            null,
+                            this.d3dDriverType,
+                            createDeviceOptions,
+                            featureLevels,
+                            out this.d3dDevice,
+                            out this.d3dFeatureLevel,
+                            out this.d3dContext);
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
             }
 
-            if (this.preferMultisampling)
+            if (this.options.PreferMultisampling)
             {
                 this.d3dSampleDesc = this.CheckMultisamplingSupport();
             }

@@ -15,12 +15,12 @@ namespace JeremyAnsel.DirectX.GameWindow
         private uint height;
 
         public RenderTargetDeviceResources(uint width, uint height)
-            : this(width, height, D3D11FeatureLevel.FeatureLevel91, true, false)
+            : this(width, height, D3D11FeatureLevel.FeatureLevel91, null)
         {
         }
 
-        public RenderTargetDeviceResources(uint width, uint height, D3D11FeatureLevel featureLevel, bool useHighestFeatureLevel, bool preferMultisampling)
-            : base(featureLevel, useHighestFeatureLevel, preferMultisampling)
+        public RenderTargetDeviceResources(uint width, uint height, D3D11FeatureLevel featureLevel, DeviceResourcesOptions options)
+            : base(featureLevel, options)
         {
             if (width < 0)
             {

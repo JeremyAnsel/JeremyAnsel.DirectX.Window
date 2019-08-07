@@ -16,12 +16,12 @@ namespace JeremyAnsel.DirectX.GameWindow
         private WindowBase window;
 
         public SwapChainDeviceResources(WindowBase window)
-            : this(window, D3D11FeatureLevel.FeatureLevel91, true, false)
+            : this(window, D3D11FeatureLevel.FeatureLevel91, null)
         {
         }
 
-        public SwapChainDeviceResources(WindowBase window, D3D11FeatureLevel featureLevel, bool useHighestFeatureLevel, bool preferMultisampling)
-            : base(featureLevel, useHighestFeatureLevel, preferMultisampling)
+        public SwapChainDeviceResources(WindowBase window, D3D11FeatureLevel featureLevel, DeviceResourcesOptions options)
+            : base(featureLevel, options)
         {
             if (window == null)
             {

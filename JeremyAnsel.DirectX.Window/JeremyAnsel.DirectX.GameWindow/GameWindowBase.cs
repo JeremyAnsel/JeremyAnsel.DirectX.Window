@@ -15,17 +15,14 @@ namespace JeremyAnsel.DirectX.GameWindow
         protected GameWindowBase()
         {
             this.RequestedD3DFeatureLevel = D3D11FeatureLevel.FeatureLevel91;
-            this.UseHighestD3DFeatureLevel = true;
-            this.PreferMultisampling = false;
+            this.DeviceResourcesOptions = new DeviceResourcesOptions();
 
             this.Timer = new StepTimer();
         }
 
         protected D3D11FeatureLevel RequestedD3DFeatureLevel { get; set; }
 
-        protected bool UseHighestD3DFeatureLevel { get; set; }
-
-        protected bool PreferMultisampling { get; set; }
+        protected DeviceResourcesOptions DeviceResourcesOptions { get; private set; }
 
         protected StepTimer Timer { get; private set; }
 
@@ -73,7 +70,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                 this.RequestedD3DFeatureLevel = this.FpsTextRenderer.MinimalFeatureLevel;
             }
 
-            this.DeviceResources = new SwapChainDeviceResources(this, this.RequestedD3DFeatureLevel, this.UseHighestD3DFeatureLevel, this.PreferMultisampling);
+            this.DeviceResources = new SwapChainDeviceResources(this, this.RequestedD3DFeatureLevel, this.DeviceResourcesOptions);
             this.DeviceResources.RegisterDeviceNotify(this);
 
             this.Title = this.DefaultTitle;
