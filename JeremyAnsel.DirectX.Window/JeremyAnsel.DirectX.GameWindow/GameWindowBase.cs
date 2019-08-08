@@ -171,7 +171,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
                         break;
 
-                    case VirtualKey.F10:
+                    case VirtualKey.F9:
                         this.DeviceResources.HandleDeviceLost();
                         break;
                 }
