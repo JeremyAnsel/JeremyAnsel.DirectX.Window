@@ -149,5 +149,33 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             base.OnEvent(msg, wParam, lParam);
         }
+
+        protected override void OnKeyboardEvent(VirtualKey key, int repeatCount, bool wasDown, bool isDown)
+        {
+            base.OnKeyboardEvent(key, repeatCount, wasDown, isDown);
+
+            if (isDown && !wasDown)
+            {
+                switch (key)
+                {
+                    case VirtualKey.F12:
+                        this.FpsTextRenderer.IsEnabled = !this.FpsTextRenderer.IsEnabled;
+                        break;
+
+                    case VirtualKey.F11:
+                        if (this.DeviceResources.D3DDriverType == D3D11DriverType.Hardware)
+                        {
+                            bool fullscreen = this.DeviceResources.SwapChain.GetFullscreenState();
+                            this.DeviceResources.SwapChain.SetFullscreenState(!fullscreen);
+                        }
+
+                        break;
+
+                    case VirtualKey.F10:
+                        this.DeviceResources.HandleDeviceLost();
+                        break;
+                }
+            }
+        }
     }
 }
