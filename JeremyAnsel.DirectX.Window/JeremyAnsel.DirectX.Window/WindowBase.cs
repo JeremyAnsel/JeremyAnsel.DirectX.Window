@@ -160,6 +160,8 @@ namespace JeremyAnsel.DirectX.Window
             }
         }
 
+        public bool IsChild { get; private set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Reviewed")]
@@ -181,6 +183,7 @@ namespace JeremyAnsel.DirectX.Window
             }
 
             this.window = new NativeWindow(this, this.DefaultTitle);
+            this.IsChild = false;
         }
 
         public void BuildWindow(int positionX, int positionY, int windowWidth, int windowHeight, IntPtr parentHandle, bool isChild)
@@ -191,6 +194,7 @@ namespace JeremyAnsel.DirectX.Window
             }
 
             this.window = new NativeWindow(this, this.DefaultTitle, positionX, positionY, windowWidth, windowHeight, parentHandle, isChild);
+            this.IsChild = isChild;
         }
 
         public void Destroy()

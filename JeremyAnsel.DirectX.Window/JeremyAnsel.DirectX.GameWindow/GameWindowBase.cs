@@ -163,7 +163,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                         break;
 
                     case VirtualKey.F11:
-                        if (this.DeviceResources.D3DDriverType == D3D11DriverType.Hardware)
+                        if (!this.IsChild && this.DeviceResources.D3DDriverType == D3D11DriverType.Hardware)
                         {
                             bool fullscreen = this.DeviceResources.SwapChain.GetFullscreenState();
                             this.DeviceResources.SwapChain.SetFullscreenState(!fullscreen);
