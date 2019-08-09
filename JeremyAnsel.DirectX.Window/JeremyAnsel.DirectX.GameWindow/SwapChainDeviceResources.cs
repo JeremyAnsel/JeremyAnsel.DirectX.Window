@@ -37,11 +37,14 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected override void OnReleaseBackBuffer()
         {
-            this.isFullscreen = this.swapChain ? this.swapChain.GetFullscreenState() : false;
-
-            if (this.isFullscreen)
+            if (!this.window.IsChild)
             {
-                this.swapChain.SetFullscreenState(false);
+                this.isFullscreen = this.swapChain ? this.swapChain.GetFullscreenState() : false;
+
+                if (this.isFullscreen)
+                {
+                    this.swapChain.SetFullscreenState(false);
+                }
             }
 
             DxgiUtils.DisposeAndNull(ref this.swapChain);
@@ -133,9 +136,12 @@ namespace JeremyAnsel.DirectX.GameWindow
                     dxgiDevice.MaximumFrameLatency = 1;
                 }
 
-                if (this.isFullscreen)
+                if (!this.window.IsChild)
                 {
-                    this.swapChain.SetFullscreenState(true);
+                    if (this.isFullscreen)
+                    {
+                        this.swapChain.SetFullscreenState(true);
+                    }
                 }
             }
 
