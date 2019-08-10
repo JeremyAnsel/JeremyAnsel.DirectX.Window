@@ -160,9 +160,9 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void Release()
         {
-            this.OnReleaseBackBuffer();
-            this.ReleaseWindowSizeDependentResources();
             this.ReleaseDeviceResources();
+            this.ReleaseWindowSizeDependentResources();
+            this.OnReleaseBackBuffer();
         }
 
         public void HandleDeviceLost()
@@ -172,9 +172,9 @@ namespace JeremyAnsel.DirectX.GameWindow
                 this.deviceNotify.OnDeviceLost();
             }
 
-            this.OnReleaseBackBuffer();
-            this.ReleaseWindowSizeDependentResources();
             this.ReleaseDeviceResources();
+            this.ReleaseWindowSizeDependentResources();
+            this.OnReleaseBackBuffer();
 
             this.CreateDeviceResources();
             this.CreateWindowSizeDependentResources();
