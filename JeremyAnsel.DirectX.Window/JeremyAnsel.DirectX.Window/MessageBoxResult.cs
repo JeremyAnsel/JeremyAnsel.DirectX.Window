@@ -1,5 +1,5 @@
 ﻿// <copyright file="MessageBoxResult.cs" company="Jérémy Ansel">
-// Copyright (c) 2015 Jérémy Ansel
+// Copyright (c) 2015, 2019 Jérémy Ansel
 // </copyright>
 
 namespace JeremyAnsel.DirectX.Window
