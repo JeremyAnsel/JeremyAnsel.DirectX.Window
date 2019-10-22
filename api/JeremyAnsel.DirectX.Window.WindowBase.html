@@ -1,0 +1,915 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WindowBase
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WindowBase
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.Window.WindowBase">
+  
+  
+  <h1 id="JeremyAnsel_DirectX_Window_WindowBase" data-uid="JeremyAnsel.DirectX.Window.WindowBase" class="text-break">Class WindowBase
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">WindowBase</span></div>
+      <div class="level2"><a class="xref" href="JeremyAnsel.DirectX.GameWindow.GameWindowBase.html">GameWindowBase</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.DirectX.Window.html">JeremyAnsel.DirectX.Window</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.Window.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_Window_WindowBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class WindowBase : INotifyPropertyChanged</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase__ctor.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L29">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase__ctor_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.#ctor*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase__ctor" data-uid="JeremyAnsel.DirectX.Window.WindowBase.#ctor">WindowBase()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected WindowBase()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_DefaultTitle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.DefaultTitle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L35">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_DefaultTitle_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.DefaultTitle*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_DefaultTitle" data-uid="JeremyAnsel.DirectX.Window.WindowBase.DefaultTitle">DefaultTitle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string DefaultTitle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_ExitOnEscapeKey.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.ExitOnEscapeKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L146">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_ExitOnEscapeKey_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.ExitOnEscapeKey*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_ExitOnEscapeKey" data-uid="JeremyAnsel.DirectX.Window.WindowBase.ExitOnEscapeKey">ExitOnEscapeKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExitOnEscapeKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Handle.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L40">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Handle_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Handle*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Handle" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Handle">Handle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IntPtr Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Height.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Height%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L73">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Height_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Height*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Height" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Height">Height</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Height { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_IsActive.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.IsActive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L90">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_IsActive_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.IsActive*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_IsActive" data-uid="JeremyAnsel.DirectX.Window.WindowBase.IsActive">IsActive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_IsChild.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.IsChild%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L163">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_IsChild_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.IsChild*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_IsChild" data-uid="JeremyAnsel.DirectX.Window.WindowBase.IsChild">IsChild</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsChild { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_IsMinimized.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.IsMinimized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L107">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_IsMinimized_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.IsMinimized*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_IsMinimized" data-uid="JeremyAnsel.DirectX.Window.WindowBase.IsMinimized">IsMinimized</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMinimized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_PerformanceTime.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.PerformanceTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L124">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_PerformanceTime_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.PerformanceTime*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_PerformanceTime" data-uid="JeremyAnsel.DirectX.Window.WindowBase.PerformanceTime">PerformanceTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WindowPerformanceTime PerformanceTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Window.WindowPerformanceTime.html">WindowPerformanceTime</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Title.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Title%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L45">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Title_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Title*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Title" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Title">Title</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Title { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_UpdateWhenInactive.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.UpdateWhenInactive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L129">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_UpdateWhenInactive_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.UpdateWhenInactive*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_UpdateWhenInactive" data-uid="JeremyAnsel.DirectX.Window.WindowBase.UpdateWhenInactive">UpdateWhenInactive</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UpdateWhenInactive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Width.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Width%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L56">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Width_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Width*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Width" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Width">Width</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Width { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_BuildWindow.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.BuildWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L178">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_BuildWindow_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.BuildWindow*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_BuildWindow" data-uid="JeremyAnsel.DirectX.Window.WindowBase.BuildWindow">BuildWindow()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BuildWindow()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_BuildWindow_System_Int32_System_Int32_System_Int32_System_Int32_System_IntPtr_System_Boolean_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.BuildWindow(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.IntPtr%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L189">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_BuildWindow_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.BuildWindow*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_BuildWindow_System_Int32_System_Int32_System_Int32_System_Int32_System_IntPtr_System_Boolean_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.BuildWindow(System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr,System.Boolean)">BuildWindow(Int32, Int32, Int32, Int32, IntPtr, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BuildWindow(int positionX, int positionY, int windowWidth, int windowHeight, IntPtr parentHandle, bool isChild)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">positionX</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">positionY</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">windowWidth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">windowHeight</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">parentHandle</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isChild</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Destroy.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L200">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Destroy_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Destroy*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Destroy" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Destroy()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Exit.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Exit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L205">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Exit_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Exit*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Exit" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Exit">Exit()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Exit()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Focus.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Focus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L267">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Focus_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Focus*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Focus" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Focus">Focus()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Focus()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Init.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Init%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L231">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Init_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Init*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Init" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Init">Init()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Init()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_NotifyPropertyChanged_System_String_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L167">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_NotifyPropertyChanged_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_NotifyPropertyChanged_System_String_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged(System.String)">NotifyPropertyChanged(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void NotifyPropertyChanged(string name = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_OnEvent_JeremyAnsel_DirectX_Window_WindowMessageType_System_IntPtr_System_IntPtr_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.OnEvent(JeremyAnsel.DirectX.Window.WindowMessageType%2CSystem.IntPtr%2CSystem.IntPtr)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L241">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_OnEvent_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.OnEvent*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_OnEvent_JeremyAnsel_DirectX_Window_WindowMessageType_System_IntPtr_System_IntPtr_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.OnEvent(JeremyAnsel.DirectX.Window.WindowMessageType,System.IntPtr,System.IntPtr)">OnEvent(WindowMessageType, IntPtr, IntPtr)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnEvent(WindowMessageType msg, IntPtr wParam, IntPtr lParam)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Window.WindowMessageType.html">WindowMessageType</a></td>
+        <td><span class="parametername">msg</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">wParam</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.intptr">IntPtr</a></td>
+        <td><span class="parametername">lParam</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_OnKeyboardEvent_JeremyAnsel_DirectX_Window_VirtualKey_System_Int32_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.OnKeyboardEvent(JeremyAnsel.DirectX.Window.VirtualKey%2CSystem.Int32%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L251">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_OnKeyboardEvent_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.OnKeyboardEvent*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_OnKeyboardEvent_JeremyAnsel_DirectX_Window_VirtualKey_System_Int32_System_Boolean_System_Boolean_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.OnKeyboardEvent(JeremyAnsel.DirectX.Window.VirtualKey,System.Int32,System.Boolean,System.Boolean)">OnKeyboardEvent(VirtualKey, Int32, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnKeyboardEvent(VirtualKey key, int repeatCount, bool wasDown, bool isDown)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Window.VirtualKey.html">VirtualKey</a></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">repeatCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">wasDown</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isDown</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_OnWindowSizeChanged.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.OnWindowSizeChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L239">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_OnWindowSizeChanged_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.OnWindowSizeChanged*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_OnWindowSizeChanged" data-uid="JeremyAnsel.DirectX.Window.WindowBase.OnWindowSizeChanged">OnWindowSizeChanged()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void OnWindowSizeChanged()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Present.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Present%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L237">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Present_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Present*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Present" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Present">Present()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Present()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Render.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Render%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L235">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Render_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Render*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Render" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Render">Render()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Render()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Run.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Run%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L210">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Run_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Run*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Run" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Run">Run()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Show_JeremyAnsel_DirectX_Window_ShowWindow_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Show(JeremyAnsel.DirectX.Window.ShowWindow)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L262">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Show_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Show*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Show_JeremyAnsel_DirectX_Window_ShowWindow_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Show(JeremyAnsel.DirectX.Window.ShowWindow)">Show(ShowWindow)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Show(ShowWindow cmdShow)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="JeremyAnsel.DirectX.Window.ShowWindow.html">ShowWindow</a></td>
+        <td><span class="parametername">cmdShow</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_Update.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L233">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_Window_WindowBase_Update_" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Update*"></a>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_Update" data-uid="JeremyAnsel.DirectX.Window.WindowBase.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Update()</code></pre>
+  </div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase_PropertyChanged.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase.PropertyChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L165">View Source</a>
+  </span>
+  <h4 id="JeremyAnsel_DirectX_Window_WindowBase_PropertyChanged" data-uid="JeremyAnsel.DirectX.Window.WindowBase.PropertyChanged">PropertyChanged</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler PropertyChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">System.ComponentModel.INotifyPropertyChanged</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_WindowBase.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.WindowBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/WindowBase.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
