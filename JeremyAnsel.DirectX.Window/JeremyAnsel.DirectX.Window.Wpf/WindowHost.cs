@@ -6,6 +6,7 @@ namespace JeremyAnsel.DirectX.Window.Wpf
 {
     using System;
     using System.Runtime.InteropServices;
+    using System.Threading;
     using System.Threading.Tasks;
     using System.Windows.Input;
     using System.Windows.Interop;
@@ -13,9 +14,9 @@ namespace JeremyAnsel.DirectX.Window.Wpf
 
     public sealed class WindowHost : HwndHost
     {
-        private int width;
+        private readonly int width;
 
-        private int height;
+        private readonly int height;
 
         public WindowHost(WindowBase window)
             : this(window, 0, 0)
@@ -26,17 +27,17 @@ namespace JeremyAnsel.DirectX.Window.Wpf
         {
             if (window == null)
             {
-                throw new ArgumentNullException("window");
+                throw new ArgumentNullException(nameof(window));
             }
 
             if (width < 0)
             {
-                throw new ArgumentOutOfRangeException("width");
+                throw new ArgumentOutOfRangeException(nameof(width));
             }
 
             if (height < 0)
             {
-                throw new ArgumentOutOfRangeException("height");
+                throw new ArgumentOutOfRangeException(nameof(height));
             }
 
             this.width = (int)width;
@@ -51,7 +52,7 @@ namespace JeremyAnsel.DirectX.Window.Wpf
         {
             this.Window.BuildWindow(0, 0, this.width, this.height, hwndParent.Handle, true);
 
-            Task.Factory.StartNew(() => this.Window.Run());
+            Task.Factory.StartNew(() => this.Window.Run(), CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Current);
 
             return new HandleRef(this, this.Window.Handle);
         }

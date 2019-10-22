@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.GameWindow
     {
         private DeviceResources deviceResources;
 
-        private WindowPerformanceTime performanceTime;
+        private readonly WindowPerformanceTime performanceTime;
 
         private D2D1DrawingStateBlock stateBlock;
 
@@ -25,7 +25,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private DWriteTextLayout textLayout;
 
-        private StringBuilder text;
+        private readonly StringBuilder text;
 
         private bool isInitialized;
 
@@ -33,7 +33,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             if (performanceTime == null)
             {
-                throw new ArgumentNullException("performanceTime");
+                throw new ArgumentNullException(nameof(performanceTime));
             }
 
             this.performanceTime = performanceTime;
@@ -57,7 +57,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             if (resources == null)
             {
-                throw new ArgumentNullException("resources");
+                throw new ArgumentNullException(nameof(resources));
             }
 
             this.deviceResources = resources;
@@ -92,7 +92,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             if (timer == null)
             {
-                throw new ArgumentNullException("timer");
+                throw new ArgumentNullException(nameof(timer));
             }
 
             var time = timer.TotalTime;

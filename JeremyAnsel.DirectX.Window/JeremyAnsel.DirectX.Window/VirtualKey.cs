@@ -208,7 +208,9 @@ namespace JeremyAnsel.DirectX.Window
 
         Subtract = 0x6D,
 
+#pragma warning disable CA1720 // L'identificateur contient le nom de type
         Decimal = 0x6E,
+#pragma warning restore CA1720 // L'identificateur contient le nom de type
 
         Divide = 0x6F,
 

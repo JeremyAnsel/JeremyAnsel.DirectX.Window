@@ -190,7 +190,9 @@ namespace JeremyAnsel.DirectX.Window
 
         KeyUp = 0x0101,
 
+#pragma warning disable CA1720 // L'identificateur contient le nom de type
         Char = 0x0102,
+#pragma warning restore CA1720 // L'identificateur contient le nom de type
 
         DearChar = 0x0103,
 

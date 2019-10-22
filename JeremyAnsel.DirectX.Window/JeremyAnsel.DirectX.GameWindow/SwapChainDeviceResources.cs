@@ -13,7 +13,7 @@ namespace JeremyAnsel.DirectX.GameWindow
     {
         private DxgiSwapChain2 swapChain;
 
-        private WindowBase window;
+        private readonly WindowBase window;
 
         private bool isFullscreen;
 
@@ -27,7 +27,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             if (window == null)
             {
-                throw new ArgumentNullException("window");
+                throw new ArgumentNullException(nameof(window));
             }
 
             this.window = window;

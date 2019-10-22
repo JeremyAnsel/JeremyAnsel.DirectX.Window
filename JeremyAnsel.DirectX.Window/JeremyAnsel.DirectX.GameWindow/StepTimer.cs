@@ -11,7 +11,7 @@ namespace JeremyAnsel.DirectX.GameWindow
     {
         private const double MaxDelta = .25;
 
-        private Stopwatch stopwatch;
+        private readonly Stopwatch stopwatch;
 
         private uint frameCount;
 

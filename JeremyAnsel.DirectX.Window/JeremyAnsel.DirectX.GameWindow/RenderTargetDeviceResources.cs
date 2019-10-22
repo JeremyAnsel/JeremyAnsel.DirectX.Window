@@ -10,9 +10,9 @@ namespace JeremyAnsel.DirectX.GameWindow
 
     public sealed class RenderTargetDeviceResources : DeviceResources
     {
-        private uint width;
+        private readonly uint width;
 
-        private uint height;
+        private readonly uint height;
 
         public RenderTargetDeviceResources(uint width, uint height)
             : this(width, height, D3D11FeatureLevel.FeatureLevel91, null)
@@ -24,12 +24,12 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             if (width < 0)
             {
-                throw new ArgumentOutOfRangeException("width");
+                throw new ArgumentOutOfRangeException(nameof(width));
             }
 
             if (height < 0)
             {
-                throw new ArgumentOutOfRangeException("height");
+                throw new ArgumentOutOfRangeException(nameof(height));
             }
 
             this.width = width;

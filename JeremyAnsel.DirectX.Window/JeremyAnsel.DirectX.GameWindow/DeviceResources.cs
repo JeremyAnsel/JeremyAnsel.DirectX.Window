@@ -16,7 +16,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
     public abstract class DeviceResources
     {
-        private DeviceResourcesOptions options;
+        private readonly DeviceResourcesOptions options;
 
         private D3D11Device d3dDevice;
 
