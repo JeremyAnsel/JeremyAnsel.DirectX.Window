@@ -1,8 +1,8 @@
 version: 1.0.{build}
 configuration: Release
 
-init:
-- if "%APPVEYOR_REPO_NAME%" == "JeremyAnsel/JeremyAnsel.DirectX.Window" if "%APPVEYOR_REPO_BRANCH%"=="master" if not defined APPVEYOR_PULL_REQUEST_NUMBER set DEPLOY=True
+# init:
+# - if "%APPVEYOR_REPO_NAME%" == "JeremyAnsel/JeremyAnsel.DirectX.Window" if "%APPVEYOR_REPO_BRANCH%"=="master" if not defined APPVEYOR_PULL_REQUEST_NUMBER set DEPLOY=True
 
 assembly_info:
   patch: true
@@ -22,11 +22,11 @@ build:
   publish_nuget: true
   verbosity: minimal
 
-deploy:
-- provider: NuGet
-  api_key:
-    secure: 8B7BSDgsTQqRD0xPzQjGcUFHitr2KvJHpFUlZQIPIcj4la6FAVxUzfj+7FVsb4o/
-  skip_symbols: true
-  on:
-    branch: master
-    DEPLOY: True
+# deploy:
+# - provider: NuGet
+#   api_key:
+#     secure: 8B7BSDgsTQqRD0xPzQjGcUFHitr2KvJHpFUlZQIPIcj4la6FAVxUzfj+7FVsb4o/
+#   skip_symbols: true
+#   on:
+#     branch: master
+#     DEPLOY: True
