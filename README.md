@@ -23,6 +23,7 @@ Description     | Value
 License         | [The MIT License (MIT)](https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/LICENSE.txt)
 Documentation   | http://jeremyansel.github.io/JeremyAnsel.DirectX.Window
 Source code     | https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window
+Samples         | https://github.com/JeremyAnsel/JeremyAnsel.DirectX-Samples
 Nuget           | https://www.nuget.org/packages/JeremyAnsel.DirectX.Window
 Nuget           | https://www.nuget.org/packages/JeremyAnsel.DirectX.Window.Wpf
 Nuget           | https://www.nuget.org/packages/JeremyAnsel.DirectX.GameWindow
