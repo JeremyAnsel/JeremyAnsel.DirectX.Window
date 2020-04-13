@@ -61,14 +61,26 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
         }
 
+        protected T CheckMinimalFeatureLevel<T>(T component) where T : IGameComponent
+        {
+            if (component == null)
+            {
+                throw new ArgumentNullException(nameof(component));
+            }
+
+            D3D11FeatureLevel level = component.MinimalFeatureLevel;
+
+            if (level > this.RequestedD3DFeatureLevel)
+            {
+                this.RequestedD3DFeatureLevel = level;
+            }
+
+            return component;
+        }
+
         protected override void Init()
         {
-            this.FpsTextRenderer = new FpsTextRenderer(this.PerformanceTime);
-
-            if (this.FpsTextRenderer.MinimalFeatureLevel > this.RequestedD3DFeatureLevel)
-            {
-                this.RequestedD3DFeatureLevel = this.FpsTextRenderer.MinimalFeatureLevel;
-            }
+            this.FpsTextRenderer = this.CheckMinimalFeatureLevel(new FpsTextRenderer(this.PerformanceTime));
 
             this.DeviceResources = new SwapChainDeviceResources(this, this.RequestedD3DFeatureLevel, this.DeviceResourcesOptions);
             this.DeviceResources.RegisterDeviceNotify(this);
