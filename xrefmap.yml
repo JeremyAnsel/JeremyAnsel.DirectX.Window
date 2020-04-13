@@ -668,6 +668,22 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.GameWindowBase
   nameWithType: GameWindowBase.GameWindowBase
+- uid: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel*
+  name: CheckMinimalFeatureLevel
+  href: api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html#JeremyAnsel_DirectX_GameWindow_GameWindowBase_CheckMinimalFeatureLevel_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel
+  nameWithType: GameWindowBase.CheckMinimalFeatureLevel
+- uid: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel``1(``0)
+  name: CheckMinimalFeatureLevel<T>(T)
+  href: api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html#JeremyAnsel_DirectX_GameWindow_GameWindowBase_CheckMinimalFeatureLevel__1___0_
+  commentId: M:JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel``1(``0)
+  name.vb: CheckMinimalFeatureLevel(Of T)(T)
+  fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel<T>(T)
+  fullName.vb: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel(Of T)(T)
+  nameWithType: GameWindowBase.CheckMinimalFeatureLevel<T>(T)
+  nameWithType.vb: GameWindowBase.CheckMinimalFeatureLevel(Of T)(T)
 - uid: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CreateDeviceDependentResources
   name: CreateDeviceDependentResources()
   href: api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html#JeremyAnsel_DirectX_GameWindow_GameWindowBase_CreateDeviceDependentResources
