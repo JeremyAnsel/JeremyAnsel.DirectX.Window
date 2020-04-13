@@ -302,8 +302,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             DxgiSampleDesc sampleDesc = new DxgiSampleDesc(1, 0);
 
-            D3D11FormatSupport formatSupport;
-            if (this.d3dDevice.CheckFormatSupport(DxgiFormat.B8G8R8A8UNorm, out formatSupport))
+            if (this.d3dDevice.CheckFormatSupport(DxgiFormat.B8G8R8A8UNorm, out D3D11FormatSupport formatSupport))
             {
                 return sampleDesc;
             }
@@ -315,9 +314,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             for (uint i = 2; i <= D3D11Constants.MaxMultisampleSampleCount; i *= 2)
             {
-                uint numQualityLevels;
-
-                if (!this.d3dDevice.CheckMultisampleQualityLevels(DxgiFormat.B8G8R8A8UNorm, i, out numQualityLevels))
+                if (!this.d3dDevice.CheckMultisampleQualityLevels(DxgiFormat.B8G8R8A8UNorm, i, out uint numQualityLevels))
                 {
                     if (numQualityLevels > 0)
                     {

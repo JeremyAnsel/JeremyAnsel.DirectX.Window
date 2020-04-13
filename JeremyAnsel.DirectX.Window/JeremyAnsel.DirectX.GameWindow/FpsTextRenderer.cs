@@ -31,12 +31,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public FpsTextRenderer(WindowPerformanceTime performanceTime)
         {
-            if (performanceTime == null)
-            {
-                throw new ArgumentNullException(nameof(performanceTime));
-            }
-
-            this.performanceTime = performanceTime;
+            this.performanceTime = performanceTime ?? throw new ArgumentNullException(nameof(performanceTime));
 
             this.text = new StringBuilder();
 
@@ -55,12 +50,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void CreateDeviceDependentResources(DeviceResources resources)
         {
-            if (resources == null)
-            {
-                throw new ArgumentNullException(nameof(resources));
-            }
-
-            this.deviceResources = resources;
+            this.deviceResources = resources ?? throw new ArgumentNullException(nameof(resources));
 
             this.stateBlock = this.deviceResources.D2DFactory.CreateDrawingStateBlock();
 
