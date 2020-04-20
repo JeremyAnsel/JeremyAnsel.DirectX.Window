@@ -38,11 +38,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.FixedTimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.FixedTimer.html",
+          "hash": "AWe8ohfzS8ADy/RH11pjew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.yml",
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html",
-          "hash": "cqf2CCJeSRT4SLOGR84LcQ=="
+          "hash": "LQ1ePckC/z0tOv9/XHp5+A=="
         }
       },
       "is_incremental": false,
@@ -78,7 +90,19 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.IGameComponent.html",
-          "hash": "l7kn47fkbOso+dhEaMB1ZQ=="
+          "hash": "SP0uefpEqxrIzCMH6MOYPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.ITimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.ITimer.html",
+          "hash": "2UbF04v4GS/ahoOoeBR9ag=="
         }
       },
       "is_incremental": false,
@@ -102,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.StepTimer.html",
-          "hash": "7c/+UUKWbqj3B3+1QfGsTQ=="
+          "hash": "qV2o2SXUjeYvAGKXIcVlKg=="
         }
       },
       "is_incremental": false,
@@ -126,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.html",
-          "hash": "5rJUHfRSeDoWovv8RPzGlQ=="
+          "hash": "FU7SaGcmXn+0JxVUqHY4Qg=="
         }
       },
       "is_incremental": false,
@@ -330,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "LLuz4Cr3R4ACAeMpQy4rDg=="
+          "hash": "/esARwG0/q3YVPTNp7fgtw=="
         }
       },
       "is_incremental": false,
@@ -379,16 +403,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 27,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 25,
           "skipped_file_count": 0
         }
       }
