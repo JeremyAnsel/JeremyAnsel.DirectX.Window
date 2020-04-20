@@ -7,21 +7,13 @@ namespace JeremyAnsel.DirectX.GameWindow
     using System;
     using System.Diagnostics;
 
-    public sealed class StepTimer
+    public sealed class StepTimer : ITimer
     {
         private const double MaxDelta = .25;
 
         private readonly Stopwatch stopwatch;
 
-        private uint frameCount;
-
         private double lastSeconds;
-
-        private double totalSeconds;
-
-        private double elapsedSeconds;
-
-        private uint framesPerSecond;
 
         private uint framesThisSecond;
 
@@ -32,38 +24,26 @@ namespace JeremyAnsel.DirectX.GameWindow
             this.stopwatch = Stopwatch.StartNew();
         }
 
-        public uint FrameCount
-        {
-            get { return this.frameCount; }
-        }
+        public uint FrameCount { get; private set; }
 
-        public uint FramesPerSecond
-        {
-            get { return this.framesPerSecond; }
-        }
+        public uint FramesPerSecond { get; private set; }
 
-        public double TotalSeconds
-        {
-            get { return this.totalSeconds; }
-        }
+        public double TotalSeconds { get; private set; }
 
-        public double ElapsedSeconds
-        {
-            get { return this.elapsedSeconds; }
-        }
+        public double ElapsedSeconds { get; private set; }
 
         public TimeSpan TotalTime
         {
-            get { return new TimeSpan(0, 0, (int)this.totalSeconds); }
+            get { return new TimeSpan(0, 0, (int)this.TotalSeconds); }
         }
 
         public void Reset()
         {
-            this.frameCount = 0;
+            this.FrameCount = 0;
             this.lastSeconds = 0;
-            this.totalSeconds = 0;
-            this.elapsedSeconds = 0;
-            this.framesPerSecond = 0;
+            this.TotalSeconds = 0;
+            this.ElapsedSeconds = 0;
+            this.FramesPerSecond = 0;
             this.framesThisSecond = 0;
             this.secondCounter = 0;
             this.stopwatch.Restart();
@@ -73,18 +53,18 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             double currentSeconds = this.stopwatch.Elapsed.TotalSeconds;
 
-            this.elapsedSeconds = currentSeconds - this.lastSeconds;
+            this.ElapsedSeconds = currentSeconds - this.lastSeconds;
 
-            this.secondCounter += this.elapsedSeconds;
+            this.secondCounter += this.ElapsedSeconds;
 
-            if (this.elapsedSeconds > StepTimer.MaxDelta)
+            if (this.ElapsedSeconds > MaxDelta)
             {
-                this.elapsedSeconds = StepTimer.MaxDelta;
+                this.ElapsedSeconds = MaxDelta;
             }
 
-            this.totalSeconds += this.elapsedSeconds;
+            this.TotalSeconds += this.ElapsedSeconds;
 
-            this.frameCount++;
+            this.FrameCount++;
 
             this.lastSeconds = currentSeconds;
 
@@ -92,7 +72,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             if (this.secondCounter > 1)
             {
-                this.framesPerSecond = this.framesThisSecond;
+                this.FramesPerSecond = this.framesThisSecond;
                 this.framesThisSecond = 0;
                 this.secondCounter %= 1;
             }

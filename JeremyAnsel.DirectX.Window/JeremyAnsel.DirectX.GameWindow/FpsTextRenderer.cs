@@ -73,7 +73,7 @@ namespace JeremyAnsel.DirectX.GameWindow
             D2D1Utils.DisposeAndNull(ref this.whiteBrush);
         }
 
-        public void Update(StepTimer timer)
+        public void Update(ITimer timer)
         {
             if (!this.IsEnabled)
             {
