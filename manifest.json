@@ -218,6 +218,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.DirectX.Window.MouseKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.DirectX.Window.MouseKeys.html",
+          "hash": "UO8TIEOY3pGuCoAfNaVybQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.ShowWindow.yml",
       "output": {
         ".html": {
@@ -330,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.html",
-          "hash": "UwxNodj/Ku+jr4BhEgBh6A=="
+          "hash": "cShKG7eg1qbn/7+fTZJONA=="
         }
       },
       "is_incremental": false,
@@ -354,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/esARwG0/q3YVPTNp7fgtw=="
+          "hash": "WyZ4PsTVGXhwbNcT7TQKeQ=="
         }
       },
       "is_incremental": false,
@@ -403,16 +415,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 27,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 28,
           "skipped_file_count": 0
         }
       }

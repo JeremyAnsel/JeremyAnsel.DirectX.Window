@@ -1768,6 +1768,54 @@ references:
   commentId: F:JeremyAnsel.DirectX.Window.MessageBoxResult.Yes
   fullName: JeremyAnsel.DirectX.Window.MessageBoxResult.Yes
   nameWithType: MessageBoxResult.Yes
+- uid: JeremyAnsel.DirectX.Window.MouseKeys
+  name: MouseKeys
+  href: api/JeremyAnsel.DirectX.Window.MouseKeys.html
+  commentId: T:JeremyAnsel.DirectX.Window.MouseKeys
+  fullName: JeremyAnsel.DirectX.Window.MouseKeys
+  nameWithType: MouseKeys
+- uid: JeremyAnsel.DirectX.Window.MouseKeys.Control
+  name: Control
+  href: api/JeremyAnsel.DirectX.Window.MouseKeys.html#JeremyAnsel_DirectX_Window_MouseKeys_Control
+  commentId: F:JeremyAnsel.DirectX.Window.MouseKeys.Control
+  fullName: JeremyAnsel.DirectX.Window.MouseKeys.Control
+  nameWithType: MouseKeys.Control
+- uid: JeremyAnsel.DirectX.Window.MouseKeys.LeftButton
+  name: LeftButton
+  href: api/JeremyAnsel.DirectX.Window.MouseKeys.html#JeremyAnsel_DirectX_Window_MouseKeys_LeftButton
+  commentId: F:JeremyAnsel.DirectX.Window.MouseKeys.LeftButton
+  fullName: JeremyAnsel.DirectX.Window.MouseKeys.LeftButton
+  nameWithType: MouseKeys.LeftButton
+- uid: JeremyAnsel.DirectX.Window.MouseKeys.MiddleButton
+  name: MiddleButton
+  href: api/JeremyAnsel.DirectX.Window.MouseKeys.html#JeremyAnsel_DirectX_Window_MouseKeys_MiddleButton
+  commentId: F:JeremyAnsel.DirectX.Window.MouseKeys.MiddleButton
+  fullName: JeremyAnsel.DirectX.Window.MouseKeys.MiddleButton
+  nameWithType: MouseKeys.MiddleButton
+- uid: JeremyAnsel.DirectX.Window.MouseKeys.RightButton
+  name: RightButton
+  href: api/JeremyAnsel.DirectX.Window.MouseKeys.html#JeremyAnsel_DirectX_Window_MouseKeys_RightButton
+  commentId: F:JeremyAnsel.DirectX.Window.MouseKeys.RightButton
+  fullName: JeremyAnsel.DirectX.Window.MouseKeys.RightButton
+  nameWithType: MouseKeys.RightButton
+- uid: JeremyAnsel.DirectX.Window.MouseKeys.Shift
+  name: Shift
+  href: api/JeremyAnsel.DirectX.Window.MouseKeys.html#JeremyAnsel_DirectX_Window_MouseKeys_Shift
+  commentId: F:JeremyAnsel.DirectX.Window.MouseKeys.Shift
+  fullName: JeremyAnsel.DirectX.Window.MouseKeys.Shift
+  nameWithType: MouseKeys.Shift
+- uid: JeremyAnsel.DirectX.Window.MouseKeys.XButton1
+  name: XButton1
+  href: api/JeremyAnsel.DirectX.Window.MouseKeys.html#JeremyAnsel_DirectX_Window_MouseKeys_XButton1
+  commentId: F:JeremyAnsel.DirectX.Window.MouseKeys.XButton1
+  fullName: JeremyAnsel.DirectX.Window.MouseKeys.XButton1
+  nameWithType: MouseKeys.XButton1
+- uid: JeremyAnsel.DirectX.Window.MouseKeys.XButton2
+  name: XButton2
+  href: api/JeremyAnsel.DirectX.Window.MouseKeys.html#JeremyAnsel_DirectX_Window_MouseKeys_XButton2
+  commentId: F:JeremyAnsel.DirectX.Window.MouseKeys.XButton2
+  fullName: JeremyAnsel.DirectX.Window.MouseKeys.XButton2
+  nameWithType: MouseKeys.XButton2
 - uid: JeremyAnsel.DirectX.Window.ShowWindow
   name: ShowWindow
   href: api/JeremyAnsel.DirectX.Window.ShowWindow.html
