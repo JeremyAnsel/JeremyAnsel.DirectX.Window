@@ -167,12 +167,7 @@ namespace JeremyAnsel.DirectX.Window
         [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Reviewed")]
         protected void NotifyPropertyChanged([CallerMemberName] string name = null)
         {
-            var handler = this.PropertyChanged;
-
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
         public void BuildWindow()

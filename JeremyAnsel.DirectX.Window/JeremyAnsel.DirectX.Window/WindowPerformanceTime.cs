@@ -11,7 +11,7 @@ namespace JeremyAnsel.DirectX.Window
 
     public sealed class WindowPerformanceTime : INotifyPropertyChanged
     {
-        private Stopwatch stopwatch = new Stopwatch();
+        private readonly Stopwatch stopwatch = new Stopwatch();
 
         private double elapsedEventTime = 0;
 
@@ -94,12 +94,7 @@ namespace JeremyAnsel.DirectX.Window
         [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Reviewed")]
         private void NotifyPropertyChanged([CallerMemberName] string name = null)
         {
-            var handler = this.PropertyChanged;
-
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
         internal void Tick()

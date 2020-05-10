@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.Window
     {
         private delegate IntPtr WindowProcedure(IntPtr hWnd, WindowMessageType msg, IntPtr wParam, IntPtr lParam);
 
-        private WindowBase window;
+        private readonly WindowBase window;
 
         [SuppressMessage("Microsoft.Reliability", "CA2006:UseSafeHandleToEncapsulateNativeResources", Justification = "Reviewed")]
         private IntPtr handle;

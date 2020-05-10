@@ -12,11 +12,11 @@ namespace JeremyAnsel.DirectX.Window
         private delegate IntPtr WindowProcedure(IntPtr hWnd, WindowMessageType msg, IntPtr wParam, IntPtr lParam);
 
         private IntPtr atom;
-        private WindowProcedure windowProcedure;
+        private readonly WindowProcedure windowProcedure;
 
         private System.Drawing.Icon icon;
 
-        private static NativeClass WindowClass = new NativeClass();
+        private static readonly NativeClass WindowClass = new NativeClass();
 
         public static IntPtr Atom
         {

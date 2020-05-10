@@ -11,19 +11,19 @@ namespace JeremyAnsel.DirectX.Window
     [StructLayout(LayoutKind.Sequential)]
     public struct WindowMessage : IEquatable<WindowMessage>
     {
-        private IntPtr handle;
+        private readonly IntPtr handle;
 
-        private WindowMessageType msg;
+        private readonly WindowMessageType msg;
 
-        private IntPtr lParam;
+        private readonly IntPtr lParam;
 
-        private IntPtr wParam;
+        private readonly IntPtr wParam;
 
-        private uint time;
+        private readonly uint time;
 
-        private int x;
+        private readonly int x;
 
-        private int y;
+        private readonly int y;
 
         public IntPtr Handle
         {

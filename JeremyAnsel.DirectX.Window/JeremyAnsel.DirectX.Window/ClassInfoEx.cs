@@ -11,31 +11,31 @@ namespace JeremyAnsel.DirectX.Window
     [StructLayout(LayoutKind.Sequential)]
     internal struct ClassInfoEx : IEquatable<ClassInfoEx>
     {
-        private uint size;
+        private readonly uint size;
 
-        private ClassStyles style;
+        private readonly ClassStyles style;
 
-        private IntPtr windowProcedure;
+        private readonly IntPtr windowProcedure;
 
-        private uint classExtra;
+        private readonly uint classExtra;
 
-        private uint windowExtra;
+        private readonly uint windowExtra;
 
-        private IntPtr instance;
+        private readonly IntPtr instance;
 
-        private IntPtr icon;
+        private readonly IntPtr icon;
 
-        private IntPtr cursor;
+        private readonly IntPtr cursor;
 
-        private IntPtr brushBackground;
-
-        [MarshalAs(UnmanagedType.LPWStr)]
-        private string menuName;
+        private readonly IntPtr brushBackground;
 
         [MarshalAs(UnmanagedType.LPWStr)]
-        private string className;
+        private readonly string menuName;
 
-        private IntPtr iconSmall;
+        [MarshalAs(UnmanagedType.LPWStr)]
+        private readonly string className;
+
+        private readonly IntPtr iconSmall;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ClassInfoEx(

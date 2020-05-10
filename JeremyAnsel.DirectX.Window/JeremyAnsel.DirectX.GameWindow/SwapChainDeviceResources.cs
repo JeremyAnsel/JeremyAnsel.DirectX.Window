@@ -25,12 +25,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         public SwapChainDeviceResources(WindowBase window, D3D11FeatureLevel featureLevel, DeviceResourcesOptions options)
             : base(featureLevel, options)
         {
-            if (window == null)
-            {
-                throw new ArgumentNullException(nameof(window));
-            }
-
-            this.window = window;
+            this.window = window ?? throw new ArgumentNullException(nameof(window));
         }
 
         public DxgiSwapChain2 SwapChain { get { return this.swapChain; } }

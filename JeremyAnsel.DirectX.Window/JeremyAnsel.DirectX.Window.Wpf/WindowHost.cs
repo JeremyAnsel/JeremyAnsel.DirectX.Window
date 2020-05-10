@@ -25,10 +25,7 @@ namespace JeremyAnsel.DirectX.Window.Wpf
 
         public WindowHost(WindowBase window, double width, double height)
         {
-            if (window == null)
-            {
-                throw new ArgumentNullException(nameof(window));
-            }
+            this.Window = window ?? throw new ArgumentNullException(nameof(window));
 
             if (width < 0)
             {
@@ -42,8 +39,6 @@ namespace JeremyAnsel.DirectX.Window.Wpf
 
             this.width = (int)width;
             this.height = (int)height;
-
-            this.Window = window;
         }
 
         public WindowBase Window { get; private set; }
