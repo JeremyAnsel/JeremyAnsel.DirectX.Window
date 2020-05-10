@@ -207,6 +207,7 @@ namespace JeremyAnsel.DirectX.Window
             this.window.Exit();
         }
 
+        [SuppressMessage("Design", "CA1031:Ne pas intercepter les types d'exception générale", Justification = "Reviewed.")]
         public void Run()
         {
             if (this.window == null)
@@ -221,10 +222,15 @@ namespace JeremyAnsel.DirectX.Window
             }
             catch (Exception ex)
             {
-                string title = this.window.Title;
-                this.window.Destroy();
-                MessageBox.Show(ex.ToString(), title, MessageBoxButton.Ok, MessageBoxIcon.Error);
-                throw;
+                try
+                {
+                    string title = this.window.Title;
+                    this.window.Destroy();
+                    MessageBox.Show(ex.ToString(), title, MessageBoxButton.Ok, MessageBoxIcon.Error);
+                }
+                catch
+                {
+                }
             }
         }
 

@@ -12,6 +12,10 @@ namespace JeremyAnsel.DirectX.GameWindow
 
     public abstract class GameWindowBase : WindowBase, IDeviceNotify
     {
+        private bool doHandleDeviceLost = false;
+
+        private bool doFullscreenSwitch = false;
+
         protected GameWindowBase()
         {
             this.RequestedD3DFeatureLevel = D3D11FeatureLevel.FeatureLevel91;
@@ -141,6 +145,25 @@ namespace JeremyAnsel.DirectX.GameWindow
             this.FpsTextRenderer.Render();
 
             this.DeviceResources.Present();
+
+            if (this.doHandleDeviceLost)
+            {
+                this.DeviceResources.HandleDeviceLost();
+                this.doHandleDeviceLost = false;
+                return;
+            }
+
+            if (this.doFullscreenSwitch)
+            {
+                if (!this.IsChild && this.DeviceResources.D3DDriverType == D3D11DriverType.Hardware)
+                {
+                    bool fullscreen = this.DeviceResources.SwapChain.GetFullscreenState();
+                    this.DeviceResources.SwapChain.SetFullscreenState(!fullscreen);
+                }
+
+                this.doFullscreenSwitch = false;
+                return;
+            }
         }
 
         protected override void OnEvent(WindowMessageType msg, IntPtr wParam, IntPtr lParam)
@@ -175,16 +198,11 @@ namespace JeremyAnsel.DirectX.GameWindow
                         break;
 
                     case VirtualKey.F11:
-                        if (!this.IsChild && this.DeviceResources.D3DDriverType == D3D11DriverType.Hardware)
-                        {
-                            bool fullscreen = this.DeviceResources.SwapChain.GetFullscreenState();
-                            this.DeviceResources.SwapChain.SetFullscreenState(!fullscreen);
-                        }
-
+                        this.doFullscreenSwitch = true;
                         break;
 
                     case VirtualKey.F9:
-                        this.DeviceResources.HandleDeviceLost();
+                        this.doHandleDeviceLost = true;
                         break;
                 }
             }

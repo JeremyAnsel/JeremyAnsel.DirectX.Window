@@ -30,6 +30,8 @@ namespace JeremyAnsel.DirectX.Window
 
         private bool doOnWindowSizeChanged = false;
 
+        private bool doUpdateRender = true;
+
         public NativeWindow(WindowBase window, string name)
             : this(window, name, WindowConstant.UseDefault, WindowConstant.UseDefault, WindowConstant.UseDefault, WindowConstant.UseDefault, IntPtr.Zero, false)
         {
@@ -148,7 +150,6 @@ namespace JeremyAnsel.DirectX.Window
                 {
                     NativeMethods.PostQuitMessage(0);
                     this.doPostQuitMessage = false;
-                    break;
                 }
 
                 if (this.doOnWindowSizeChanged)
@@ -174,6 +175,11 @@ namespace JeremyAnsel.DirectX.Window
                 {
                     if (!NativeMethods.PeekMessage(out message, IntPtr.Zero, WindowMessageType.Null, WindowMessageType.Null, 1))
                     {
+                        if (!this.doUpdateRender)
+                        {
+                            continue;
+                        }
+
                         if (this.window.UpdateWhenInactive || this.window.IsActive)
                         {
                             this.PerformanceTime.Start();
@@ -212,6 +218,7 @@ namespace JeremyAnsel.DirectX.Window
             switch (msg)
             {
                 case WindowMessageType.Destroy:
+                    this.doUpdateRender = false;
                     this.doPostQuitMessage = true;
                     return new IntPtr(1);
 
