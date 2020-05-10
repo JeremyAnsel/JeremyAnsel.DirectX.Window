@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html",
-          "hash": "FqreqnOlGPd6X20ZoBJoYA=="
+          "hash": "XFlcPLa3nV0o5ZJac2sOcg=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html",
-          "hash": "iWbO6tch9RXhu/U5GTnqPQ=="
+          "hash": "xjPSwxOyuUNrioiOSgqNjA=="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.WindowBase.html",
-          "hash": "kWdn7DgjC//+KlH3AsbT0w=="
+          "hash": "BcPB9dcdATQolwO+9qEG3Q=="
         }
       },
       "is_incremental": false,
@@ -318,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.WindowHost.html",
-          "hash": "YZPgmZkI1ukjmbpouq7tjg=="
+          "hash": "m0uYyHBFAWkgM0ZscuIgWw=="
         }
       },
       "is_incremental": false,
