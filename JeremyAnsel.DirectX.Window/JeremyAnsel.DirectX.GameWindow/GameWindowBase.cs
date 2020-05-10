@@ -173,12 +173,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                 case WindowMessageType.Destroy:
                     this.ReleaseWindowSizeDependentResources();
                     this.ReleaseDeviceDependentResources();
-
-                    if (this.DeviceResources != null)
-                    {
-                        this.DeviceResources.Release();
-                    }
-
+                    this.DeviceResources?.Release();
                     break;
             }
 

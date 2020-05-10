@@ -165,7 +165,7 @@ namespace JeremyAnsel.DirectX.Window
                     }
                 }
 
-                if (this.window.IsMinimized || !this.isInitialized)
+                if (this.window.IsMinimized || !this.isInitialized || !this.doUpdateRender || this.isDestroyed)
                 {
                     this.PerformanceTime.Start();
                     NativeMethods.GetMessage(out message, IntPtr.Zero, WindowMessageType.Null, WindowMessageType.Null);
@@ -175,11 +175,6 @@ namespace JeremyAnsel.DirectX.Window
                 {
                     if (!NativeMethods.PeekMessage(out message, IntPtr.Zero, WindowMessageType.Null, WindowMessageType.Null, 1))
                     {
-                        if (!this.doUpdateRender)
-                        {
-                            continue;
-                        }
-
                         if (this.window.UpdateWhenInactive || this.window.IsActive)
                         {
                             this.PerformanceTime.Start();
