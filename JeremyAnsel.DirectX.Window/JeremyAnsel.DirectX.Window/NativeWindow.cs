@@ -102,9 +102,9 @@ namespace JeremyAnsel.DirectX.Window
         {
             if (!this.isDestroyed)
             {
+                this.isDestroyed = true;
                 NativeMethods.DestroyWindow(this.handle);
                 this.handle = IntPtr.Zero;
-                this.isDestroyed = true;
             }
         }
 
@@ -148,16 +148,16 @@ namespace JeremyAnsel.DirectX.Window
 
                 if (this.doPostQuitMessage)
                 {
-                    NativeMethods.PostQuitMessage(0);
                     this.doPostQuitMessage = false;
+                    NativeMethods.PostQuitMessage(0);
                 }
 
                 if (this.doOnWindowSizeChanged)
                 {
+                    this.doOnWindowSizeChanged = false;
                     this.PerformanceTime.Start();
                     this.window.OnWindowSizeChanged();
                     this.PerformanceTime.StopEvent();
-                    this.doOnWindowSizeChanged = false;
 
                     if (!this.isInitialized)
                     {

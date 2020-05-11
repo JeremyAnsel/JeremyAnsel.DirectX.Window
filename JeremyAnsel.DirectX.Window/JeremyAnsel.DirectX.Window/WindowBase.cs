@@ -244,7 +244,7 @@ namespace JeremyAnsel.DirectX.Window
             switch (msg)
             {
                 case WindowMessageType.SetText:
-                    this.NotifyPropertyChanged("Title");
+                    this.NotifyPropertyChanged(nameof(Title));
                     break;
             }
         }
