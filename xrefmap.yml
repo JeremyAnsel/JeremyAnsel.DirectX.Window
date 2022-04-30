@@ -13,11 +13,11 @@ references:
   commentId: T:JeremyAnsel.DirectX.GameWindow.DeviceResources
   fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources
   nameWithType: DeviceResources
-- uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor(D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   name: DeviceResources(D3D11FeatureLevel, DeviceResourcesOptions)
-  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources__ctor_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
-  commentId: M:JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor(D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.DeviceResources(D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources__ctor_JeremyAnsel_DirectX_D3D11_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
+  commentId: M:JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.DeviceResources(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   nameWithType: DeviceResources.DeviceResources(D3D11FeatureLevel, DeviceResourcesOptions)
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor*
   name: DeviceResources
@@ -1246,11 +1246,11 @@ references:
   commentId: M:JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor(System.UInt32,System.UInt32)
   fullName: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.RenderTargetDeviceResources(System.UInt32, System.UInt32)
   nameWithType: RenderTargetDeviceResources.RenderTargetDeviceResources(UInt32, UInt32)
-- uid: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor(System.UInt32,System.UInt32,D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+- uid: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor(System.UInt32,System.UInt32,JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   name: RenderTargetDeviceResources(UInt32, UInt32, D3D11FeatureLevel, DeviceResourcesOptions)
-  href: api/JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.html#JeremyAnsel_DirectX_GameWindow_RenderTargetDeviceResources__ctor_System_UInt32_System_UInt32_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
-  commentId: M:JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor(System.UInt32,System.UInt32,D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  fullName: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.RenderTargetDeviceResources(System.UInt32, System.UInt32, D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  href: api/JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.html#JeremyAnsel_DirectX_GameWindow_RenderTargetDeviceResources__ctor_System_UInt32_System_UInt32_JeremyAnsel_DirectX_D3D11_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
+  commentId: M:JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor(System.UInt32,System.UInt32,JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  fullName: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.RenderTargetDeviceResources(System.UInt32, System.UInt32, JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   nameWithType: RenderTargetDeviceResources.RenderTargetDeviceResources(UInt32, UInt32, D3D11FeatureLevel, DeviceResourcesOptions)
 - uid: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor*
   name: RenderTargetDeviceResources
@@ -1420,11 +1420,11 @@ references:
   commentId: M:JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase)
   fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.SwapChainDeviceResources(JeremyAnsel.DirectX.Window.WindowBase)
   nameWithType: SwapChainDeviceResources.SwapChainDeviceResources(WindowBase)
-- uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase,D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+- uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase,JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   name: SwapChainDeviceResources(WindowBase, D3D11FeatureLevel, DeviceResourcesOptions)
-  href: api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html#JeremyAnsel_DirectX_GameWindow_SwapChainDeviceResources__ctor_JeremyAnsel_DirectX_Window_WindowBase_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
-  commentId: M:JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase,D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.SwapChainDeviceResources(JeremyAnsel.DirectX.Window.WindowBase, D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  href: api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html#JeremyAnsel_DirectX_GameWindow_SwapChainDeviceResources__ctor_JeremyAnsel_DirectX_Window_WindowBase_JeremyAnsel_DirectX_D3D11_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
+  commentId: M:JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase,JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.SwapChainDeviceResources(JeremyAnsel.DirectX.Window.WindowBase, JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   nameWithType: SwapChainDeviceResources.SwapChainDeviceResources(WindowBase, D3D11FeatureLevel, DeviceResourcesOptions)
 - uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor*
   name: SwapChainDeviceResources
