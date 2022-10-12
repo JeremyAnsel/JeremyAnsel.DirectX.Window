@@ -28,6 +28,8 @@ namespace JeremyAnsel.DirectX.Window
 
         protected WindowBase()
         {
+            DpiHelpers.SetDpiAware();
+
             this.updateWhenInactive = true;
             this.exitOnEscapeKey = true;
         }

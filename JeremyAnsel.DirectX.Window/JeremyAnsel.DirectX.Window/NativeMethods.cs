@@ -14,6 +14,9 @@ namespace JeremyAnsel.DirectX.Window
     [SecurityCritical, SuppressUnmanagedCodeSecurity]
     internal static class NativeMethods
     {
+        public const int DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE = -3;
+        public const int PROCESS_PER_MONITOR_DPI_AWARE = 2;
+
         [DllImport("user32.dll", EntryPoint = "CreateWindowExW")]
         public static extern IntPtr CreateWindowEx(
             int styleEx,
@@ -53,6 +56,10 @@ namespace JeremyAnsel.DirectX.Window
         [DllImport("user32.dll", EntryPoint = "GetWindowTextLengthW")]
         public static extern int GetWindowTextLength(IntPtr handle);
 
+        [DllImport("user32.dll", EntryPoint = "IsProcessDPIAware")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool IsProcessDPIAware();
+
         [DllImport("user32.dll", EntryPoint = "LoadIconW")]
         public static extern IntPtr LoadIcon(IntPtr instance, IntPtr name);
 
@@ -75,6 +82,17 @@ namespace JeremyAnsel.DirectX.Window
 
         [DllImport("user32.dll", EntryPoint = "SetFocus")]
         public static extern IntPtr SetFocus(IntPtr hWnd);
+
+        [DllImport("user32.dll", EntryPoint = "SetProcessDPIAware")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool SetProcessDPIAware();
+
+        [DllImport("shcore.dll", EntryPoint = "SetProcessDpiAwareness")]
+        public static extern IntPtr SetProcessDpiAwareness(int value);
+
+        [DllImport("user32.dll", EntryPoint = "SetProcessDpiAwarenessContext")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool SetProcessDpiAwarenessContext(int value);
 
         [DllImport("user32.dll", EntryPoint = "SetWindowLongW")]
         private static extern int SetWindowLong32(IntPtr handle, int index, int value);
