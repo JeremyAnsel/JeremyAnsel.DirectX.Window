@@ -251,7 +251,21 @@ namespace JeremyAnsel.DirectX.GameWindow
                 {
                     using (var bitmap = new Bitmap((int)textureDescription.Width, (int)textureDescription.Height, (int)map.RowPitch, PixelFormat.Format32bppArgb, map.Data))
                     {
-                        bitmap.Save(fileName, format);
+                        if (format == ImageFormat.Jpeg)
+                        {
+                            ImageCodecInfo encoder = ImageCodecInfo
+                                .GetImageEncoders()
+                                .First(c => c.FormatID == ImageFormat.Jpeg.Guid);
+
+                            var encParams = new EncoderParameters(1);
+                            encParams.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
+
+                            bitmap.Save(fileName, encoder, encParams);
+                        }
+                        else
+                        {
+                            bitmap.Save(fileName, format);
+                        }
                     }
                 }
                 finally
