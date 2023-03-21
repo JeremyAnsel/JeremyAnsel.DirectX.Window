@@ -34,10 +34,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JeremyAnsel.DirectX.D2D1" Version="3.0.27" />
-    <PackageReference Include="JeremyAnsel.DirectX.D3D11" Version="3.0.27" />
-    <PackageReference Include="JeremyAnsel.DirectX.DWrite" Version="3.0.27" />
-    <PackageReference Include="JeremyAnsel.DirectX.Dxgi" Version="3.0.27" />
+    <PackageReference Include="JeremyAnsel.DirectX.D2D1" Version="3.0.28" />
+    <PackageReference Include="JeremyAnsel.DirectX.D3D11" Version="3.0.28" />
+    <PackageReference Include="JeremyAnsel.DirectX.DWrite" Version="3.0.28" />
+    <PackageReference Include="JeremyAnsel.DirectX.Dxgi" Version="3.0.28" />
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
