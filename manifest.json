@@ -9,8 +9,7 @@
         "resource": {
           "relative_path": "index.json"
         }
-      },
-      "is_incremental": false
+      }
     },
     {
       "type": "ManagedReference",
@@ -18,10 +17,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html",
-          "hash": "yN/5G6v2EbDfKjrbjLUH78bhbzU+Hw6p3GBhImoc0SY="
+          "hash": "1pswxb7R6kG6AucVJnd5lhGGDGyeKpukKzKrlchNHNA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -30,10 +28,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html",
-          "hash": "nRKOS0hqoGFpISRxPD1FCareyw9la5tuhKopVtgUgw4="
+          "hash": "eJ1+tSss4sLnP7cjxv7NFiJ4iXjz2twrsALuDg4kcyQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -42,10 +39,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.FixedTimer.html",
-          "hash": "eMfDjL8JdNXtAXJeDn7zGl3giuXE9MiC9QtZ2y5tuiY="
+          "hash": "GoQ/umfAzQoA/dX8sCo3NigarB5LiAUwYGhqwCvmMOA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -54,10 +50,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html",
-          "hash": "od+vUqE60ADLO99DZkeg7jjPJucfHWDZi81915YbgHM="
+          "hash": "8GLVe3shEhawCUCjhCPiGG/v7i1QUyFRPisQ9GLU6h4="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -66,10 +61,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html",
-          "hash": "muM32CpkpjMwcOioJ+vCz0Pg6CQHfQpP5qFsmleYBbM="
+          "hash": "vmv9De71LwQPnP1jmV3GqRrpf0bQazCSN4HY66jzXFk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -78,10 +72,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.IDeviceNotify.html",
-          "hash": "vJgotGm3TDkxNSbYO3L4Kvy4TinLeGaqDY9CqF/mYQA="
+          "hash": "bzVYnRblUfYtWFJpX800exl/FBoTTbJx6PQt+sWEMVo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -90,10 +83,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.IGameComponent.html",
-          "hash": "nEd12s0Ku/Zah9xgkEaerZxljB104ch4yuHuWt2sMFc="
+          "hash": "6eSvptfDlgnIkG2+W+Vjy6D8Ib5JzZfgR3qMRX9a5+o="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -102,10 +94,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.ITimer.html",
-          "hash": "ACXtIwVUNIZj2ZmybLEzRq+XUUI9UvCnduUbieJQap4="
+          "hash": "4ASKiIFe4utfk5cTeO+mri08hfMIftkNenGo/soum4M="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -114,10 +105,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.html",
-          "hash": "+ze9i92J9gFMV3bQEoh6e5R/Jj/9PdxLskybJzULe58="
+          "hash": "1Wna4dcAbG0Bi9teVeQDxowGudMpYAf9U0mb0gk+z/U="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -126,10 +116,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.StepTimer.html",
-          "hash": "vHEqUOiPqgaOyoPSr7KVM9i9i3ZE7Iz7/DDCkkCbtmk="
+          "hash": "KXVlgK2qrHDfoE+p57VG/vw6ZT23JUO7tBR6bWW4j/M="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -138,10 +127,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html",
-          "hash": "nlSdzWFShcQWCvaEmSxveAs9YFypbBhjBq+SSrOIqlM="
+          "hash": "74vF78gXjhFw23m6e0L+H9XLoCEA6mvKXrJiYRD/hHQ="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -150,10 +138,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.GameWindow.html",
-          "hash": "TvsV+1jpqfeqr1oqHsymAsHfxNDV9uzIBe1d7I/cPC0="
+          "hash": "xciziDMTYTmWGs9R6OlaMXIo6HxwvGZ/YkSp21EANGs="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -162,10 +149,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBox.html",
-          "hash": "q2Mbl+gR7td0kb0JOk+abUI0kYDa7uiW5qJERgZ6+rw="
+          "hash": "93SJQh1vq09fvCQUxPChUcSKtV/PCeftW/jRJ0OC5fM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -174,10 +160,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxButton.html",
-          "hash": "M3tJgoxzyO7p2ED/62vOMOG/5KYHkV21lN1F+a+CGxc="
+          "hash": "VrK7E7m6ACtAqvJp1mHqe6gUSDEpUGzzm1oiA7wrUho="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -186,10 +171,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxDefaultButton.html",
-          "hash": "TyB0a8TZylAkAJIeLmcCVF2jn5PX312SJX9qrh2pgGE="
+          "hash": "ey0xXT5YYqZ/8x5mUGAfkUaSB8ay+GQuBXfBvucyatc="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -198,10 +182,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxIcon.html",
-          "hash": "PqNUcwrEhYATixJjTuzi/H4QhidU+ubGOQJZOGUeBBo="
+          "hash": "PkZ4QxUVxpACRFianKuHBZNr7mlIcQrCnJgaWdhDVqo="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -210,10 +193,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxResult.html",
-          "hash": "vfqM12jQP4f6fobFhVgJ9hEDxpZoe0Y8s6qW0oB1+gA="
+          "hash": "CY+thzuTkddwjpEJr7TmZs6ifbVZCaQJntJ6Ur+Tj3c="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -222,10 +204,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.MouseKeys.html",
-          "hash": "zgtTB6iBS3Y33Z67vDWFQbDbYlr5l0b09fdcNVxiTb8="
+          "hash": "djsxySktlPNPdb/Xn9OWO61C6AnDkjKxQ6PHfYFM7ME="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -234,10 +215,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.ShowWindow.html",
-          "hash": "Fj/kAlzv/iy3zeekUZM+5KbfPKKvAT+UQbOmav8xm2A="
+          "hash": "hzVeWdJsxAfu75IQbeDkVemZtpxC6MsC0rZ6dsPs6Mg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -246,10 +226,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.VirtualKey.html",
-          "hash": "l7hoX1ky75cnj7sQwgQe5sos4yW7Cyn3bLiif00K3ig="
+          "hash": "d+hxu7mQKiemW1+01H9RKA9aQwoYQ6niXIUwwC+P24w="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -258,10 +237,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.WindowBase.html",
-          "hash": "m2ben4sUmJu12lMTSlkTj+3i8KdYDEaJSe2Qa0WAAtI="
+          "hash": "+0DId1ArQS3vtv9MAK/ANkpdCnSEMneyj8Zp9TaAd88="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -270,10 +248,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.WindowConstant.html",
-          "hash": "pL/+xMVRegkCH/yF8U3uHo6jyx0JpLmxetRqxcbdpyU="
+          "hash": "9XHTiyQxubzwlJWj0KTuKvuAGOcHcF9xd0RYy6YwCN4="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -282,10 +259,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.WindowMessage.html",
-          "hash": "ueqi5eT8MC+v7zGNr42H/dWGIIRqt6b8eqK/8dPpzSQ="
+          "hash": "urpyEEmX+p3MnRvEMGqqN58DMBM2frYpCG8SLpWw/TM="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -294,10 +270,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.WindowMessageType.html",
-          "hash": "23J4RqxeVmq4OivE+1/2lAu4PTzPx4MqJzOIMMZBr7s="
+          "hash": "hjjwozq9KTK7ICssujTN+pibBRTud717FyHRfc34XQk="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -306,10 +281,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.WindowPerformanceTime.html",
-          "hash": "W2578Vlv/2CO7hb0Ct5fDLx5N+iRfsI+CaX4Emeg4Wg="
+          "hash": "gKW6D+5hJ2Yd1wos/2Y3MoQLkANirkjT3FlvHrJ4csA="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -318,10 +292,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.WindowHost.html",
-          "hash": "EX7pzAhLWLMbQyh5wu3ITJFwk7DcR8kHonT+Am7t12c="
+          "hash": "lBsUtTGHbvC5E6IWAaqmhqAa7xzw1lmrsEYhaN1i4L0="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -330,10 +303,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.html",
-          "hash": "BDjFHqsTIh2TQrJSKIMNE+mM4FIYCnY/KVXeKJ+kf2s="
+          "hash": "EBnxTWwXJ9k2zN1BQY9QZqo3TTnU2sA1bTa4xyzuXYg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -342,10 +314,9 @@
       "output": {
         ".html": {
           "relative_path": "api/JeremyAnsel.DirectX.Window.html",
-          "hash": "Dy0etQxiXbLFwrAe9uEdw8vCnwAm5V/wPygAz0dDnEg="
+          "hash": "F4CgiFL0z6lkEFqEhT8HiG3KBKghEuHTmZAlEQJWmJ8="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -354,10 +325,9 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "lvLLyRAgaepnM4EzzmD2JNji/i5JVGssU84KZx7Dy9k="
+          "hash": "MeJ1GBVlfe6vZfDrt8LNi0rZvar/YlAnkewmjXGhEpg="
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -366,54 +336,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "axcvn0C7LMLIy7swwqsbdFF39/zUBmSezpEios42GBg="
+          "hash": "noTyloD6OpMko7aOfyTZchW0en/oN9RmPFuK3NsanfI="
         }
       },
-      "is_incremental": false,
       "version": ""
-    }
-  ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
-      },
-      "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 28,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
     }
   ],
   "version_info": {},
