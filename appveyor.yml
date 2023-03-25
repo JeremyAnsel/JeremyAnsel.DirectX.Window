@@ -28,6 +28,7 @@ build:
   verbosity: minimal
 
 after_build:
+- if not defined APPVEYOR_PULL_REQUEST_NUMBER JeremyAnsel.DirectX.Window\build-doc.cmd
 - if not defined APPVEYOR_PULL_REQUEST_NUMBER 7z a JeremyAnsel.DirectX.Window.Documentation.zip .\JeremyAnsel.DirectX.Window\Documentation\_site\* > nul
 - if not defined APPVEYOR_PULL_REQUEST_NUMBER appveyor PushArtifact JeremyAnsel.DirectX.Window.Documentation.zip
 

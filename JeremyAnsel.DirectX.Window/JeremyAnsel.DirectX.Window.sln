@@ -3,18 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.Window", "JeremyAnsel.DirectX.Window\JeremyAnsel.DirectX.Window.csproj", "{6959BC1D-C938-4649-AD4E-399FFBD35E1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.Window", "JeremyAnsel.DirectX.Window\JeremyAnsel.DirectX.Window.csproj", "{6959BC1D-C938-4649-AD4E-399FFBD35E1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.GameWindow", "JeremyAnsel.DirectX.GameWindow\JeremyAnsel.DirectX.GameWindow.csproj", "{7BE1C585-F679-4ADD-B03B-B77FA899B348}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.GameWindow", "JeremyAnsel.DirectX.GameWindow\JeremyAnsel.DirectX.GameWindow.csproj", "{7BE1C585-F679-4ADD-B03B-B77FA899B348}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.Window.Wpf", "JeremyAnsel.DirectX.Window.Wpf\JeremyAnsel.DirectX.Window.Wpf.csproj", "{31025448-6216-4D90-916C-BC4F904558D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.Window.Wpf", "JeremyAnsel.DirectX.Window.Wpf\JeremyAnsel.DirectX.Window.Wpf.csproj", "{31025448-6216-4D90-916C-BC4F904558D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{CF34B6EC-A82A-47B7-B440-D7CB9437767A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6959BC1D-C938-4649-AD4E-399FFBD35E1D} = {6959BC1D-C938-4649-AD4E-399FFBD35E1D}
-		{31025448-6216-4D90-916C-BC4F904558D5} = {31025448-6216-4D90-916C-BC4F904558D5}
-		{7BE1C585-F679-4ADD-B03B-B77FA899B348} = {7BE1C585-F679-4ADD-B03B-B77FA899B348}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation", "Documentation\Documentation.csproj", "{CF34B6EC-A82A-47B7-B440-D7CB9437767A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
