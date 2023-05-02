@@ -16,8 +16,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.DeviceResources.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html",
-          "hash": "1pswxb7R6kG6AucVJnd5lhGGDGyeKpukKzKrlchNHNA="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html"
         }
       },
       "version": ""
@@ -27,8 +26,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html",
-          "hash": "eJ1+tSss4sLnP7cjxv7NFiJ4iXjz2twrsALuDg4kcyQ="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html"
         }
       },
       "version": ""
@@ -38,8 +36,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.FixedTimer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.FixedTimer.html",
-          "hash": "GoQ/umfAzQoA/dX8sCo3NigarB5LiAUwYGhqwCvmMOA="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.FixedTimer.html"
         }
       },
       "version": ""
@@ -49,8 +46,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html",
-          "hash": "8GLVe3shEhawCUCjhCPiGG/v7i1QUyFRPisQ9GLU6h4="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html"
         }
       },
       "version": ""
@@ -60,8 +56,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html",
-          "hash": "vmv9De71LwQPnP1jmV3GqRrpf0bQazCSN4HY66jzXFk="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html"
         }
       },
       "version": ""
@@ -71,8 +66,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.IDeviceNotify.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.IDeviceNotify.html",
-          "hash": "bzVYnRblUfYtWFJpX800exl/FBoTTbJx6PQt+sWEMVo="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.IDeviceNotify.html"
         }
       },
       "version": ""
@@ -82,8 +76,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.IGameComponent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.IGameComponent.html",
-          "hash": "6eSvptfDlgnIkG2+W+Vjy6D8Ib5JzZfgR3qMRX9a5+o="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.IGameComponent.html"
         }
       },
       "version": ""
@@ -93,8 +86,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.ITimer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.ITimer.html",
-          "hash": "4ASKiIFe4utfk5cTeO+mri08hfMIftkNenGo/soum4M="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.ITimer.html"
         }
       },
       "version": ""
@@ -104,8 +96,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.html",
-          "hash": "1Wna4dcAbG0Bi9teVeQDxowGudMpYAf9U0mb0gk+z/U="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.html"
         }
       },
       "version": ""
@@ -115,8 +106,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.StepTimer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.StepTimer.html",
-          "hash": "KXVlgK2qrHDfoE+p57VG/vw6ZT23JUO7tBR6bWW4j/M="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.StepTimer.html"
         }
       },
       "version": ""
@@ -126,8 +116,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html",
-          "hash": "74vF78gXjhFw23m6e0L+H9XLoCEA6mvKXrJiYRD/hHQ="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html"
         }
       },
       "version": ""
@@ -137,8 +126,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.html",
-          "hash": "xciziDMTYTmWGs9R6OlaMXIo6HxwvGZ/YkSp21EANGs="
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.html"
         }
       },
       "version": ""
@@ -148,8 +136,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.MessageBox.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBox.html",
-          "hash": "93SJQh1vq09fvCQUxPChUcSKtV/PCeftW/jRJ0OC5fM="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBox.html"
         }
       },
       "version": ""
@@ -159,8 +146,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxButton.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxButton.html",
-          "hash": "VrK7E7m6ACtAqvJp1mHqe6gUSDEpUGzzm1oiA7wrUho="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxButton.html"
         }
       },
       "version": ""
@@ -170,8 +156,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxDefaultButton.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxDefaultButton.html",
-          "hash": "ey0xXT5YYqZ/8x5mUGAfkUaSB8ay+GQuBXfBvucyatc="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxDefaultButton.html"
         }
       },
       "version": ""
@@ -181,8 +166,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxIcon.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxIcon.html",
-          "hash": "PkZ4QxUVxpACRFianKuHBZNr7mlIcQrCnJgaWdhDVqo="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxIcon.html"
         }
       },
       "version": ""
@@ -192,8 +176,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxResult.html",
-          "hash": "CY+thzuTkddwjpEJr7TmZs6ifbVZCaQJntJ6Ur+Tj3c="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.MessageBoxResult.html"
         }
       },
       "version": ""
@@ -203,8 +186,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.MouseKeys.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.MouseKeys.html",
-          "hash": "djsxySktlPNPdb/Xn9OWO61C6AnDkjKxQ6PHfYFM7ME="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.MouseKeys.html"
         }
       },
       "version": ""
@@ -214,8 +196,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.ShowWindow.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.ShowWindow.html",
-          "hash": "hzVeWdJsxAfu75IQbeDkVemZtpxC6MsC0rZ6dsPs6Mg="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.ShowWindow.html"
         }
       },
       "version": ""
@@ -225,8 +206,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.VirtualKey.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.VirtualKey.html",
-          "hash": "d+hxu7mQKiemW1+01H9RKA9aQwoYQ6niXIUwwC+P24w="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.VirtualKey.html"
         }
       },
       "version": ""
@@ -236,8 +216,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.WindowBase.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowBase.html",
-          "hash": "+0DId1ArQS3vtv9MAK/ANkpdCnSEMneyj8Zp9TaAd88="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowBase.html"
         }
       },
       "version": ""
@@ -247,8 +226,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.WindowConstant.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowConstant.html",
-          "hash": "9XHTiyQxubzwlJWj0KTuKvuAGOcHcF9xd0RYy6YwCN4="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowConstant.html"
         }
       },
       "version": ""
@@ -258,8 +236,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.WindowMessage.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowMessage.html",
-          "hash": "urpyEEmX+p3MnRvEMGqqN58DMBM2frYpCG8SLpWw/TM="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowMessage.html"
         }
       },
       "version": ""
@@ -269,8 +246,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.WindowMessageType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowMessageType.html",
-          "hash": "hjjwozq9KTK7ICssujTN+pibBRTud717FyHRfc34XQk="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowMessageType.html"
         }
       },
       "version": ""
@@ -280,8 +256,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.WindowPerformanceTime.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowPerformanceTime.html",
-          "hash": "gKW6D+5hJ2Yd1wos/2Y3MoQLkANirkjT3FlvHrJ4csA="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.WindowPerformanceTime.html"
         }
       },
       "version": ""
@@ -291,8 +266,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.WindowHost.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.WindowHost.html",
-          "hash": "lBsUtTGHbvC5E6IWAaqmhqAa7xzw1lmrsEYhaN1i4L0="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.WindowHost.html"
         }
       },
       "version": ""
@@ -302,8 +276,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.html",
-          "hash": "EBnxTWwXJ9k2zN1BQY9QZqo3TTnU2sA1bTa4xyzuXYg="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.Wpf.html"
         }
       },
       "version": ""
@@ -313,8 +286,7 @@
       "source_relative_path": "api/JeremyAnsel.DirectX.Window.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.Window.html",
-          "hash": "F4CgiFL0z6lkEFqEhT8HiG3KBKghEuHTmZAlEQJWmJ8="
+          "relative_path": "api/JeremyAnsel.DirectX.Window.html"
         }
       },
       "version": ""
@@ -324,8 +296,7 @@
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
-          "relative_path": "api/index.html",
-          "hash": "MeJ1GBVlfe6vZfDrt8LNi0rZvar/YlAnkewmjXGhEpg="
+          "relative_path": "api/index.html"
         }
       },
       "version": ""
@@ -335,8 +306,7 @@
       "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "index.html",
-          "hash": "noTyloD6OpMko7aOfyTZchW0en/oN9RmPFuK3NsanfI="
+          "relative_path": "index.html"
         }
       },
       "version": ""
