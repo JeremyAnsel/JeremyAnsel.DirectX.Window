@@ -50,7 +50,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                 this.height,
                 1,
                 1,
-                D3D11BindOptions.RenderTarget,
+                D3D11BindOptions.RenderTarget | D3D11BindOptions.ShaderResource | D3D11BindOptions.UnorderedAccess,
                 D3D11Usage.Default,
                 D3D11CpuAccessOptions.None,
                 1,

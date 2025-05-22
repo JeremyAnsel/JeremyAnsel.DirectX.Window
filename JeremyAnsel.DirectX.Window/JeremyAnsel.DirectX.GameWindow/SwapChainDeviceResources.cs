@@ -75,7 +75,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                     Format = DxgiFormat.B8G8R8A8UNorm,
                     Stereo = false,
                     SampleDescription = new DxgiSampleDesc(1, 0),
-                    BufferUsage = DxgiUsages.RenderTargetOutput,
+                    BufferUsage = DxgiUsages.RenderTargetOutput |  DxgiUsages.ShaderInput | DxgiUsages.UnorderedAcess,
                     BufferCount = 3,
                     Scaling = DxgiScaling.None,
                     SwapEffect = DxgiSwapEffect.FlipSequential,
