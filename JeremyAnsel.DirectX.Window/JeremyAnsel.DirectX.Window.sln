@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.DirectX.Window.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation", "Documentation\Documentation.csproj", "{CF34B6EC-A82A-47B7-B440-D7CB9437767A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.DirectX.Window.Avalonia", "JeremyAnsel.DirectX.Window.Avalonia\JeremyAnsel.DirectX.Window.Avalonia.csproj", "{C450BBE2-51AD-4AF5-8D30-0602DE0EB942}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{CF34B6EC-A82A-47B7-B440-D7CB9437767A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF34B6EC-A82A-47B7-B440-D7CB9437767A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF34B6EC-A82A-47B7-B440-D7CB9437767A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C450BBE2-51AD-4AF5-8D30-0602DE0EB942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C450BBE2-51AD-4AF5-8D30-0602DE0EB942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C450BBE2-51AD-4AF5-8D30-0602DE0EB942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C450BBE2-51AD-4AF5-8D30-0602DE0EB942}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

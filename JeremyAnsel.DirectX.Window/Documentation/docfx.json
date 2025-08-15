@@ -6,7 +6,8 @@
           "files": [
             "JeremyAnsel.DirectX.Window/**.csproj",
             "JeremyAnsel.DirectX.GameWindow/**.csproj",
-            "JeremyAnsel.DirectX.Window.Wpf/**.csproj"
+            "JeremyAnsel.DirectX.Window.Wpf/**.csproj",
+            "JeremyAnsel.DirectX.Window.Avalonia/**.csproj"
           ],
           "src": "../"
         }
