@@ -258,12 +258,12 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L57">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources__ctor_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor*"></a>
-  <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources__ctor_JeremyAnsel_DirectX_D3D11_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)">DeviceResources(D3D11FeatureLevel, DeviceResourcesOptions)</h4>
+  <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources__ctor_JeremyAnsel_DirectX_D3D11_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)">DeviceResources(D3D11FeatureLevel, DeviceResourcesOptions?)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected DeviceResources(D3D11FeatureLevel featureLevel, DeviceResourcesOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">protected DeviceResources(D3D11FeatureLevel featureLevel, DeviceResourcesOptions? options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -302,7 +302,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DxgiAdapterDesc2 AdapterDescription { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DxgiAdapterDesc2? AdapterDescription { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -314,7 +314,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DxgiAdapterDesc2</span></td>
+        <td><span class="xref">DxgiAdapterDesc2</span>?</td>
         <td></td>
       </tr>
     </tbody>
@@ -332,7 +332,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11Texture2D BackBuffer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public D3D11Texture2D? BackBuffer { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -422,7 +422,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1Factory D2DFactory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1Factory? D2DFactory { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -452,7 +452,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D2D1RenderTarget D2DRenderTarget { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public D2D1RenderTarget? D2DRenderTarget { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -482,7 +482,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11DeviceContext D3DContext { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public D3D11DeviceContext? D3DContext { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -512,7 +512,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11DepthStencilView D3DDepthStencilView { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public D3D11DepthStencilView? D3DDepthStencilView { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -542,7 +542,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11Device D3DDevice { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public D3D11Device? D3DDevice { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -632,7 +632,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public D3D11RenderTargetView D3DRenderTargetView { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public D3D11RenderTargetView? D3DRenderTargetView { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -692,7 +692,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DWriteFactory DWriteFactory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DWriteFactory? DWriteFactory { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -806,7 +806,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertDipsToPixelsX_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertDipsToPixelsX(System.Single)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L120">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L125">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertDipsToPixelsX_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertDipsToPixelsX*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertDipsToPixelsX_System_Single_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertDipsToPixelsX(System.Single)">ConvertDipsToPixelsX(float)</h4>
@@ -853,7 +853,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertDipsToPixelsY_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertDipsToPixelsY(System.Single)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L125">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L130">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertDipsToPixelsY_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertDipsToPixelsY*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertDipsToPixelsY_System_Single_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertDipsToPixelsY(System.Single)">ConvertDipsToPixelsY(float)</h4>
@@ -900,7 +900,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertPixelsToDipsX_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertPixelsToDipsX(System.Single)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L110">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L115">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertPixelsToDipsX_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertPixelsToDipsX*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertPixelsToDipsX_System_Single_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertPixelsToDipsX(System.Single)">ConvertPixelsToDipsX(float)</h4>
@@ -947,7 +947,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertPixelsToDipsY_System_Single_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertPixelsToDipsY(System.Single)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L115">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L120">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertPixelsToDipsY_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertPixelsToDipsY*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ConvertPixelsToDipsY_System_Single_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ConvertPixelsToDipsY(System.Single)">ConvertPixelsToDipsY(float)</h4>
@@ -994,7 +994,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_GetBackBufferContent.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.GetBackBufferContent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L278">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L294">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_GetBackBufferContent_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.GetBackBufferContent*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_GetBackBufferContent" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.GetBackBufferContent">GetBackBufferContent()</h4>
@@ -1002,7 +1002,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] GetBackBufferContent()</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[]? GetBackBufferContent()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -1024,7 +1024,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_HandleDeviceLost.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.HandleDeviceLost%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L168">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L179">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_HandleDeviceLost_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.HandleDeviceLost*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_HandleDeviceLost" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.HandleDeviceLost">HandleDeviceLost()</h4>
@@ -1039,7 +1039,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_OnCreateBackBuffer.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.OnCreateBackBuffer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L311">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L332">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_OnCreateBackBuffer_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.OnCreateBackBuffer*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_OnCreateBackBuffer" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.OnCreateBackBuffer">OnCreateBackBuffer()</h4>
@@ -1047,7 +1047,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract D3D11Texture2D OnCreateBackBuffer()</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract D3D11Texture2D? OnCreateBackBuffer()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -1069,7 +1069,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_OnPresent.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.OnPresent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L313">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L334">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_OnPresent_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.OnPresent*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_OnPresent" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.OnPresent">OnPresent()</h4>
@@ -1084,7 +1084,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_OnReleaseBackBuffer.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.OnReleaseBackBuffer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L309">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L330">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_OnReleaseBackBuffer_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.OnReleaseBackBuffer*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_OnReleaseBackBuffer" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.OnReleaseBackBuffer">OnReleaseBackBuffer()</h4>
@@ -1099,7 +1099,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_OnSizeChanged.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.OnSizeChanged%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L188">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L199">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_OnSizeChanged_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.OnSizeChanged*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_OnSizeChanged" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.OnSizeChanged">OnSizeChanged()</h4>
@@ -1114,7 +1114,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_Present.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.Present%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L194">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L205">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_Present_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.Present*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_Present" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.Present">Present()</h4>
@@ -1129,15 +1129,15 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_RegisterDeviceNotify_JeremyAnsel_DirectX_GameWindow_IDeviceNotify_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify(JeremyAnsel.DirectX.GameWindow.IDeviceNotify)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L130">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L135">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_RegisterDeviceNotify_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify*"></a>
-  <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_RegisterDeviceNotify_JeremyAnsel_DirectX_GameWindow_IDeviceNotify_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify(JeremyAnsel.DirectX.GameWindow.IDeviceNotify)">RegisterDeviceNotify(IDeviceNotify)</h4>
+  <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_RegisterDeviceNotify_JeremyAnsel_DirectX_GameWindow_IDeviceNotify_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify(JeremyAnsel.DirectX.GameWindow.IDeviceNotify)">RegisterDeviceNotify(IDeviceNotify?)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RegisterDeviceNotify(IDeviceNotify notify)</code></pre>
+    <pre><code class="lang-csharp hljs">public void RegisterDeviceNotify(IDeviceNotify? notify)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -1161,7 +1161,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_Release.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.Release%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L161">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L171">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_Release_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.Release*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_Release" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.Release">Release()</h4>
@@ -1176,7 +1176,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_SaveBackBuffer_System_String_.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.SaveBackBuffer(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L217">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L228">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_SaveBackBuffer_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.SaveBackBuffer*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_SaveBackBuffer_System_String_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.SaveBackBuffer(System.String)">SaveBackBuffer(string)</h4>
@@ -1208,7 +1208,7 @@
     <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_DeviceResources_ValidateDevice.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.DeviceResources.ValidateDevice%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L135">View Source</a>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/DeviceResources.cs/#L140">View Source</a>
   </span>
   <a id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ValidateDevice_" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ValidateDevice*"></a>
   <h4 id="JeremyAnsel_DirectX_GameWindow_DeviceResources_ValidateDevice" data-uid="JeremyAnsel.DirectX.GameWindow.DeviceResources.ValidateDevice">ValidateDevice()</h4>

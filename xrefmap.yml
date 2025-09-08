@@ -14,13 +14,13 @@ references:
   fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources
   nameWithType: DeviceResources
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  name: DeviceResources(D3D11FeatureLevel, DeviceResourcesOptions)
+  name: DeviceResources(D3D11FeatureLevel, DeviceResourcesOptions?)
   href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources__ctor_JeremyAnsel_DirectX_D3D11_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
   commentId: M:JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   name.vb: New(D3D11FeatureLevel, DeviceResourcesOptions)
-  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.DeviceResources(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.DeviceResources(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions?)
   fullName.vb: JeremyAnsel.DirectX.GameWindow.DeviceResources.New(JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  nameWithType: DeviceResources.DeviceResources(D3D11FeatureLevel, DeviceResourcesOptions)
+  nameWithType: DeviceResources.DeviceResources(D3D11FeatureLevel, DeviceResourcesOptions?)
   nameWithType.vb: DeviceResources.New(D3D11FeatureLevel, DeviceResourcesOptions)
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.#ctor*
   name: DeviceResources
@@ -396,11 +396,14 @@ references:
   fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.Present
   nameWithType: DeviceResources.Present
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify(JeremyAnsel.DirectX.GameWindow.IDeviceNotify)
-  name: RegisterDeviceNotify(IDeviceNotify)
+  name: RegisterDeviceNotify(IDeviceNotify?)
   href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources_RegisterDeviceNotify_JeremyAnsel_DirectX_GameWindow_IDeviceNotify_
   commentId: M:JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify(JeremyAnsel.DirectX.GameWindow.IDeviceNotify)
-  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify(JeremyAnsel.DirectX.GameWindow.IDeviceNotify)
-  nameWithType: DeviceResources.RegisterDeviceNotify(IDeviceNotify)
+  name.vb: RegisterDeviceNotify(IDeviceNotify)
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify(JeremyAnsel.DirectX.GameWindow.IDeviceNotify?)
+  fullName.vb: JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify(JeremyAnsel.DirectX.GameWindow.IDeviceNotify)
+  nameWithType: DeviceResources.RegisterDeviceNotify(IDeviceNotify?)
+  nameWithType.vb: DeviceResources.RegisterDeviceNotify(IDeviceNotify)
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.RegisterDeviceNotify*
   name: RegisterDeviceNotify
   href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources_RegisterDeviceNotify_
@@ -656,13 +659,13 @@ references:
   fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer
   nameWithType: FpsTextRenderer
 - uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.#ctor(JeremyAnsel.DirectX.Window.WindowPerformanceTime)
-  name: FpsTextRenderer(WindowPerformanceTime)
+  name: FpsTextRenderer(WindowPerformanceTime?)
   href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer__ctor_JeremyAnsel_DirectX_Window_WindowPerformanceTime_
   commentId: M:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.#ctor(JeremyAnsel.DirectX.Window.WindowPerformanceTime)
   name.vb: New(WindowPerformanceTime)
-  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.FpsTextRenderer(JeremyAnsel.DirectX.Window.WindowPerformanceTime)
+  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.FpsTextRenderer(JeremyAnsel.DirectX.Window.WindowPerformanceTime?)
   fullName.vb: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.New(JeremyAnsel.DirectX.Window.WindowPerformanceTime)
-  nameWithType: FpsTextRenderer.FpsTextRenderer(WindowPerformanceTime)
+  nameWithType: FpsTextRenderer.FpsTextRenderer(WindowPerformanceTime?)
   nameWithType.vb: FpsTextRenderer.New(WindowPerformanceTime)
 - uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.#ctor*
   name: FpsTextRenderer
@@ -675,11 +678,14 @@ references:
   nameWithType: FpsTextRenderer.FpsTextRenderer
   nameWithType.vb: FpsTextRenderer.New
 - uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.CreateDeviceDependentResources(JeremyAnsel.DirectX.GameWindow.DeviceResources)
-  name: CreateDeviceDependentResources(DeviceResources)
+  name: CreateDeviceDependentResources(DeviceResources?)
   href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_CreateDeviceDependentResources_JeremyAnsel_DirectX_GameWindow_DeviceResources_
   commentId: M:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.CreateDeviceDependentResources(JeremyAnsel.DirectX.GameWindow.DeviceResources)
-  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.CreateDeviceDependentResources(JeremyAnsel.DirectX.GameWindow.DeviceResources)
-  nameWithType: FpsTextRenderer.CreateDeviceDependentResources(DeviceResources)
+  name.vb: CreateDeviceDependentResources(DeviceResources)
+  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.CreateDeviceDependentResources(JeremyAnsel.DirectX.GameWindow.DeviceResources?)
+  fullName.vb: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.CreateDeviceDependentResources(JeremyAnsel.DirectX.GameWindow.DeviceResources)
+  nameWithType: FpsTextRenderer.CreateDeviceDependentResources(DeviceResources?)
+  nameWithType.vb: FpsTextRenderer.CreateDeviceDependentResources(DeviceResources)
 - uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.CreateDeviceDependentResources*
   name: CreateDeviceDependentResources
   href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_CreateDeviceDependentResources_
@@ -792,11 +798,14 @@ references:
   fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowTime
   nameWithType: FpsTextRenderer.ShowTime
 - uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  name: Update(ITimer)
+  name: Update(ITimer?)
   href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_Update_JeremyAnsel_DirectX_GameWindow_ITimer_
   commentId: M:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  nameWithType: FpsTextRenderer.Update(ITimer)
+  name.vb: Update(ITimer)
+  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer?)
+  fullName.vb: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
+  nameWithType: FpsTextRenderer.Update(ITimer?)
+  nameWithType.vb: FpsTextRenderer.Update(ITimer)
 - uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update*
   name: Update
   href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_Update_
@@ -837,13 +846,13 @@ references:
   fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel
   nameWithType: GameWindowBase.CheckMinimalFeatureLevel
 - uid: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel``1(``0)
-  name: CheckMinimalFeatureLevel<T>(T)
+  name: CheckMinimalFeatureLevel<T>(T?)
   href: api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html#JeremyAnsel_DirectX_GameWindow_GameWindowBase_CheckMinimalFeatureLevel__1___0_
   commentId: M:JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel``1(``0)
   name.vb: CheckMinimalFeatureLevel(Of T)(T)
-  fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel<T>(T)
+  fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel<T>(T?)
   fullName.vb: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CheckMinimalFeatureLevel(Of T)(T)
-  nameWithType: GameWindowBase.CheckMinimalFeatureLevel<T>(T)
+  nameWithType: GameWindowBase.CheckMinimalFeatureLevel<T>(T?)
   nameWithType.vb: GameWindowBase.CheckMinimalFeatureLevel(Of T)(T)
 - uid: JeremyAnsel.DirectX.GameWindow.GameWindowBase.CreateDeviceDependentResources
   name: CreateDeviceDependentResources()
@@ -1301,13 +1310,13 @@ references:
   nameWithType: RenderTargetDeviceResources.RenderTargetDeviceResources(uint, uint)
   nameWithType.vb: RenderTargetDeviceResources.New(UInteger, UInteger)
 - uid: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor(System.UInt32,System.UInt32,JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  name: RenderTargetDeviceResources(uint, uint, D3D11FeatureLevel, DeviceResourcesOptions)
+  name: RenderTargetDeviceResources(uint, uint, D3D11FeatureLevel, DeviceResourcesOptions?)
   href: api/JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.html#JeremyAnsel_DirectX_GameWindow_RenderTargetDeviceResources__ctor_System_UInt32_System_UInt32_JeremyAnsel_DirectX_D3D11_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
   commentId: M:JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor(System.UInt32,System.UInt32,JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   name.vb: New(UInteger, UInteger, D3D11FeatureLevel, DeviceResourcesOptions)
-  fullName: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.RenderTargetDeviceResources(uint, uint, JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  fullName: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.RenderTargetDeviceResources(uint, uint, JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions?)
   fullName.vb: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.New(UInteger, UInteger, JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  nameWithType: RenderTargetDeviceResources.RenderTargetDeviceResources(uint, uint, D3D11FeatureLevel, DeviceResourcesOptions)
+  nameWithType: RenderTargetDeviceResources.RenderTargetDeviceResources(uint, uint, D3D11FeatureLevel, DeviceResourcesOptions?)
   nameWithType.vb: RenderTargetDeviceResources.New(UInteger, UInteger, D3D11FeatureLevel, DeviceResourcesOptions)
 - uid: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.#ctor*
   name: RenderTargetDeviceResources
@@ -1481,22 +1490,22 @@ references:
   fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources
   nameWithType: SwapChainDeviceResources
 - uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase)
-  name: SwapChainDeviceResources(WindowBase)
+  name: SwapChainDeviceResources(WindowBase?)
   href: api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html#JeremyAnsel_DirectX_GameWindow_SwapChainDeviceResources__ctor_JeremyAnsel_DirectX_Window_WindowBase_
   commentId: M:JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase)
   name.vb: New(WindowBase)
-  fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.SwapChainDeviceResources(JeremyAnsel.DirectX.Window.WindowBase)
+  fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.SwapChainDeviceResources(JeremyAnsel.DirectX.Window.WindowBase?)
   fullName.vb: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.New(JeremyAnsel.DirectX.Window.WindowBase)
-  nameWithType: SwapChainDeviceResources.SwapChainDeviceResources(WindowBase)
+  nameWithType: SwapChainDeviceResources.SwapChainDeviceResources(WindowBase?)
   nameWithType.vb: SwapChainDeviceResources.New(WindowBase)
 - uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase,JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  name: SwapChainDeviceResources(WindowBase, D3D11FeatureLevel, DeviceResourcesOptions)
+  name: SwapChainDeviceResources(WindowBase?, D3D11FeatureLevel, DeviceResourcesOptions?)
   href: api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html#JeremyAnsel_DirectX_GameWindow_SwapChainDeviceResources__ctor_JeremyAnsel_DirectX_Window_WindowBase_JeremyAnsel_DirectX_D3D11_D3D11FeatureLevel_JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_
   commentId: M:JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor(JeremyAnsel.DirectX.Window.WindowBase,JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel,JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
   name.vb: New(WindowBase, D3D11FeatureLevel, DeviceResourcesOptions)
-  fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.SwapChainDeviceResources(JeremyAnsel.DirectX.Window.WindowBase, JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
+  fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.SwapChainDeviceResources(JeremyAnsel.DirectX.Window.WindowBase?, JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions?)
   fullName.vb: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.New(JeremyAnsel.DirectX.Window.WindowBase, JeremyAnsel.DirectX.D3D11.D3D11FeatureLevel, JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions)
-  nameWithType: SwapChainDeviceResources.SwapChainDeviceResources(WindowBase, D3D11FeatureLevel, DeviceResourcesOptions)
+  nameWithType: SwapChainDeviceResources.SwapChainDeviceResources(WindowBase?, D3D11FeatureLevel, DeviceResourcesOptions?)
   nameWithType.vb: SwapChainDeviceResources.New(WindowBase, D3D11FeatureLevel, DeviceResourcesOptions)
 - uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.#ctor*
   name: SwapChainDeviceResources
@@ -1579,13 +1588,13 @@ references:
   fullName: JeremyAnsel.DirectX.Window.Avalonia.WindowHost
   nameWithType: WindowHost
 - uid: JeremyAnsel.DirectX.Window.Avalonia.WindowHost.#ctor(JeremyAnsel.DirectX.Window.WindowBase)
-  name: WindowHost(WindowBase)
+  name: WindowHost(WindowBase?)
   href: api/JeremyAnsel.DirectX.Window.Avalonia.WindowHost.html#JeremyAnsel_DirectX_Window_Avalonia_WindowHost__ctor_JeremyAnsel_DirectX_Window_WindowBase_
   commentId: M:JeremyAnsel.DirectX.Window.Avalonia.WindowHost.#ctor(JeremyAnsel.DirectX.Window.WindowBase)
   name.vb: New(WindowBase)
-  fullName: JeremyAnsel.DirectX.Window.Avalonia.WindowHost.WindowHost(JeremyAnsel.DirectX.Window.WindowBase)
+  fullName: JeremyAnsel.DirectX.Window.Avalonia.WindowHost.WindowHost(JeremyAnsel.DirectX.Window.WindowBase?)
   fullName.vb: JeremyAnsel.DirectX.Window.Avalonia.WindowHost.New(JeremyAnsel.DirectX.Window.WindowBase)
-  nameWithType: WindowHost.WindowHost(WindowBase)
+  nameWithType: WindowHost.WindowHost(WindowBase?)
   nameWithType.vb: WindowHost.New(WindowBase)
 - uid: JeremyAnsel.DirectX.Window.Avalonia.WindowHost.#ctor*
   name: WindowHost
@@ -1643,94 +1652,94 @@ references:
   fullName: JeremyAnsel.DirectX.Window.MessageBox
   nameWithType: MessageBox
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String)
-  name: Show(nint, string)
+  name: Show(nint, string?)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_IntPtr_System_String_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String)
   name.vb: Show(IntPtr, String)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string?)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr, String)
-  nameWithType: MessageBox.Show(nint, string)
+  nameWithType: MessageBox.Show(nint, string?)
   nameWithType.vb: MessageBox.Show(IntPtr, String)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String,System.String)
-  name: Show(nint, string, string)
+  name: Show(nint, string?, string?)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_IntPtr_System_String_System_String_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String,System.String)
   name.vb: Show(IntPtr, String, String)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string, string)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string?, string?)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr, String, String)
-  nameWithType: MessageBox.Show(nint, string, string)
+  nameWithType: MessageBox.Show(nint, string?, string?)
   nameWithType.vb: MessageBox.Show(IntPtr, String, String)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton)
-  name: Show(nint, string, string, MessageBoxButton)
+  name: Show(nint, string?, string?, MessageBoxButton)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_IntPtr_System_String_System_String_JeremyAnsel_DirectX_Window_MessageBoxButton_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton)
   name.vb: Show(IntPtr, String, String, MessageBoxButton)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string, string, JeremyAnsel.DirectX.Window.MessageBoxButton)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string?, string?, JeremyAnsel.DirectX.Window.MessageBoxButton)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr, String, String, JeremyAnsel.DirectX.Window.MessageBoxButton)
-  nameWithType: MessageBox.Show(nint, string, string, MessageBoxButton)
+  nameWithType: MessageBox.Show(nint, string?, string?, MessageBoxButton)
   nameWithType.vb: MessageBox.Show(IntPtr, String, String, MessageBoxButton)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton,JeremyAnsel.DirectX.Window.MessageBoxIcon)
-  name: Show(nint, string, string, MessageBoxButton, MessageBoxIcon)
+  name: Show(nint, string?, string?, MessageBoxButton, MessageBoxIcon)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_IntPtr_System_String_System_String_JeremyAnsel_DirectX_Window_MessageBoxButton_JeremyAnsel_DirectX_Window_MessageBoxIcon_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton,JeremyAnsel.DirectX.Window.MessageBoxIcon)
   name.vb: Show(IntPtr, String, String, MessageBoxButton, MessageBoxIcon)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string, string, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string?, string?, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr, String, String, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon)
-  nameWithType: MessageBox.Show(nint, string, string, MessageBoxButton, MessageBoxIcon)
+  nameWithType: MessageBox.Show(nint, string?, string?, MessageBoxButton, MessageBoxIcon)
   nameWithType.vb: MessageBox.Show(IntPtr, String, String, MessageBoxButton, MessageBoxIcon)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton,JeremyAnsel.DirectX.Window.MessageBoxIcon,JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
-  name: Show(nint, string, string, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
+  name: Show(nint, string?, string?, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_IntPtr_System_String_System_String_JeremyAnsel_DirectX_Window_MessageBoxButton_JeremyAnsel_DirectX_Window_MessageBoxIcon_JeremyAnsel_DirectX_Window_MessageBoxDefaultButton_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr,System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton,JeremyAnsel.DirectX.Window.MessageBoxIcon,JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
   name.vb: Show(IntPtr, String, String, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string, string, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon, JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(nint, string?, string?, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon, JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(System.IntPtr, String, String, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon, JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
-  nameWithType: MessageBox.Show(nint, string, string, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
+  nameWithType: MessageBox.Show(nint, string?, string?, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
   nameWithType.vb: MessageBox.Show(IntPtr, String, String, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.String)
-  name: Show(string)
+  name: Show(string?)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_String_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.String)
   name.vb: Show(String)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string?)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(String)
-  nameWithType: MessageBox.Show(string)
+  nameWithType: MessageBox.Show(string?)
   nameWithType.vb: MessageBox.Show(String)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.String,System.String)
-  name: Show(string, string)
+  name: Show(string?, string?)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_String_System_String_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.String,System.String)
   name.vb: Show(String, String)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string, string)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string?, string?)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(String, String)
-  nameWithType: MessageBox.Show(string, string)
+  nameWithType: MessageBox.Show(string?, string?)
   nameWithType.vb: MessageBox.Show(String, String)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton)
-  name: Show(string, string, MessageBoxButton)
+  name: Show(string?, string?, MessageBoxButton)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_String_System_String_JeremyAnsel_DirectX_Window_MessageBoxButton_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton)
   name.vb: Show(String, String, MessageBoxButton)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string, string, JeremyAnsel.DirectX.Window.MessageBoxButton)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string?, string?, JeremyAnsel.DirectX.Window.MessageBoxButton)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(String, String, JeremyAnsel.DirectX.Window.MessageBoxButton)
-  nameWithType: MessageBox.Show(string, string, MessageBoxButton)
+  nameWithType: MessageBox.Show(string?, string?, MessageBoxButton)
   nameWithType.vb: MessageBox.Show(String, String, MessageBoxButton)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton,JeremyAnsel.DirectX.Window.MessageBoxIcon)
-  name: Show(string, string, MessageBoxButton, MessageBoxIcon)
+  name: Show(string?, string?, MessageBoxButton, MessageBoxIcon)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_String_System_String_JeremyAnsel_DirectX_Window_MessageBoxButton_JeremyAnsel_DirectX_Window_MessageBoxIcon_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton,JeremyAnsel.DirectX.Window.MessageBoxIcon)
   name.vb: Show(String, String, MessageBoxButton, MessageBoxIcon)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string, string, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string?, string?, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(String, String, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon)
-  nameWithType: MessageBox.Show(string, string, MessageBoxButton, MessageBoxIcon)
+  nameWithType: MessageBox.Show(string?, string?, MessageBoxButton, MessageBoxIcon)
   nameWithType.vb: MessageBox.Show(String, String, MessageBoxButton, MessageBoxIcon)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show(System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton,JeremyAnsel.DirectX.Window.MessageBoxIcon,JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
-  name: Show(string, string, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
+  name: Show(string?, string?, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html#JeremyAnsel_DirectX_Window_MessageBox_Show_System_String_System_String_JeremyAnsel_DirectX_Window_MessageBoxButton_JeremyAnsel_DirectX_Window_MessageBoxIcon_JeremyAnsel_DirectX_Window_MessageBoxDefaultButton_
   commentId: M:JeremyAnsel.DirectX.Window.MessageBox.Show(System.String,System.String,JeremyAnsel.DirectX.Window.MessageBoxButton,JeremyAnsel.DirectX.Window.MessageBoxIcon,JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
   name.vb: Show(String, String, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
-  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string, string, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon, JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
+  fullName: JeremyAnsel.DirectX.Window.MessageBox.Show(string?, string?, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon, JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
   fullName.vb: JeremyAnsel.DirectX.Window.MessageBox.Show(String, String, JeremyAnsel.DirectX.Window.MessageBoxButton, JeremyAnsel.DirectX.Window.MessageBoxIcon, JeremyAnsel.DirectX.Window.MessageBoxDefaultButton)
-  nameWithType: MessageBox.Show(string, string, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
+  nameWithType: MessageBox.Show(string?, string?, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
   nameWithType.vb: MessageBox.Show(String, String, MessageBoxButton, MessageBoxIcon, MessageBoxDefaultButton)
 - uid: JeremyAnsel.DirectX.Window.MessageBox.Show*
   name: Show
@@ -3136,13 +3145,13 @@ references:
   fullName: JeremyAnsel.DirectX.Window.WindowBase.IsMinimized
   nameWithType: WindowBase.IsMinimized
 - uid: JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged(System.String)
-  name: NotifyPropertyChanged(string)
+  name: NotifyPropertyChanged(string?)
   href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_NotifyPropertyChanged_System_String_
   commentId: M:JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged(System.String)
   name.vb: NotifyPropertyChanged(String)
-  fullName: JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged(string)
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged(string?)
   fullName.vb: JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged(String)
-  nameWithType: WindowBase.NotifyPropertyChanged(string)
+  nameWithType: WindowBase.NotifyPropertyChanged(string?)
   nameWithType.vb: WindowBase.NotifyPropertyChanged(String)
 - uid: JeremyAnsel.DirectX.Window.WindowBase.NotifyPropertyChanged*
   name: NotifyPropertyChanged
@@ -3350,13 +3359,13 @@ references:
   fullName: JeremyAnsel.DirectX.Window.WindowMessage.Equals(JeremyAnsel.DirectX.Window.WindowMessage)
   nameWithType: WindowMessage.Equals(WindowMessage)
 - uid: JeremyAnsel.DirectX.Window.WindowMessage.Equals(System.Object)
-  name: Equals(object)
+  name: Equals(object?)
   href: api/JeremyAnsel.DirectX.Window.WindowMessage.html#JeremyAnsel_DirectX_Window_WindowMessage_Equals_System_Object_
   commentId: M:JeremyAnsel.DirectX.Window.WindowMessage.Equals(System.Object)
   name.vb: Equals(Object)
-  fullName: JeremyAnsel.DirectX.Window.WindowMessage.Equals(object)
+  fullName: JeremyAnsel.DirectX.Window.WindowMessage.Equals(object?)
   fullName.vb: JeremyAnsel.DirectX.Window.WindowMessage.Equals(Object)
-  nameWithType: WindowMessage.Equals(object)
+  nameWithType: WindowMessage.Equals(object?)
   nameWithType.vb: WindowMessage.Equals(Object)
 - uid: JeremyAnsel.DirectX.Window.WindowMessage.Equals*
   name: Equals
@@ -4676,22 +4685,22 @@ references:
   fullName: JeremyAnsel.DirectX.Window.Wpf.WindowHost
   nameWithType: WindowHost
 - uid: JeremyAnsel.DirectX.Window.Wpf.WindowHost.#ctor(JeremyAnsel.DirectX.Window.WindowBase)
-  name: WindowHost(WindowBase)
+  name: WindowHost(WindowBase?)
   href: api/JeremyAnsel.DirectX.Window.Wpf.WindowHost.html#JeremyAnsel_DirectX_Window_Wpf_WindowHost__ctor_JeremyAnsel_DirectX_Window_WindowBase_
   commentId: M:JeremyAnsel.DirectX.Window.Wpf.WindowHost.#ctor(JeremyAnsel.DirectX.Window.WindowBase)
   name.vb: New(WindowBase)
-  fullName: JeremyAnsel.DirectX.Window.Wpf.WindowHost.WindowHost(JeremyAnsel.DirectX.Window.WindowBase)
+  fullName: JeremyAnsel.DirectX.Window.Wpf.WindowHost.WindowHost(JeremyAnsel.DirectX.Window.WindowBase?)
   fullName.vb: JeremyAnsel.DirectX.Window.Wpf.WindowHost.New(JeremyAnsel.DirectX.Window.WindowBase)
-  nameWithType: WindowHost.WindowHost(WindowBase)
+  nameWithType: WindowHost.WindowHost(WindowBase?)
   nameWithType.vb: WindowHost.New(WindowBase)
 - uid: JeremyAnsel.DirectX.Window.Wpf.WindowHost.#ctor(JeremyAnsel.DirectX.Window.WindowBase,System.Double,System.Double)
-  name: WindowHost(WindowBase, double, double)
+  name: WindowHost(WindowBase?, double, double)
   href: api/JeremyAnsel.DirectX.Window.Wpf.WindowHost.html#JeremyAnsel_DirectX_Window_Wpf_WindowHost__ctor_JeremyAnsel_DirectX_Window_WindowBase_System_Double_System_Double_
   commentId: M:JeremyAnsel.DirectX.Window.Wpf.WindowHost.#ctor(JeremyAnsel.DirectX.Window.WindowBase,System.Double,System.Double)
   name.vb: New(WindowBase, Double, Double)
-  fullName: JeremyAnsel.DirectX.Window.Wpf.WindowHost.WindowHost(JeremyAnsel.DirectX.Window.WindowBase, double, double)
+  fullName: JeremyAnsel.DirectX.Window.Wpf.WindowHost.WindowHost(JeremyAnsel.DirectX.Window.WindowBase?, double, double)
   fullName.vb: JeremyAnsel.DirectX.Window.Wpf.WindowHost.New(JeremyAnsel.DirectX.Window.WindowBase, Double, Double)
-  nameWithType: WindowHost.WindowHost(WindowBase, double, double)
+  nameWithType: WindowHost.WindowHost(WindowBase?, double, double)
   nameWithType.vb: WindowHost.New(WindowBase, Double, Double)
 - uid: JeremyAnsel.DirectX.Window.Wpf.WindowHost.#ctor*
   name: WindowHost
