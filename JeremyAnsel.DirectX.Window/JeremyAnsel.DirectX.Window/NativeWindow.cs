@@ -20,7 +20,7 @@ namespace JeremyAnsel.DirectX.Window
         [SuppressMessage("Microsoft.Reliability", "CA2006:UseSafeHandleToEncapsulateNativeResources", Justification = "Reviewed")]
         private IntPtr handle;
 
-        private WindowProcedure windowProcedure;
+        private WindowProcedure? windowProcedure;
 
         private bool isDestroyed = false;
 
@@ -32,12 +32,12 @@ namespace JeremyAnsel.DirectX.Window
 
         private bool doUpdateRender = true;
 
-        public NativeWindow(WindowBase window, string name)
+        public NativeWindow(WindowBase window, string? name)
             : this(window, name, WindowConstant.UseDefault, WindowConstant.UseDefault, WindowConstant.UseDefault, WindowConstant.UseDefault, IntPtr.Zero, false)
         {
         }
 
-        public NativeWindow(WindowBase window, string name, int x, int y, int width, int height, IntPtr parentHandle, bool isChild)
+        public NativeWindow(WindowBase window, string? name, int x, int y, int width, int height, IntPtr parentHandle, bool isChild)
         {
             this.window = window;
 
@@ -63,7 +63,7 @@ namespace JeremyAnsel.DirectX.Window
             get { return this.handle; }
         }
 
-        public string Title
+        public string? Title
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get

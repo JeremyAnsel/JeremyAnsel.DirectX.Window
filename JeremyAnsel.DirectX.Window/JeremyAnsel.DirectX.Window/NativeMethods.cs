@@ -21,7 +21,7 @@ namespace JeremyAnsel.DirectX.Window
         public static extern IntPtr CreateWindowEx(
             int styleEx,
             IntPtr classAtom,
-            [MarshalAs(UnmanagedType.LPWStr)] string windowName,
+            [MarshalAs(UnmanagedType.LPWStr)] string? windowName,
             WindowStyles style,
             int x,
             int y,
@@ -68,7 +68,7 @@ namespace JeremyAnsel.DirectX.Window
 
         [SuppressMessage("Microsoft.Usage", "CA2205:UseManagedEquivalentsOfWin32Api", Justification = "Reviewed")]
         [DllImport("user32.dll", EntryPoint = "MessageBoxW", CharSet = CharSet.Unicode)]
-        public static extern MessageBoxResult MessageBox(IntPtr handle, string text, string caption, uint type);
+        public static extern MessageBoxResult MessageBox(IntPtr handle, string? text, string? caption, uint type);
 
         [DllImport("user32.dll", EntryPoint = "PeekMessageW")]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -116,7 +116,7 @@ namespace JeremyAnsel.DirectX.Window
 
         [DllImport("user32.dll", EntryPoint = "SetWindowTextW")]
         [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool SetWindowText(IntPtr handle, [MarshalAs(UnmanagedType.LPWStr)] String text);
+        public static extern bool SetWindowText(IntPtr handle, [MarshalAs(UnmanagedType.LPWStr)] string? text);
 
         [DllImport("user32.dll", EntryPoint = "ShowWindow")]
         [return: MarshalAs(UnmanagedType.Bool)]

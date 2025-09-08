@@ -30,7 +30,7 @@ namespace JeremyAnsel.DirectX.Window
         private readonly IntPtr brushBackground;
 
         [MarshalAs(UnmanagedType.LPWStr)]
-        private readonly string menuName;
+        private readonly string? menuName;
 
         [MarshalAs(UnmanagedType.LPWStr)]
         private readonly string className;
@@ -45,7 +45,7 @@ namespace JeremyAnsel.DirectX.Window
             IntPtr icon,
             IntPtr cursor,
             IntPtr brushBackground,
-            string menuName,
+            string? menuName,
             string className,
             IntPtr iconSmall)
         {
@@ -103,7 +103,7 @@ namespace JeremyAnsel.DirectX.Window
             get { return this.brushBackground; }
         }
 
-        public string MenuName
+        public string? MenuName
         {
             get { return this.menuName; }
         }
@@ -145,9 +145,9 @@ namespace JeremyAnsel.DirectX.Window
         /// </summary>
         /// <param name="obj">The object to compare with the current object.</param>
         /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (!(obj is ClassInfoEx))
+            if (obj is not ClassInfoEx)
             {
                 return false;
             }

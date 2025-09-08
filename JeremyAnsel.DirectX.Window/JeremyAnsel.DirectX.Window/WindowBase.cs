@@ -12,7 +12,7 @@ namespace JeremyAnsel.DirectX.Window
 
     public abstract class WindowBase : INotifyPropertyChanged
     {
-        private NativeWindow window;
+        private NativeWindow? window;
 
         private int width;
 
@@ -41,16 +41,20 @@ namespace JeremyAnsel.DirectX.Window
 
         public IntPtr Handle
         {
-            get { return this.window.Handle; }
+            get { return this.window is null ? IntPtr.Zero : this.window.Handle; }
         }
 
-        public string Title
+        public string? Title
         {
-            get { return this.window.Title; }
+            get { return this.window?.Title; }
 
             set
             {
-                this.window.Title = value;
+                if (this.window is not null)
+                {
+                    this.window.Title = value;
+                }
+
                 this.NotifyPropertyChanged();
             }
         }
@@ -123,9 +127,9 @@ namespace JeremyAnsel.DirectX.Window
             }
         }
 
-        public WindowPerformanceTime PerformanceTime
+        public WindowPerformanceTime? PerformanceTime
         {
-            get { return this.window.PerformanceTime; }
+            get { return this.window?.PerformanceTime; }
         }
 
         public bool UpdateWhenInactive
@@ -164,10 +168,10 @@ namespace JeremyAnsel.DirectX.Window
 
         public bool IsChild { get; private set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Reviewed")]
-        protected void NotifyPropertyChanged([CallerMemberName] string name = null)
+        protected void NotifyPropertyChanged([CallerMemberName] string? name = null)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
@@ -196,12 +200,12 @@ namespace JeremyAnsel.DirectX.Window
 
         public void Destroy()
         {
-            this.window.Destroy();
+            this.window?.Destroy();
         }
 
         public void Exit()
         {
-            this.window.Exit();
+            this.window?.Exit();
         }
 
         [SuppressMessage("Design", "CA1031:Ne pas intercepter les types d'exception générale", Justification = "Reviewed.")]
@@ -210,6 +214,11 @@ namespace JeremyAnsel.DirectX.Window
             if (this.window == null)
             {
                 this.BuildWindow();
+            }
+
+            if (this.window == null)
+            {
+                return;
             }
 
             try
@@ -221,7 +230,7 @@ namespace JeremyAnsel.DirectX.Window
             {
                 try
                 {
-                    string title = this.window.Title;
+                    string? title = this.window.Title;
                     this.window.Destroy();
                     MessageBox.Show(ex.ToString(), title, MessageBoxButton.Ok, MessageBoxIcon.Error);
                 }

@@ -19,7 +19,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
         }
 
-        public RenderTargetDeviceResources(uint width, uint height, D3D11FeatureLevel featureLevel, DeviceResourcesOptions options)
+        public RenderTargetDeviceResources(uint width, uint height, D3D11FeatureLevel featureLevel, DeviceResourcesOptions? options)
             : base(featureLevel, options)
         {
             if (width < 0)
@@ -42,8 +42,13 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
         }
 
-        protected override D3D11Texture2D OnCreateBackBuffer()
+        protected override D3D11Texture2D? OnCreateBackBuffer()
         {
+            if (this.D3DDevice is null)
+            {
+                return null;
+            }
+
             D3D11Texture2DDesc backBufferDesc = new D3D11Texture2DDesc(
                 DxgiFormat.B8G8R8A8UNorm,
                 this.width,
@@ -67,7 +72,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected override void OnPresent()
         {
-            this.D3DDevice.ThrowDeviceRemovedReason();
+            this.D3DDevice?.ThrowDeviceRemovedReason();
         }
     }
 }

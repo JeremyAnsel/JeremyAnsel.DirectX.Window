@@ -13,23 +13,23 @@ namespace JeremyAnsel.DirectX.GameWindow
 
     public sealed class FpsTextRenderer : IGameComponent
     {
-        private DeviceResources deviceResources;
+        private DeviceResources? deviceResources;
 
         private readonly WindowPerformanceTime performanceTime;
 
-        private D2D1DrawingStateBlock stateBlock;
+        private D2D1DrawingStateBlock? stateBlock;
 
-        private DWriteTextFormat textFormat;
+        private DWriteTextFormat? textFormat;
 
-        private D2D1SolidColorBrush whiteBrush;
+        private D2D1SolidColorBrush? whiteBrush;
 
-        private DWriteTextLayout textLayout;
+        private DWriteTextLayout? textLayout;
 
         private readonly StringBuilder text;
 
         private bool isInitialized;
 
-        public FpsTextRenderer(WindowPerformanceTime performanceTime)
+        public FpsTextRenderer(WindowPerformanceTime? performanceTime)
         {
             this.performanceTime = performanceTime ?? throw new ArgumentNullException(nameof(performanceTime));
 
@@ -48,13 +48,13 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public bool ShowPerformanceTime { get; set; }
 
-        public void CreateDeviceDependentResources(DeviceResources resources)
+        public void CreateDeviceDependentResources(DeviceResources? resources)
         {
             this.deviceResources = resources ?? throw new ArgumentNullException(nameof(resources));
 
-            this.stateBlock = this.deviceResources.D2DFactory.CreateDrawingStateBlock();
+            this.stateBlock = this.deviceResources.D2DFactory?.CreateDrawingStateBlock();
 
-            this.textFormat = this.deviceResources.DWriteFactory.CreateTextFormat("Segoe UI", null, DWriteFontWeight.Light, DWriteFontStyle.Normal, DWriteFontStretch.Normal, 20.0f, string.Empty);
+            this.textFormat = this.deviceResources.DWriteFactory?.CreateTextFormat("Segoe UI", null, DWriteFontWeight.Light, DWriteFontStyle.Normal, DWriteFontStretch.Normal, 20.0f, string.Empty);
         }
 
         public void ReleaseDeviceDependentResources()
@@ -65,15 +65,21 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void CreateWindowSizeDependentResources()
         {
-            this.whiteBrush = this.deviceResources.D2DRenderTarget.CreateSolidColorBrush(new D2D1ColorF(D2D1KnownColor.White));
+            if (this.deviceResources is null)
+            {
+                return;
+            }
+
+            this.whiteBrush = this.deviceResources.D2DRenderTarget?.CreateSolidColorBrush(new D2D1ColorF(D2D1KnownColor.White));
         }
 
         public void ReleaseWindowSizeDependentResources()
         {
+            DWriteUtils.DisposeAndNull(ref this.textLayout);
             D2D1Utils.DisposeAndNull(ref this.whiteBrush);
         }
 
-        public void Update(ITimer timer)
+        public void Update(ITimer? timer)
         {
             if (!this.IsEnabled)
             {
@@ -121,7 +127,8 @@ namespace JeremyAnsel.DirectX.GameWindow
             text.Append(" FPS");
 
             DWriteUtils.DisposeAndNull(ref this.textLayout);
-            this.textLayout = this.deviceResources.DWriteFactory.CreateTextLayout(
+
+            this.textLayout = this.deviceResources?.DWriteFactory?.CreateTextLayout(
                 text.ToString(),
                 this.textFormat,
                 this.deviceResources.ConvertPixelsToDipsX(600),
@@ -137,12 +144,22 @@ namespace JeremyAnsel.DirectX.GameWindow
                 return;
             }
 
+            if (this.deviceResources is null)
+            {
+                return;
+            }
+
             var context = this.deviceResources.D2DRenderTarget;
+
+            if (context is null)
+            {
+                return;
+            }
 
             context.SaveDrawingState(this.stateBlock);
             context.BeginDraw();
 
-            this.deviceResources.D2DRenderTarget.DrawTextLayout(new D2D1Point2F(), this.textLayout, this.whiteBrush);
+            context.DrawTextLayout(new D2D1Point2F(), this.textLayout, this.whiteBrush);
 
             context.EndDrawIgnoringRecreateTargetError();
             context.RestoreDrawingState(this.stateBlock);

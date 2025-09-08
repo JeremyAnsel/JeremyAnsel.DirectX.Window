@@ -18,12 +18,12 @@ namespace JeremyAnsel.DirectX.Window.Wpf
 
         private readonly int height;
 
-        public WindowHost(WindowBase window)
+        public WindowHost(WindowBase? window)
             : this(window, 0, 0)
         {
         }
 
-        public WindowHost(WindowBase window, double width, double height)
+        public WindowHost(WindowBase? window, double width, double height)
         {
             this.Window = window ?? throw new ArgumentNullException(nameof(window));
 
@@ -41,11 +41,11 @@ namespace JeremyAnsel.DirectX.Window.Wpf
             this.height = (int)height;
         }
 
-        public WindowBase Window { get; private set; }
+        public WindowBase? Window { get; private set; }
 
         protected override HandleRef BuildWindowCore(HandleRef hwndParent)
         {
-            this.Window.BuildWindow(0, 0, this.width, this.height, hwndParent.Handle, true);
+            this.Window!.BuildWindow(0, 0, this.width, this.height, hwndParent.Handle, true);
 
             Task.Factory.StartNew(() => this.Window.Run(), CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Current);
 
@@ -54,13 +54,13 @@ namespace JeremyAnsel.DirectX.Window.Wpf
 
         protected override void DestroyWindowCore(HandleRef hwnd)
         {
-            this.Window.Destroy();
+            this.Window?.Destroy();
             this.Window = null;
         }
 
         protected override bool TabIntoCore(TraversalRequest request)
         {
-            this.Window.Focus();
+            this.Window!.Focus();
             return true;
         }
     }

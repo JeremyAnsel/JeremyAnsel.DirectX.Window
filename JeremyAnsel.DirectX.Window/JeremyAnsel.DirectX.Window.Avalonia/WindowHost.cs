@@ -12,12 +12,12 @@ namespace JeremyAnsel.DirectX.Window.Avalonia
 
     public sealed class WindowHost : global::Avalonia.Controls.NativeControlHost
     {
-        public WindowHost(WindowBase window)
+        public WindowHost(WindowBase? window)
         {
             this.Window = window ?? throw new ArgumentNullException(nameof(window));
         }
 
-        public WindowBase Window { get; private set; }
+        public WindowBase? Window { get; private set; }
 
         protected override IPlatformHandle CreateNativeControlCore(IPlatformHandle hwndParent)
         {

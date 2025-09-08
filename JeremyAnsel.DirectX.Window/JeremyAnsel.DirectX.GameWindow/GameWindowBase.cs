@@ -30,9 +30,9 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected StepTimer Timer { get; private set; }
 
-        protected SwapChainDeviceResources DeviceResources { get; private set; }
+        protected SwapChainDeviceResources? DeviceResources { get; private set; }
 
-        protected FpsTextRenderer FpsTextRenderer { get; private set; }
+        protected FpsTextRenderer? FpsTextRenderer { get; private set; }
 
         protected override string DefaultTitle
         {
@@ -53,11 +53,14 @@ namespace JeremyAnsel.DirectX.GameWindow
                     sb.Append(", ");
                     sb.Append(this.DeviceResources.D3DFeatureLevel);
 
-                    using (var device = new DxgiDevice2(this.DeviceResources.D3DDevice.Handle))
-                    using (var adapter = device.GetAdapter())
+                    if (this.DeviceResources.D3DDevice is not null)
                     {
-                        sb.Append(", ");
-                        sb.Append(adapter.Description.AdapterDescription);
+                        using (var device = new DxgiDevice2(this.DeviceResources.D3DDevice.Handle))
+                        using (var adapter = device.GetAdapter())
+                        {
+                            sb.Append(", ");
+                            sb.Append(adapter.Description.AdapterDescription);
+                        }
                     }
                 }
 
@@ -65,7 +68,7 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
         }
 
-        protected T CheckMinimalFeatureLevel<T>(T component) where T : IGameComponent
+        protected T CheckMinimalFeatureLevel<T>(T? component) where T : IGameComponent
         {
             if (component == null)
             {
@@ -97,7 +100,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         protected override void OnWindowSizeChanged()
         {
             this.ReleaseWindowSizeDependentResources();
-            this.DeviceResources.OnSizeChanged();
+            this.DeviceResources?.OnSizeChanged();
             this.CreateWindowSizeDependentResources();
         }
 
@@ -115,34 +118,39 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected virtual void CreateDeviceDependentResources()
         {
-            this.FpsTextRenderer.CreateDeviceDependentResources(this.DeviceResources);
+            this.FpsTextRenderer?.CreateDeviceDependentResources(this.DeviceResources);
         }
 
         protected virtual void ReleaseDeviceDependentResources()
         {
-            this.FpsTextRenderer.ReleaseDeviceDependentResources();
+            this.FpsTextRenderer?.ReleaseDeviceDependentResources();
         }
 
         protected virtual void CreateWindowSizeDependentResources()
         {
-            this.FpsTextRenderer.CreateWindowSizeDependentResources();
+            this.FpsTextRenderer?.CreateWindowSizeDependentResources();
         }
 
         protected virtual void ReleaseWindowSizeDependentResources()
         {
-            this.FpsTextRenderer.ReleaseWindowSizeDependentResources();
+            this.FpsTextRenderer?.ReleaseWindowSizeDependentResources();
         }
 
         protected override void Update()
         {
             this.Timer.Tick();
 
-            this.FpsTextRenderer.Update(this.Timer);
+            this.FpsTextRenderer?.Update(this.Timer);
         }
 
         protected override void Present()
         {
-            this.FpsTextRenderer.Render();
+            if (this.DeviceResources is null)
+            {
+                return;
+            }
+
+            this.FpsTextRenderer?.Render();
 
             this.DeviceResources.Present();
 
@@ -155,7 +163,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             if (this.doFullscreenSwitch)
             {
-                if (!this.IsChild && this.DeviceResources.D3DDriverType == D3D11DriverType.Hardware)
+                if (!this.IsChild && this.DeviceResources.D3DDriverType == D3D11DriverType.Hardware && this.DeviceResources.SwapChain is not null)
                 {
                     bool fullscreen = this.DeviceResources.SwapChain.GetFullscreenState();
                     this.DeviceResources.SwapChain.SetFullscreenState(!fullscreen);
@@ -189,7 +197,11 @@ namespace JeremyAnsel.DirectX.GameWindow
                 switch (key)
                 {
                     case VirtualKey.F12:
-                        this.FpsTextRenderer.IsEnabled = !this.FpsTextRenderer.IsEnabled;
+                        if (this.FpsTextRenderer is not null)
+                        {
+                            this.FpsTextRenderer.IsEnabled = !this.FpsTextRenderer.IsEnabled;
+                        }
+
                         break;
 
                     case VirtualKey.F11:

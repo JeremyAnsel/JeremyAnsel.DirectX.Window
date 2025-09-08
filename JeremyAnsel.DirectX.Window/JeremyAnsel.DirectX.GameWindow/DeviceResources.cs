@@ -18,29 +18,29 @@ namespace JeremyAnsel.DirectX.GameWindow
     {
         private readonly DeviceResourcesOptions options;
 
-        private D3D11Device d3dDevice;
+        private D3D11Device? d3dDevice;
 
-        private D3D11DeviceContext d3dContext;
+        private D3D11DeviceContext? d3dContext;
 
-        private D3D11Texture2D backBuffer;
+        private D3D11Texture2D? backBuffer;
 
-        private D3D11Texture2D offscreenBuffer;
+        private D3D11Texture2D? offscreenBuffer;
 
         private uint backBufferWidth;
 
         private uint backBufferHeight;
 
-        private D3D11RenderTargetView d3dRenderTargetView;
+        private D3D11RenderTargetView? d3dRenderTargetView;
 
-        private D3D11DepthStencilView d3dDepthStencilView;
+        private D3D11DepthStencilView? d3dDepthStencilView;
 
         private D3D11Viewport screenViewport;
 
-        private D2D1Factory d2dFactory;
+        private D2D1Factory? d2dFactory;
 
-        private D2D1RenderTarget d2dRenderTarget;
+        private D2D1RenderTarget? d2dRenderTarget;
 
-        private DWriteFactory dwriteFactory;
+        private DWriteFactory? dwriteFactory;
 
         private D3D11DriverType d3dDriverType;
 
@@ -48,13 +48,13 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private DxgiSampleDesc d3dSampleDesc;
 
-        private IDeviceNotify deviceNotify;
+        private IDeviceNotify? deviceNotify;
 
         private float dpiX;
 
         private float dpiY;
 
-        protected DeviceResources(D3D11FeatureLevel featureLevel, DeviceResourcesOptions options)
+        protected DeviceResources(D3D11FeatureLevel featureLevel, DeviceResourcesOptions? options)
         {
             this.d3dFeatureLevel = featureLevel;
             this.options = options ?? new DeviceResourcesOptions();
@@ -63,27 +63,27 @@ namespace JeremyAnsel.DirectX.GameWindow
             this.CreateDeviceResources();
         }
 
-        public D3D11Device D3DDevice { get { return this.d3dDevice; } }
+        public D3D11Device? D3DDevice { get { return this.d3dDevice; } }
 
-        public D3D11DeviceContext D3DContext { get { return this.d3dContext; } }
+        public D3D11DeviceContext? D3DContext { get { return this.d3dContext; } }
 
-        public D3D11Texture2D BackBuffer { get { return this.backBuffer; } }
+        public D3D11Texture2D? BackBuffer { get { return this.backBuffer; } }
 
         public uint BackBufferWidth { get { return this.backBufferWidth; } }
 
         public uint BackBufferHeight { get { return this.backBufferHeight; } }
 
-        public D3D11RenderTargetView D3DRenderTargetView { get { return this.d3dRenderTargetView; } }
+        public D3D11RenderTargetView? D3DRenderTargetView { get { return this.d3dRenderTargetView; } }
 
-        public D3D11DepthStencilView D3DDepthStencilView { get { return this.d3dDepthStencilView; } }
+        public D3D11DepthStencilView? D3DDepthStencilView { get { return this.d3dDepthStencilView; } }
 
         public D3D11Viewport ScreenViewport { get { return this.screenViewport; } }
 
-        public D2D1Factory D2DFactory { get { return this.d2dFactory; } }
+        public D2D1Factory? D2DFactory { get { return this.d2dFactory; } }
 
-        public D2D1RenderTarget D2DRenderTarget { get { return this.d2dRenderTarget; } }
+        public D2D1RenderTarget? D2DRenderTarget { get { return this.d2dRenderTarget; } }
 
-        public DWriteFactory DWriteFactory { get { return this.dwriteFactory; } }
+        public DWriteFactory? DWriteFactory { get { return this.dwriteFactory; } }
 
         public D3D11DriverType D3DDriverType { get { return this.d3dDriverType; } }
 
@@ -95,10 +95,15 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public float DpiY { get { return this.dpiY; } }
 
-        public DxgiAdapterDesc2 AdapterDescription
+        public DxgiAdapterDesc2? AdapterDescription
         {
             get
             {
+                if (this.d3dDevice is null)
+                {
+                    return null;
+                }
+
                 using (var dxgiDevice = new DxgiDevice2(this.d3dDevice.Handle))
                 using (var dxgiAdapter = dxgiDevice.GetAdapter())
                 {
@@ -127,13 +132,18 @@ namespace JeremyAnsel.DirectX.GameWindow
             return (float)Math.Floor(dips * this.dpiY / 96.0f + 0.5f);
         }
 
-        public void RegisterDeviceNotify(IDeviceNotify notify)
+        public void RegisterDeviceNotify(IDeviceNotify? notify)
         {
             this.deviceNotify = notify;
         }
 
         public void ValidateDevice()
         {
+            if (this.d3dDevice is null)
+            {
+                return;
+            }
+
             DxgiAdapterDesc2 previousDesc;
 
             using (var dxgiDevice = new DxgiDevice2(this.d3dDevice.Handle))
@@ -160,6 +170,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void Release()
         {
+            this.ReleaseDeviceIndependentResources();
             this.ReleaseDeviceResources();
             this.ReleaseWindowSizeDependentResources();
             this.OnReleaseBackBuffer();
@@ -197,7 +208,7 @@ namespace JeremyAnsel.DirectX.GameWindow
             {
                 if (this.d3dSampleDesc.Count > 1)
                 {
-                    this.d3dContext.ResolveSubresource(this.backBuffer, 0, this.offscreenBuffer, 0, DxgiFormat.B8G8R8A8UNorm);
+                    this.d3dContext?.ResolveSubresource(this.backBuffer, 0, this.offscreenBuffer, 0, DxgiFormat.B8G8R8A8UNorm);
                 }
 
                 this.OnPresent();
@@ -216,6 +227,11 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void SaveBackBuffer(string fileName)
         {
+            if (this.d3dDevice is null || this.d3dContext is null || this.backBuffer is null)
+            {
+                return;
+            }
+
             ImageFormat format;
 
             switch (System.IO.Path.GetExtension(fileName).ToUpperInvariant())
@@ -275,8 +291,13 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
         }
 
-        public byte[] GetBackBufferContent()
+        public byte[]? GetBackBufferContent()
         {
+            if (this.d3dDevice is null || this.d3dContext is null || this.backBuffer is null)
+            {
+                return null;
+            }
+
             var textureDescription = this.backBuffer.Description;
             textureDescription.BindOptions = D3D11BindOptions.None;
             textureDescription.CpuAccessOptions = D3D11CpuAccessOptions.Read | D3D11CpuAccessOptions.Write;
@@ -308,13 +329,18 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected abstract void OnReleaseBackBuffer();
 
-        protected abstract D3D11Texture2D OnCreateBackBuffer();
+        protected abstract D3D11Texture2D? OnCreateBackBuffer();
 
         protected abstract void OnPresent();
 
         private DxgiSampleDesc CheckMultisamplingSupport()
         {
             DxgiSampleDesc sampleDesc = new DxgiSampleDesc(1, 0);
+
+            if (this.d3dDevice is null)
+            {
+                return sampleDesc;
+            }
 
             if (this.d3dDevice.CheckFormatSupport(DxgiFormat.B8G8R8A8UNorm, out D3D11FormatSupport formatSupport))
             {
@@ -353,6 +379,12 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
 
             this.dwriteFactory = DWriteFactory.Create(DWriteFactoryType.Shared);
+        }
+
+        private void ReleaseDeviceIndependentResources()
+        {
+            D2D1Utils.DisposeAndNull(ref this.d2dFactory);
+            DWriteUtils.DisposeAndNull(ref this.dwriteFactory);
         }
 
         private void CreateDeviceResources()
@@ -467,7 +499,12 @@ namespace JeremyAnsel.DirectX.GameWindow
         private void CreateWindowSizeDependentResources()
         {
             //this.ReleaseWindowSizeDependentResources();
-            this.d3dContext.Flush();
+            this.d3dContext?.Flush();
+
+            if (this.d3dDevice is null || this.d3dContext is null)
+            {
+                return;
+            }
 
             var createdBackBuffer = this.OnCreateBackBuffer();
 
@@ -497,7 +534,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                     this.d3dSampleDesc.Quality,
                     D3D11ResourceMiscOptions.None);
 
-                this.offscreenBuffer = this.D3DDevice.CreateTexture2D(desc);
+                this.offscreenBuffer = this.d3dDevice.CreateTexture2D(desc);
             }
 
             if (this.d3dSampleDesc.Count > 1)
@@ -546,23 +583,26 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             this.d3dContext.RasterizerStageSetViewports(new[] { this.screenViewport });
 
-            using (var surface = new DxgiSurface2(this.d3dSampleDesc.Count > 1 ? this.offscreenBuffer.Handle : this.backBuffer.Handle))
+            if (this.d2dFactory is not null)
             {
-                this.d2dFactory.GetDesktopDpi(out this.dpiX, out this.dpiY);
+                using (var surface = new DxgiSurface2(this.d3dSampleDesc.Count > 1 ? this.offscreenBuffer!.Handle : this.backBuffer.Handle))
+                {
+                    this.d2dFactory.GetDesktopDpi(out this.dpiX, out this.dpiY);
 
-                var properties = new D2D1RenderTargetProperties(
-                    D2D1RenderTargetType.Default,
-                    new D2D1PixelFormat(DxgiFormat.B8G8R8A8UNorm, D2D1AlphaMode.Premultiplied),
-                    dpiX,
-                    dpiY,
-                    D2D1RenderTargetUsages.None,
-                    D2D1FeatureLevel.Default);
+                    var properties = new D2D1RenderTargetProperties(
+                        D2D1RenderTargetType.Default,
+                        new D2D1PixelFormat(DxgiFormat.B8G8R8A8UNorm, D2D1AlphaMode.Premultiplied),
+                        dpiX,
+                        dpiY,
+                        D2D1RenderTargetUsages.None,
+                        D2D1FeatureLevel.Default);
 
-                this.d2dRenderTarget = this.d2dFactory.CreateDxgiSurfaceRenderTarget(surface, properties);
+                    this.d2dRenderTarget = this.d2dFactory.CreateDxgiSurfaceRenderTarget(surface, properties);
+                }
+
+                this.d2dRenderTarget.AntialiasMode = D2D1AntialiasMode.PerPrimitive;
+                this.d2dRenderTarget.TextAntialiasMode = D2D1TextAntialiasMode.Grayscale;
             }
-
-            this.d2dRenderTarget.AntialiasMode = D2D1AntialiasMode.PerPrimitive;
-            this.d2dRenderTarget.TextAntialiasMode = D2D1TextAntialiasMode.Grayscale;
 
             D3D11RasterizerDesc rasterizerStateDesc = new D3D11RasterizerDesc(D3D11FillMode.Solid, D3D11CullMode.Back, false, 0, 0.0f, 0.0f, true, false, true, false);
 
@@ -576,8 +616,8 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             if (this.d3dContext)
             {
-                this.d3dContext.OutputMergerSetRenderTargets(new D3D11RenderTargetView[] { null }, null);
-                this.d3dContext.ClearState();
+                this.d3dContext!.OutputMergerSetRenderTargets(new D3D11RenderTargetView?[] { null }, null);
+                this.d3dContext!.ClearState();
             }
 
             D3D11Utils.DisposeAndNull(ref this.backBuffer);

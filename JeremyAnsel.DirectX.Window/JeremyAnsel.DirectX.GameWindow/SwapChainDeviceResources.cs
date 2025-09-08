@@ -11,47 +11,47 @@ namespace JeremyAnsel.DirectX.GameWindow
 
     public sealed class SwapChainDeviceResources : DeviceResources
     {
-        private DxgiSwapChain2 swapChain;
+        private DxgiSwapChain2? swapChain;
 
         private readonly WindowBase window;
 
         private bool isFullscreen;
 
-        public SwapChainDeviceResources(WindowBase window)
+        public SwapChainDeviceResources(WindowBase? window)
             : this(window, D3D11FeatureLevel.FeatureLevel91, null)
         {
         }
 
-        public SwapChainDeviceResources(WindowBase window, D3D11FeatureLevel featureLevel, DeviceResourcesOptions options)
+        public SwapChainDeviceResources(WindowBase? window, D3D11FeatureLevel featureLevel, DeviceResourcesOptions? options)
             : base(featureLevel, options)
         {
             this.window = window ?? throw new ArgumentNullException(nameof(window));
         }
 
-        public DxgiSwapChain2 SwapChain { get { return this.swapChain; } }
+        public DxgiSwapChain2? SwapChain { get { return this.swapChain; } }
 
         protected override void OnReleaseBackBuffer()
         {
             if (!this.window.IsChild)
             {
-                this.isFullscreen = this.swapChain ? this.swapChain.GetFullscreenState() : false;
+                this.isFullscreen = this.swapChain ? this.swapChain!.GetFullscreenState() : false;
 
                 if (this.isFullscreen)
                 {
-                    this.swapChain.SetFullscreenState(false);
+                    this.swapChain!.SetFullscreenState(false);
                 }
             }
 
             DxgiUtils.DisposeAndNull(ref this.swapChain);
         }
 
-        protected override D3D11Texture2D OnCreateBackBuffer()
+        protected override D3D11Texture2D? OnCreateBackBuffer()
         {
             if (this.swapChain)
             {
                 try
                 {
-                    this.swapChain.ResizeBuffers(3, 0, 0, DxgiFormat.Unknown, DxgiSwapChainOptions.None);
+                    this.swapChain!.ResizeBuffers(3, 0, 0, DxgiFormat.Unknown, DxgiSwapChainOptions.None);
                 }
                 catch (Exception ex)
                 {
@@ -75,7 +75,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                     Format = DxgiFormat.B8G8R8A8UNorm,
                     Stereo = false,
                     SampleDescription = new DxgiSampleDesc(1, 0),
-                    BufferUsage = DxgiUsages.RenderTargetOutput |  DxgiUsages.ShaderInput,
+                    BufferUsage = DxgiUsages.RenderTargetOutput | DxgiUsages.ShaderInput,
                     BufferCount = 3,
                     Scaling = DxgiScaling.None,
                     SwapEffect = DxgiSwapEffect.FlipSequential,
@@ -100,6 +100,11 @@ namespace JeremyAnsel.DirectX.GameWindow
                         ScanlineOrdering = DxgiModeScanlineOrder.Unspecified
                     };
                 }*/
+
+                if (this.D3DDevice is null)
+                {
+                    return null;
+                }
 
                 using (var dxgiDevice = new DxgiDevice2(this.D3DDevice.Handle))
                 using (var dxgiAdapter = dxgiDevice.GetAdapter())
@@ -150,7 +155,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected override void OnPresent()
         {
-            this.swapChain.Present(1, DxgiPresentOptions.None);
+            this.swapChain?.Present(1, DxgiPresentOptions.None);
         }
     }
 }

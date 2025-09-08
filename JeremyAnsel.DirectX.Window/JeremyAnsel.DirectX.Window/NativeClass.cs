@@ -14,7 +14,7 @@ namespace JeremyAnsel.DirectX.Window
         private IntPtr atom;
         private readonly WindowProcedure windowProcedure;
 
-        private System.Drawing.Icon icon;
+        private System.Drawing.Icon? icon;
 
         private static readonly NativeClass WindowClass = new NativeClass();
 
@@ -38,7 +38,7 @@ namespace JeremyAnsel.DirectX.Window
                 NativeMethods.LoadCursor(IntPtr.Zero, new IntPtr(32512)),
                 IntPtr.Zero,
                 null,
-                typeof(NativeClass).FullName,
+                typeof(NativeClass).FullName!,
                 IntPtr.Zero);
 
             ushort atom = NativeMethods.RegisterClassEx(ref windowClass);
