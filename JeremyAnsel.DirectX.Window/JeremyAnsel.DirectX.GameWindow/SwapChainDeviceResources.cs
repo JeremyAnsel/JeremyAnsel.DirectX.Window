@@ -75,13 +75,18 @@ namespace JeremyAnsel.DirectX.GameWindow
                     Format = DxgiFormat.B8G8R8A8UNorm,
                     Stereo = false,
                     SampleDescription = new DxgiSampleDesc(1, 0),
-                    BufferUsage = DxgiUsages.RenderTargetOutput |  DxgiUsages.ShaderInput | DxgiUsages.UnorderedAcess,
+                    BufferUsage = DxgiUsages.RenderTargetOutput |  DxgiUsages.ShaderInput,
                     BufferCount = 3,
                     Scaling = DxgiScaling.None,
                     SwapEffect = DxgiSwapEffect.FlipSequential,
                     AlphaMode = DxgiAlphaMode.Ignore,
                     Options = DxgiSwapChainOptions.None
                 };
+
+                if (this.D3DFeatureLevel >= D3D11FeatureLevel.FeatureLevel110)
+                {
+                    swapChainDesc.BufferUsage |= DxgiUsages.UnorderedAcess;
+                }
 
                 //DxgiSwapChainFullscreenDesc? swapChainFullscreenDesc = null;
 
