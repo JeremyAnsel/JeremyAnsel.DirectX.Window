@@ -76,7 +76,7 @@ namespace JeremyAnsel.DirectX.Window
 
         private void LoadIcon()
         {
-            this.icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
+            this.icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly()!.Location);
 
             //string iconPath = System.IO.Path.ChangeExtension(AppDomain.CurrentDomain.FriendlyName, ".ico");
 
