@@ -5,14 +5,13 @@
 namespace JeremyAnsel.DirectX.GameWindow
 {
     using System;
-    using System.Drawing;
-    using System.Drawing.Imaging;
     using System.Linq;
     using System.Runtime.InteropServices;
     using JeremyAnsel.DirectX.D2D1;
     using JeremyAnsel.DirectX.D3D11;
     using JeremyAnsel.DirectX.DWrite;
     using JeremyAnsel.DirectX.Dxgi;
+    using JeremyAnsel.DirectX.WinCodec;
 
     public abstract class DeviceResources
     {
@@ -227,67 +226,57 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void SaveBackBuffer(string fileName)
         {
-            if (this.d3dDevice is null || this.d3dContext is null || this.backBuffer is null)
+            if (d3dDevice is null || d3dContext is null || backBuffer is null)
             {
                 return;
             }
 
-            ImageFormat format;
-
-            switch (System.IO.Path.GetExtension(fileName).ToUpperInvariant())
-            {
-                case ".BMP":
-                    format = ImageFormat.Bmp;
-                    break;
-
-                case ".PNG":
-                    format = ImageFormat.Png;
-                    break;
-
-                case ".JPG":
-                    format = ImageFormat.Jpeg;
-                    break;
-
-                default:
-                    throw new InvalidOperationException();
-            }
-
-            var textureDescription = this.backBuffer.Description;
+            var textureDescription = backBuffer.Description;
             textureDescription.BindOptions = D3D11BindOptions.None;
             textureDescription.CpuAccessOptions = D3D11CpuAccessOptions.Read | D3D11CpuAccessOptions.Write;
             textureDescription.Usage = D3D11Usage.Staging;
 
-            using (var texture = this.d3dDevice.CreateTexture2D(textureDescription))
+            using var texture = d3dDevice.CreateTexture2D(textureDescription);
+            d3dContext.CopyResource(texture, backBuffer);
+
+            WicPixelFormatGuid format = WicGuids.GUID_WICPixelFormat32bppBGRA;
+
+            var container = System.IO.Path.GetExtension(fileName).ToUpperInvariant() switch
             {
-                this.d3dContext.CopyResource(texture, this.backBuffer);
+                ".BMP" => WicGuids.GUID_ContainerFormatBmp,
+                ".PNG" => WicGuids.GUID_ContainerFormatPng,
+                ".JPG" or ".JPEG" => WicGuids.GUID_ContainerFormatJpeg,
+                _ => throw new InvalidOperationException(),
+            };
 
-                var map = this.d3dContext.Map(texture, 0, D3D11MapCpuPermission.Read, D3D11MapOptions.None);
+            using var factory = WicImagingFactory.Create();
+            using var encoder = factory.CreateEncoder(container);
+            using var stream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+            encoder.Initialize(stream, WicBitmapEncoderCacheOption.WICBitmapEncoderNoCache);
+            using var frame = encoder.CreateNewFrame();
+            frame.Initialize();
+            frame.SetSize(textureDescription.Width, textureDescription.Height);
+            frame.SetPixelFormat(ref format);
 
-                try
-                {
-                    using (var bitmap = new Bitmap((int)textureDescription.Width, (int)textureDescription.Height, (int)map.RowPitch, PixelFormat.Format32bppArgb, map.Data))
-                    {
-                        if (format == ImageFormat.Jpeg)
-                        {
-                            ImageCodecInfo encoder = ImageCodecInfo
-                                .GetImageEncoders()
-                                .First(c => c.FormatID == ImageFormat.Jpeg.Guid);
+            var map = d3dContext.Map(texture, 0, D3D11MapCpuPermission.Read, D3D11MapOptions.None);
 
-                            var encParams = new EncoderParameters(1);
-                            encParams.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
-
-                            bitmap.Save(fileName, encoder, encParams);
-                        }
-                        else
-                        {
-                            bitmap.Save(fileName, format);
-                        }
-                    }
-                }
-                finally
-                {
-                    this.d3dContext.Unmap(texture, 0);
-                }
+            try
+            {
+                using var bitmap = factory.CreateBitmapFromMemory(
+                    textureDescription.Width,
+                    textureDescription.Height,
+                    WicGuids.GUID_WICPixelFormat32bppBGRA,
+                    map.RowPitch,
+                    map.Data,
+                    (int)map.DepthPitch);
+                using var bitmap2 = WicImagingFactory.ConvertBitmapSource(format, bitmap)!;
+                frame.WriteSource(bitmap2, null);
+                frame.Commit();
+                encoder.Commit();
+            }
+            finally
+            {
+                d3dContext.Unmap(texture, 0);
             }
         }
 

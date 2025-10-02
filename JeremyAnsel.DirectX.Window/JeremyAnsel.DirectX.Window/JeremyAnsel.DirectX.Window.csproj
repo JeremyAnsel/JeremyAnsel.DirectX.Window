@@ -25,7 +25,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Using Remove="System.Drawing" />
     <Using Remove="System.Net.Http" />
   </ItemGroup>
 

@@ -44,15 +44,15 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="JeremyAnsel.DirectX.D2D1" Version="3.0.37" />
-    <PackageReference Include="JeremyAnsel.DirectX.D3D11" Version="3.0.37" />
-    <PackageReference Include="JeremyAnsel.DirectX.DWrite" Version="3.0.37" />
-    <PackageReference Include="JeremyAnsel.DirectX.Dxgi" Version="3.0.37" />
+    <PackageReference Include="JeremyAnsel.DirectX.D2D1" Version="3.0.47" />
+    <PackageReference Include="JeremyAnsel.DirectX.D3D11" Version="3.0.47" />
+    <PackageReference Include="JeremyAnsel.DirectX.DWrite" Version="3.0.47" />
+    <PackageReference Include="JeremyAnsel.DirectX.Dxgi" Version="3.0.47" />
+    <PackageReference Include="JeremyAnsel.DirectX.WinCodec" Version="3.0.47" />
     <PackageReference Condition="'$(CI)' == 'True'" Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.Drawing.Common" Version="8.0.15" />
   </ItemGroup>
 
   <ItemGroup>
