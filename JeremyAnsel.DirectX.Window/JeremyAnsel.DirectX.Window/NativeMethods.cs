@@ -35,12 +35,25 @@ namespace JeremyAnsel.DirectX.Window
         [DllImport("user32.dll", EntryPoint = "DefWindowProcW")]
         public static extern IntPtr DefWindowProc(IntPtr hWnd, WindowMessageType msg, IntPtr wParam, IntPtr lParam);
 
+        [DllImport("user32.dll", EntryPoint = "DestroyIcon")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool DestroyIcon(IntPtr handle);
+
         [DllImport("user32.dll", EntryPoint = "DestroyWindow")]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool DestroyWindow(IntPtr handle);
 
         [DllImport("user32.dll", EntryPoint = "DispatchMessageW")]
         public static extern IntPtr DispatchMessage([In] ref WindowMessage message);
+
+        [DllImport("shell32.dll", EntryPoint = "ExtractAssociatedIconW")]
+        private static extern IntPtr ExtractAssociatedIconW(IntPtr instance, [MarshalAs(UnmanagedType.LPWStr)] StringBuilder path, ref short index);
+
+        public static IntPtr ExtractAssociatedIcon(IntPtr instance, string path, short index)
+        {
+            StringBuilder sb = new(path, 260);
+            return ExtractAssociatedIconW(instance, sb, ref index);
+        }
 
         [DllImport("user32.dll", EntryPoint = "GetClientRect")]
         [return: MarshalAs(UnmanagedType.Bool)]

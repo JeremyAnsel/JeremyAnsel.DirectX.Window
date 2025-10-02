@@ -14,7 +14,7 @@ namespace JeremyAnsel.DirectX.Window
         private IntPtr atom;
         private readonly WindowProcedure windowProcedure;
 
-        private System.Drawing.Icon? icon;
+        private IntPtr icon;
 
         private static readonly NativeClass WindowClass = new NativeClass();
 
@@ -34,7 +34,7 @@ namespace JeremyAnsel.DirectX.Window
                 ClassStyles.HorizontalRedraw | ClassStyles.VerticalRedraw,
                 windowProcedurePtr,
                 IntPtr.Zero,
-                icon != null ? icon.Handle : NativeMethods.LoadIcon(IntPtr.Zero, new IntPtr(32512)),
+                icon != IntPtr.Zero ? icon : NativeMethods.LoadIcon(IntPtr.Zero, new IntPtr(32512)),
                 NativeMethods.LoadCursor(IntPtr.Zero, new IntPtr(32512)),
                 IntPtr.Zero,
                 null,
@@ -66,17 +66,17 @@ namespace JeremyAnsel.DirectX.Window
 
             if (isDisposing)
             {
-                if (this.icon != null)
+                if (this.icon != IntPtr.Zero)
                 {
-                    this.icon.Dispose();
-                    this.icon = null;
+                    NativeMethods.DestroyIcon(this.icon);
+                    this.icon = IntPtr.Zero;
                 }
             }
         }
 
         private void LoadIcon()
         {
-            this.icon = System.Drawing.Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly()!.Location);
+            this.icon = NativeMethods.ExtractAssociatedIcon(IntPtr.Zero, System.Reflection.Assembly.GetEntryAssembly()!.Location, 0);
 
             //string iconPath = System.IO.Path.ChangeExtension(AppDomain.CurrentDomain.FriendlyName, ".ico");
 

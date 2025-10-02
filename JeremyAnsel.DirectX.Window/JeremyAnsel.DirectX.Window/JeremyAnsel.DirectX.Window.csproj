@@ -25,6 +25,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Using Remove="System.Drawing" />
     <Using Remove="System.Net.Http" />
   </ItemGroup>
 
@@ -48,7 +49,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.Drawing.Common" Version="8.0.15" />
   </ItemGroup>
 
 </Project>
