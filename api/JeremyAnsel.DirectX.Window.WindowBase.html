@@ -747,7 +747,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void NotifyPropertyChanged(string? name = null)</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Microsoft.Design&quot;, &quot;CA1026:DefaultParametersShouldNotBeUsed&quot;, Justification = &quot;Reviewed&quot;)]
+protected void NotifyPropertyChanged(string? name = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -913,7 +914,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Run()</code></pre>
+    <pre><code class="lang-csharp hljs">[SuppressMessage(&quot;Design&quot;, &quot;CA1031:Ne pas intercepter les types d&#39;exception g&#233;n&#233;rale&quot;, Justification = &quot;Reviewed.&quot;)]
+public void Run()</code></pre>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
