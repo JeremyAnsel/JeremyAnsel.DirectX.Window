@@ -1,5 +1,5 @@
 // <copyright file="GameWindowBase.cs" company="Jérémy Ansel">
-// Copyright (c) 2015, 2019 Jérémy Ansel
+// Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
 namespace JeremyAnsel.DirectX.GameWindow

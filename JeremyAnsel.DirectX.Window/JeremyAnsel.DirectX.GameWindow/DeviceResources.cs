@@ -1,5 +1,5 @@
 ﻿// <copyright file="DeviceResources.cs" company="Jérémy Ansel">
-// Copyright (c) 2015, 2019 Jérémy Ansel
+// Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
 namespace JeremyAnsel.DirectX.GameWindow
@@ -10,6 +10,7 @@ namespace JeremyAnsel.DirectX.GameWindow
     using JeremyAnsel.DirectX.D2D1;
     using JeremyAnsel.DirectX.D3D11;
     using JeremyAnsel.DirectX.DWrite;
+    using JeremyAnsel.DirectX.DXCommon;
     using JeremyAnsel.DirectX.Dxgi;
     using JeremyAnsel.DirectX.WinCodec;
 
@@ -256,7 +257,7 @@ namespace JeremyAnsel.DirectX.GameWindow
             using var frame = encoder.CreateNewFrame();
             frame.Initialize();
             frame.SetSize(textureDescription.Width, textureDescription.Height);
-            frame.SetPixelFormat(ref format);
+            frame.SetPixelFormat(format);
 
             var map = d3dContext.Map(texture, 0, D3D11MapCpuPermission.Read, D3D11MapOptions.None);
 
@@ -372,8 +373,8 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private void ReleaseDeviceIndependentResources()
         {
-            D2D1Utils.DisposeAndNull(ref this.d2dFactory);
-            DWriteUtils.DisposeAndNull(ref this.dwriteFactory);
+            DXUtils.DisposeAndNull(ref this.d2dFactory);
+            DXUtils.DisposeAndNull(ref this.dwriteFactory);
         }
 
         private void CreateDeviceResources()
@@ -423,14 +424,13 @@ namespace JeremyAnsel.DirectX.GameWindow
             {
                 this.d3dDriverType = D3D11DriverType.Warp;
 
-                D3D11Device.CreateDevice(
-                    null,
+                D3D11DeviceAndContext device = D3D11DeviceAndContext.Create(
                     this.d3dDriverType,
                     createDeviceOptions,
-                    featureLevels,
-                    out this.d3dDevice,
-                    out this.d3dFeatureLevel,
-                    out this.d3dContext);
+                    featureLevels);
+                this.d3dDevice = device.Device;
+                this.d3dContext = device.Context;
+                this.d3dFeatureLevel = device.FeatureLevel;
             }
             else
             {
@@ -438,14 +438,13 @@ namespace JeremyAnsel.DirectX.GameWindow
                 {
                     this.d3dDriverType = D3D11DriverType.Hardware;
 
-                    D3D11Device.CreateDevice(
-                        null,
+                    D3D11DeviceAndContext device = D3D11DeviceAndContext.Create(
                         this.d3dDriverType,
                         createDeviceOptions,
-                        featureLevels,
-                        out this.d3dDevice,
-                        out this.d3dFeatureLevel,
-                        out this.d3dContext);
+                        featureLevels);
+                    this.d3dDevice = device.Device;
+                    this.d3dContext = device.Context;
+                    this.d3dFeatureLevel = device.FeatureLevel;
                 }
                 catch (Exception ex)
                 {
@@ -453,14 +452,13 @@ namespace JeremyAnsel.DirectX.GameWindow
                     {
                         this.d3dDriverType = D3D11DriverType.Warp;
 
-                        D3D11Device.CreateDevice(
-                            null,
+                        D3D11DeviceAndContext device = D3D11DeviceAndContext.Create(
                             this.d3dDriverType,
                             createDeviceOptions,
-                            featureLevels,
-                            out this.d3dDevice,
-                            out this.d3dFeatureLevel,
-                            out this.d3dContext);
+                            featureLevels);
+                        this.d3dDevice = device.Device;
+                        this.d3dContext = device.Context;
+                        this.d3dFeatureLevel = device.FeatureLevel;
                     }
                     else
                     {
@@ -481,8 +479,8 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private void ReleaseDeviceResources()
         {
-            D3D11Utils.DisposeAndNull(ref this.d3dContext);
-            D3D11Utils.DisposeAndNull(ref this.d3dDevice);
+            DXUtils.DisposeAndNull(ref this.d3dContext);
+            DXUtils.DisposeAndNull(ref this.d3dDevice);
         }
 
         private void CreateWindowSizeDependentResources()
@@ -603,17 +601,17 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private void ReleaseWindowSizeDependentResources()
         {
-            if (this.d3dContext)
+            if (this.d3dContext is not null)
             {
-                this.d3dContext!.OutputMergerSetRenderTargets(new D3D11RenderTargetView?[] { null }, null);
-                this.d3dContext!.ClearState();
+                this.d3dContext.OutputMergerSetRenderTargets((D3D11RenderTargetView?)null, null);
+                this.d3dContext.ClearState();
             }
 
-            D3D11Utils.DisposeAndNull(ref this.backBuffer);
-            D3D11Utils.DisposeAndNull(ref this.offscreenBuffer);
-            D3D11Utils.DisposeAndNull(ref this.d3dRenderTargetView);
-            D3D11Utils.DisposeAndNull(ref this.d3dDepthStencilView);
-            D2D1Utils.DisposeAndNull(ref this.d2dRenderTarget);
+            DXUtils.DisposeAndNull(ref this.backBuffer);
+            DXUtils.DisposeAndNull(ref this.offscreenBuffer);
+            DXUtils.DisposeAndNull(ref this.d3dRenderTargetView);
+            DXUtils.DisposeAndNull(ref this.d3dDepthStencilView);
+            DXUtils.DisposeAndNull(ref this.d2dRenderTarget);
         }
     }
 }

@@ -1,13 +1,14 @@
 // <copyright file="SwapChainDeviceResources.cs" company="Jérémy Ansel">
-// Copyright (c) 2015, 2019 Jérémy Ansel
+// Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using System;
     using JeremyAnsel.DirectX.D3D11;
+    using JeremyAnsel.DirectX.DXCommon;
     using JeremyAnsel.DirectX.Dxgi;
     using JeremyAnsel.DirectX.Window;
+    using System;
 
     public sealed class SwapChainDeviceResources : DeviceResources
     {
@@ -34,7 +35,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             if (!this.window.IsChild)
             {
-                this.isFullscreen = this.swapChain ? this.swapChain!.GetFullscreenState() : false;
+                this.isFullscreen = this.swapChain is not null ? this.swapChain.GetFullscreenState() : false;
 
                 if (this.isFullscreen)
                 {
@@ -42,12 +43,12 @@ namespace JeremyAnsel.DirectX.GameWindow
                 }
             }
 
-            DxgiUtils.DisposeAndNull(ref this.swapChain);
+            DXUtils.DisposeAndNull(ref this.swapChain);
         }
 
         protected override D3D11Texture2D? OnCreateBackBuffer()
         {
-            if (this.swapChain)
+            if (this.swapChain is not null)
             {
                 try
                 {

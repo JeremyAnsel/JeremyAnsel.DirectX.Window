@@ -12,11 +12,11 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <ContinuousIntegrationBuild Condition="'$(CI)' == 'True'">true</ContinuousIntegrationBuild>
-    <Version>3.0.0</Version>
+    <Version>4.0.0</Version>
     <Description>A managed game window using DirectX.</Description>
     <Authors>Jérémy Ansel</Authors>
     <Company>Jérémy Ansel</Company>
-    <Copyright>Copyright © 2015-2022 Jérémy Ansel</Copyright>
+    <Copyright>Copyright © 2015-2026 Jérémy Ansel</Copyright>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>DirectX Window Game</PackageTags>
@@ -40,15 +40,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PolySharp" Version="1.14.1">
+    <PackageReference Include="JeremyAnsel.DirectX.DXCommon" Version="4.0.50" />
+    <PackageReference Include="PolySharp" Version="1.15.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="JeremyAnsel.DirectX.D2D1" Version="3.0.49" />
-    <PackageReference Include="JeremyAnsel.DirectX.D3D11" Version="3.0.49" />
-    <PackageReference Include="JeremyAnsel.DirectX.DWrite" Version="3.0.49" />
-    <PackageReference Include="JeremyAnsel.DirectX.Dxgi" Version="3.0.49" />
-    <PackageReference Include="JeremyAnsel.DirectX.WinCodec" Version="3.0.49" />
+    <PackageReference Include="JeremyAnsel.DirectX.D2D1" Version="4.0.50" />
+    <PackageReference Include="JeremyAnsel.DirectX.D3D11" Version="4.0.50" />
+    <PackageReference Include="JeremyAnsel.DirectX.DWrite" Version="4.0.50" />
+    <PackageReference Include="JeremyAnsel.DirectX.Dxgi" Version="4.0.50" />
+    <PackageReference Include="JeremyAnsel.DirectX.WinCodec" Version="4.0.50" />
     <PackageReference Condition="'$(CI)' == 'True'" Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

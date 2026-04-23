@@ -1,5 +1,5 @@
 ﻿// <copyright file="FpsTextRenderer.cs" company="Jérémy Ansel">
-// Copyright (c) 2015, 2019 Jérémy Ansel
+// Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
 namespace JeremyAnsel.DirectX.GameWindow
@@ -10,6 +10,7 @@ namespace JeremyAnsel.DirectX.GameWindow
     using JeremyAnsel.DirectX.DWrite;
     using JeremyAnsel.DirectX.Window;
     using D3D11;
+    using JeremyAnsel.DirectX.DXCommon;
 
     public sealed class FpsTextRenderer : IGameComponent
     {
@@ -59,8 +60,8 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void ReleaseDeviceDependentResources()
         {
-            D2D1Utils.DisposeAndNull(ref this.stateBlock);
-            DWriteUtils.DisposeAndNull(ref this.textFormat);
+            DXUtils.DisposeAndNull(ref this.stateBlock);
+            DXUtils.DisposeAndNull(ref this.textFormat);
         }
 
         public void CreateWindowSizeDependentResources()
@@ -75,8 +76,8 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         public void ReleaseWindowSizeDependentResources()
         {
-            DWriteUtils.DisposeAndNull(ref this.textLayout);
-            D2D1Utils.DisposeAndNull(ref this.whiteBrush);
+            DXUtils.DisposeAndNull(ref this.textLayout);
+            DXUtils.DisposeAndNull(ref this.whiteBrush);
         }
 
         public void Update(ITimer? timer)
@@ -126,7 +127,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             text.Append(" FPS");
 
-            DWriteUtils.DisposeAndNull(ref this.textLayout);
+            DXUtils.DisposeAndNull(ref this.textLayout);
 
             this.textLayout = this.deviceResources?.DWriteFactory?.CreateTextLayout(
                 text.ToString(),
