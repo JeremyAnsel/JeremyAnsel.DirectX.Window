@@ -40,16 +40,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JeremyAnsel.DirectX.DXCommon" Version="4.0.55" />
+    <PackageReference Include="JeremyAnsel.DirectX.DXCommon" Version="4.0.56" />
     <PackageReference Include="PolySharp" Version="1.15.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="JeremyAnsel.DirectX.D2D1" Version="4.0.55" />
-    <PackageReference Include="JeremyAnsel.DirectX.D3D11" Version="4.0.55" />
-    <PackageReference Include="JeremyAnsel.DirectX.DWrite" Version="4.0.55" />
-    <PackageReference Include="JeremyAnsel.DirectX.Dxgi" Version="4.0.55" />
-    <PackageReference Include="JeremyAnsel.DirectX.WinCodec" Version="4.0.55" />
+    <PackageReference Include="JeremyAnsel.DirectX.D2D1" Version="4.0.56" />
+    <PackageReference Include="JeremyAnsel.DirectX.D3D11" Version="4.0.56" />
+    <PackageReference Include="JeremyAnsel.DirectX.DWrite" Version="4.0.56" />
+    <PackageReference Include="JeremyAnsel.DirectX.Dxgi" Version="4.0.56" />
+    <PackageReference Include="JeremyAnsel.DirectX.WinCodec" Version="4.0.56" />
     <PackageReference Condition="'$(CI)' == 'True'" Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
