@@ -4,8 +4,6 @@
 
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using System;
-
     public interface ITimer
     {
         uint FrameCount { get; }

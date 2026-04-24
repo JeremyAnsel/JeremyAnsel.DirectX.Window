@@ -4,8 +4,6 @@
 
 namespace JeremyAnsel.DirectX.Window
 {
-    using System;
-
     public static class WindowConstant
     {
         public const int UseDefault = unchecked((int)0x80000000);

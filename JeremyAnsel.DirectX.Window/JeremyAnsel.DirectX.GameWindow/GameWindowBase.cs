@@ -2,14 +2,13 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.Text;
+using JeremyAnsel.DirectX.D3D11;
+using JeremyAnsel.DirectX.Window;
+using JeremyAnsel.DirectX.Dxgi;
+
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using System;
-    using System.Text;
-    using JeremyAnsel.DirectX.D3D11;
-    using JeremyAnsel.DirectX.Window;
-    using JeremyAnsel.DirectX.Dxgi;
-
     public abstract class GameWindowBase : WindowBase, IDeviceNotify
     {
         private bool doHandleDeviceLost = false;
@@ -55,7 +54,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
                     if (this.DeviceResources.D3DDevice is not null)
                     {
-                        using (var device = new DxgiDevice2(this.DeviceResources.D3DDevice.Handle))
+                        using (var device = DxgiDevice2.CreateDeviceFromDevice(this.DeviceResources.D3DDevice))
                         using (var adapter = device.GetAdapter())
                         {
                             sb.Append(", ");

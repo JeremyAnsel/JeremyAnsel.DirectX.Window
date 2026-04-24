@@ -2,18 +2,16 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.Runtime.InteropServices;
+using JeremyAnsel.DirectX.D2D1;
+using JeremyAnsel.DirectX.D3D11;
+using JeremyAnsel.DirectX.DWrite;
+using JeremyAnsel.DirectX.DXCommon;
+using JeremyAnsel.DirectX.Dxgi;
+using JeremyAnsel.DirectX.WinCodec;
+
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using System;
-    using System.Linq;
-    using System.Runtime.InteropServices;
-    using JeremyAnsel.DirectX.D2D1;
-    using JeremyAnsel.DirectX.D3D11;
-    using JeremyAnsel.DirectX.DWrite;
-    using JeremyAnsel.DirectX.DXCommon;
-    using JeremyAnsel.DirectX.Dxgi;
-    using JeremyAnsel.DirectX.WinCodec;
-
     public abstract class DeviceResources
     {
         private readonly DeviceResourcesOptions options;
@@ -104,7 +102,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                     return null;
                 }
 
-                using (var dxgiDevice = new DxgiDevice2(this.d3dDevice.Handle))
+                using (var dxgiDevice = DxgiDevice2.CreateDeviceFromDevice(this.d3dDevice))
                 using (var dxgiAdapter = dxgiDevice.GetAdapter())
                 {
                     return dxgiAdapter.Description;
@@ -146,7 +144,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             DxgiAdapterDesc2 previousDesc;
 
-            using (var dxgiDevice = new DxgiDevice2(this.d3dDevice.Handle))
+            using (var dxgiDevice = DxgiDevice2.CreateDeviceFromDevice(this.d3dDevice))
             using (var deviceAdapter = dxgiDevice.GetAdapter())
             using (var deviceFactory = deviceAdapter.GetParent())
             using (var previousDefaultAdapter = deviceFactory.EnumAdapters().First())
@@ -572,7 +570,7 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             if (this.d2dFactory is not null)
             {
-                using (var surface = new DxgiSurface2(this.d3dSampleDesc.Count > 1 ? this.offscreenBuffer!.Handle : this.backBuffer.Handle))
+                using (var surface = DxgiSurface2.CreateSurfaceFromResource(this.d3dSampleDesc.Count > 1 ? this.offscreenBuffer! : this.backBuffer!))
                 {
                     this.d2dFactory.GetDesktopDpi(out this.dpiX, out this.dpiY);
 

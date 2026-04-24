@@ -2,12 +2,11 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.InteropServices;
+
 namespace JeremyAnsel.DirectX.Window
 {
-    using System;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Runtime.InteropServices;
-
     [StructLayout(LayoutKind.Sequential)]
     public struct WindowMessage : IEquatable<WindowMessage>
     {

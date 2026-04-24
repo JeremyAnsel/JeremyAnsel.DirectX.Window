@@ -2,11 +2,10 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace JeremyAnsel.DirectX.Window
 {
-    using System;
-    using System.Diagnostics.CodeAnalysis;
-
     [SuppressMessage("Microsoft.Design", "CA1008:EnumsShouldHaveZeroValue", Justification = "Reviewed")]
     [SuppressMessage("Microsoft.Usage", "CA2217:DoNotMarkEnumsWithFlags", Justification = "Reviewed")]
     [Flags]

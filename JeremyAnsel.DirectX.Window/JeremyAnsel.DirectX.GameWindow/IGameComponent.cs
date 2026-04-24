@@ -2,10 +2,10 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using JeremyAnsel.DirectX.D3D11;
+
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using JeremyAnsel.DirectX.D3D11;
-
     public interface IGameComponent
     {
         D3D11FeatureLevel MinimalFeatureLevel { get; }

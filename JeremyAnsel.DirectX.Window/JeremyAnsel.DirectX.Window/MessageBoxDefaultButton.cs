@@ -2,10 +2,10 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace JeremyAnsel.DirectX.Window
 {
-    using System.Diagnostics.CodeAnalysis;
-
     [SuppressMessage("Microsoft.Design", "CA1027:MarkEnumsWithFlags", Justification = "Reviewed")]
     public enum MessageBoxDefaultButton
     {

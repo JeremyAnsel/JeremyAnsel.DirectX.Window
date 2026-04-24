@@ -4,8 +4,6 @@
 
 namespace JeremyAnsel.DirectX.Window
 {
-    using System;
-
     public static class MessageBox
     {
         public static MessageBoxResult Show(string? text)

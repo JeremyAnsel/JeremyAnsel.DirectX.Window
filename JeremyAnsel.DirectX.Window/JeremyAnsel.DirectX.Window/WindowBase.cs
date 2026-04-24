@@ -2,14 +2,13 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.Runtime.CompilerServices;
+
 namespace JeremyAnsel.DirectX.Window
 {
-    using System;
-    using System.ComponentModel;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Globalization;
-    using System.Runtime.CompilerServices;
-
     public abstract class WindowBase : INotifyPropertyChanged
     {
         private NativeWindow? window;
@@ -234,8 +233,15 @@ namespace JeremyAnsel.DirectX.Window
                     this.window.Destroy();
                     MessageBox.Show(ex.ToString(), title, MessageBoxButton.Ok, MessageBoxIcon.Error);
                 }
-                catch
+                catch (Exception ex2)
                 {
+                    try
+                    {
+                        MessageBox.Show(ex2.ToString(), "", MessageBoxButton.Ok, MessageBoxIcon.Error);
+                    }
+                    catch
+                    {
+                    }
                 }
             }
         }

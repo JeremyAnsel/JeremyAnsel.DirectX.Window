@@ -2,11 +2,10 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.Runtime.InteropServices;
+
 namespace JeremyAnsel.DirectX.Window
 {
-    using System;
-    using System.Runtime.InteropServices;
-
     internal sealed class NativeClass : IDisposable
     {
         private delegate IntPtr WindowProcedure(IntPtr hWnd, WindowMessageType msg, IntPtr wParam, IntPtr lParam);

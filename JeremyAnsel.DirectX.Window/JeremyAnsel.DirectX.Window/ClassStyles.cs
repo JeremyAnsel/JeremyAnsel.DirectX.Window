@@ -4,8 +4,6 @@
 
 namespace JeremyAnsel.DirectX.Window
 {
-    using System;
-
     [Flags]
     internal enum ClassStyles
     {

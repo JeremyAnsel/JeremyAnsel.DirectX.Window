@@ -4,8 +4,6 @@
 
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using System;
-
     public sealed class FixedTimer : ITimer
     {
         private const double MaxDelta = .25;

@@ -2,14 +2,13 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using JeremyAnsel.DirectX.D3D11;
+using JeremyAnsel.DirectX.DXCommon;
+using JeremyAnsel.DirectX.Dxgi;
+using JeremyAnsel.DirectX.Window;
+
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using JeremyAnsel.DirectX.D3D11;
-    using JeremyAnsel.DirectX.DXCommon;
-    using JeremyAnsel.DirectX.Dxgi;
-    using JeremyAnsel.DirectX.Window;
-    using System;
-
     public sealed class SwapChainDeviceResources : DeviceResources
     {
         private DxgiSwapChain2? swapChain;
@@ -107,14 +106,14 @@ namespace JeremyAnsel.DirectX.GameWindow
                     return null;
                 }
 
-                using (var dxgiDevice = new DxgiDevice2(this.D3DDevice.Handle))
+                using (var dxgiDevice = DxgiDevice2.CreateDeviceFromDevice(this.D3DDevice))
                 using (var dxgiAdapter = dxgiDevice.GetAdapter())
                 using (var dxgiFactory = dxgiAdapter.GetParent())
                 {
                     try
                     {
                         this.swapChain = dxgiFactory.CreateSwapChainForWindowHandle(
-                            this.D3DDevice.Handle,
+                            this.D3DDevice,
                             this.window.Handle,
                             swapChainDesc,
                             null,
@@ -127,7 +126,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                             swapChainDesc.SwapEffect = DxgiSwapEffect.Sequential;
 
                             this.swapChain = dxgiFactory.CreateSwapChainForWindowHandle(
-                                this.D3DDevice.Handle,
+                                this.D3DDevice,
                                 this.window.Handle,
                                 swapChainDesc,
                                 null,

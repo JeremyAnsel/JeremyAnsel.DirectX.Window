@@ -2,13 +2,13 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
+
 namespace JeremyAnsel.DirectX.Window
 {
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Runtime.CompilerServices;
-
     public sealed class WindowPerformanceTime : INotifyPropertyChanged
     {
         private readonly Stopwatch stopwatch = new Stopwatch();

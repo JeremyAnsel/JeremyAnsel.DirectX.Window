@@ -2,11 +2,10 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.Diagnostics;
+
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using System;
-    using System.Diagnostics;
-
     public sealed class StepTimer : ITimer
     {
         private const double MaxDelta = .25;

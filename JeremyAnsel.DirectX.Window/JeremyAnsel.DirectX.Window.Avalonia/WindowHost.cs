@@ -2,14 +2,10 @@
 // Copyright (c) 2015, 2019, 2025 Jérémy Ansel
 // </copyright>
 
+using global::Avalonia.Platform;
+
 namespace JeremyAnsel.DirectX.Window.Avalonia
 {
-    using global::Avalonia.Platform;
-    using JeremyAnsel.DirectX.Window;
-    using System;
-    using System.Threading;
-    using System.Threading.Tasks;
-
     public sealed class WindowHost : global::Avalonia.Controls.NativeControlHost
     {
         public WindowHost(WindowBase? window)

@@ -2,16 +2,12 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using System.Runtime.InteropServices;
+using System.Windows.Input;
+using System.Windows.Interop;
+
 namespace JeremyAnsel.DirectX.Window.Wpf
 {
-    using System;
-    using System.Runtime.InteropServices;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using System.Windows.Input;
-    using System.Windows.Interop;
-    using JeremyAnsel.DirectX.Window;
-
     public sealed class WindowHost : HwndHost
     {
         private readonly int width;

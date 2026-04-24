@@ -2,12 +2,11 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using JeremyAnsel.DirectX.D3D11;
+using JeremyAnsel.DirectX.Dxgi;
+
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    using JeremyAnsel.DirectX.D3D11;
-    using JeremyAnsel.DirectX.Dxgi;
-    using System;
-
     public sealed class RenderTargetDeviceResources : DeviceResources
     {
         private readonly uint width;

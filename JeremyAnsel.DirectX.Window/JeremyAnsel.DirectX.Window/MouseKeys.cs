@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace JeremyAnsel.DirectX.Window
+﻿namespace JeremyAnsel.DirectX.Window
 {
     /// <summary>
     /// Indicates whether various virtual keys are down.
