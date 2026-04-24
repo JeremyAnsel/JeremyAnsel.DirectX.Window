@@ -771,6 +771,32 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Render
   nameWithType: FpsTextRenderer.Render
+- uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowAllocatedMemory
+  name: ShowAllocatedMemory
+  href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_ShowAllocatedMemory
+  commentId: P:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowAllocatedMemory
+  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowAllocatedMemory
+  nameWithType: FpsTextRenderer.ShowAllocatedMemory
+- uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowAllocatedMemory*
+  name: ShowAllocatedMemory
+  href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_ShowAllocatedMemory_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowAllocatedMemory
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowAllocatedMemory
+  nameWithType: FpsTextRenderer.ShowAllocatedMemory
+- uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowMemoryUsage
+  name: ShowMemoryUsage
+  href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_ShowMemoryUsage
+  commentId: P:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowMemoryUsage
+  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowMemoryUsage
+  nameWithType: FpsTextRenderer.ShowMemoryUsage
+- uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowMemoryUsage*
+  name: ShowMemoryUsage
+  href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_ShowMemoryUsage_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowMemoryUsage
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowMemoryUsage
+  nameWithType: FpsTextRenderer.ShowMemoryUsage
 - uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowPerformanceTime
   name: ShowPerformanceTime
   href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_ShowPerformanceTime
