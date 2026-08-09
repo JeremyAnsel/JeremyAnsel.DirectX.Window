@@ -75,7 +75,13 @@ namespace JeremyAnsel.DirectX.Window
 
         private void LoadIcon()
         {
-            this.icon = NativeMethods.ExtractAssociatedIcon(IntPtr.Zero, System.Reflection.Assembly.GetEntryAssembly()!.Location, 0);
+            string location;
+#if NET6_0_OR_GREATER
+            location = Environment.ProcessPath ?? string.Empty;
+#else
+            location = System.Reflection.Assembly.GetEntryAssembly()!.Location;
+#endif
+            this.icon = NativeMethods.ExtractAssociatedIcon(IntPtr.Zero, location, 0);
 
             //string iconPath = System.IO.Path.ChangeExtension(AppDomain.CurrentDomain.FriendlyName, ".ico");
 

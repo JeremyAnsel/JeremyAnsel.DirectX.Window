@@ -396,8 +396,12 @@ namespace JeremyAnsel.DirectX.GameWindow
                 }
                 else
                 {
+#if NET6_0_OR_GREATER
+                    featureLevels = Enum.GetValues<D3D11FeatureLevel>()
+#else
                     featureLevels = Enum.GetValues(typeof(D3D11FeatureLevel))
                         .Cast<D3D11FeatureLevel>()
+#endif
                         .Where(t => t >= this.d3dFeatureLevel)
                         .OrderByDescending(t => t)
                         .ToArray();

@@ -48,7 +48,7 @@ namespace JeremyAnsel.DirectX.Window
             string className,
             IntPtr iconSmall)
         {
-            this.size = (uint)Marshal.SizeOf(typeof(ClassInfoEx));
+            this.size = (uint)Marshal.SizeOf<ClassInfoEx>();
             this.style = style;
             this.windowProcedure = windowProcedure;
             this.classExtra = 0;
