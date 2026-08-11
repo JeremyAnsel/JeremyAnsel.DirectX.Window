@@ -10,7 +10,7 @@ using System.Text;
 namespace JeremyAnsel.DirectX.Window
 {
     [SuppressMessage("Microsoft.Design", "CA1049:TypesThatOwnNativeResourcesShouldBeDisposable", Justification = "Reviewed")]
-    internal sealed class NativeWindow
+    internal unsafe sealed class NativeWindow
     {
         private delegate IntPtr WindowProcedure(IntPtr hWnd, WindowMessageType msg, IntPtr wParam, IntPtr lParam);
 
@@ -40,19 +40,22 @@ namespace JeremyAnsel.DirectX.Window
         {
             this.window = window;
 
-            this.handle = NativeMethods.CreateWindowEx(
-                0,
-                NativeClass.Atom,
-                name,
-                isChild ? WindowStyles.Child : WindowStyles.OverlappedWindow,
-                x,
-                y,
-                width,
-                height,
-                parentHandle,
-                IntPtr.Zero,
-                IntPtr.Zero,
-                IntPtr.Zero);
+            fixed (char* namePtr = name)
+            {
+                this.handle = NativeMethods.CreateWindowEx(
+                    0,
+                    NativeClass.Atom,
+                    namePtr,
+                    isChild ? WindowStyles.Child : WindowStyles.OverlappedWindow,
+                    x,
+                    y,
+                    width,
+                    height,
+                    parentHandle,
+                    IntPtr.Zero,
+                    IntPtr.Zero,
+                    IntPtr.Zero);
+            }
 
             this.PerformanceTime = new WindowPerformanceTime();
         }
@@ -73,14 +76,15 @@ namespace JeremyAnsel.DirectX.Window
                 }
 
                 int length = NativeMethods.GetWindowTextLength(this.handle) + 1;
-                StringBuilder sb = new StringBuilder(length);
+                char* buffer = stackalloc char[length + 1];
 
-                if (NativeMethods.GetWindowText(this.handle, sb, length) == 0)
+                if (NativeMethods.GetWindowText(this.handle, buffer, length) == 0)
                 {
                     return string.Empty;
                 }
 
-                return sb.ToString();
+                buffer[length] = '\0';
+                return new string(buffer);
             }
 
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -91,7 +95,10 @@ namespace JeremyAnsel.DirectX.Window
                     return;
                 }
 
-                NativeMethods.SetWindowText(this.handle, value);
+                fixed (char* ptr = value)
+                {
+                    NativeMethods.SetWindowText(this.handle, ptr);
+                }
             }
         }
 
@@ -172,7 +179,7 @@ namespace JeremyAnsel.DirectX.Window
                 }
                 else
                 {
-                    if (!NativeMethods.PeekMessage(out message, IntPtr.Zero, WindowMessageType.Null, WindowMessageType.Null, 1))
+                    if (NativeMethods.PeekMessage(out message, IntPtr.Zero, WindowMessageType.Null, WindowMessageType.Null, 1) == 0)
                     {
                         if (this.window.UpdateWhenInactive || this.window.IsActive)
                         {
@@ -234,7 +241,7 @@ namespace JeremyAnsel.DirectX.Window
 
                         try
                         {
-                            if (NativeMethods.GetClientRect(this.handle, rectPtr))
+                            if (NativeMethods.GetClientRect(this.handle, rectPtr) != 0)
                             {
                                 this.window.Width = Marshal.ReadInt32(rectPtr, 8);
                                 this.window.Height = Marshal.ReadInt32(rectPtr, 12);

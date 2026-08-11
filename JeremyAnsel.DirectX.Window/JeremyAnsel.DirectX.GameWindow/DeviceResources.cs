@@ -381,10 +381,8 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             if (this.options.UseHighestFeatureLevel)
             {
-                if (this.d3dFeatureLevel == D3D11FeatureLevel.FeatureLevel91)
+                D3D11FeatureLevel[] levels = new D3D11FeatureLevel[]
                 {
-                    featureLevels = new D3D11FeatureLevel[]
-                    {
                         D3D11FeatureLevel.FeatureLevel111,
                         D3D11FeatureLevel.FeatureLevel110,
                         D3D11FeatureLevel.FeatureLevel101,
@@ -392,20 +390,12 @@ namespace JeremyAnsel.DirectX.GameWindow
                         D3D11FeatureLevel.FeatureLevel93,
                         D3D11FeatureLevel.FeatureLevel92,
                         D3D11FeatureLevel.FeatureLevel91
-                    };
-                }
-                else
-                {
-#if NET6_0_OR_GREATER
-                    featureLevels = Enum.GetValues<D3D11FeatureLevel>()
-#else
-                    featureLevels = Enum.GetValues(typeof(D3D11FeatureLevel))
-                        .Cast<D3D11FeatureLevel>()
-#endif
-                        .Where(t => t >= this.d3dFeatureLevel)
-                        .OrderByDescending(t => t)
-                        .ToArray();
-                }
+                };
+
+                featureLevels = levels
+                    .Where(t => t >= this.d3dFeatureLevel)
+                    .OrderByDescending(t => t)
+                    .ToArray();
             }
             else
             {

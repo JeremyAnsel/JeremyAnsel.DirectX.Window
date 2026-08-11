@@ -3,12 +3,10 @@
 // </copyright>
 
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 namespace JeremyAnsel.DirectX.Window
 {
-    [StructLayout(LayoutKind.Sequential)]
-    internal struct ClassInfoEx : IEquatable<ClassInfoEx>
+    internal unsafe readonly struct ClassInfoEx : IEquatable<ClassInfoEx>
     {
         private readonly uint size;
 
@@ -28,11 +26,9 @@ namespace JeremyAnsel.DirectX.Window
 
         private readonly IntPtr brushBackground;
 
-        [MarshalAs(UnmanagedType.LPWStr)]
-        private readonly string? menuName;
+        private readonly char* menuName;
 
-        [MarshalAs(UnmanagedType.LPWStr)]
-        private readonly string className;
+        private readonly char* className;
 
         private readonly IntPtr iconSmall;
 
@@ -44,11 +40,11 @@ namespace JeremyAnsel.DirectX.Window
             IntPtr icon,
             IntPtr cursor,
             IntPtr brushBackground,
-            string? menuName,
-            string className,
+            char* menuName,
+            char* className,
             IntPtr iconSmall)
         {
-            this.size = (uint)Marshal.SizeOf<ClassInfoEx>();
+            this.size = (uint)sizeof(ClassInfoEx);
             this.style = style;
             this.windowProcedure = windowProcedure;
             this.classExtra = 0;
@@ -102,12 +98,12 @@ namespace JeremyAnsel.DirectX.Window
             get { return this.brushBackground; }
         }
 
-        public string? MenuName
+        public char* MenuName
         {
             get { return this.menuName; }
         }
 
-        public string ClassName
+        public char* ClassName
         {
             get { return this.className; }
         }
@@ -117,86 +113,53 @@ namespace JeremyAnsel.DirectX.Window
             get { return this.iconSmall; }
         }
 
-        /// <summary>
-        /// Compares two <see cref="ClassInfoEx"/> objects. The result specifies whether the values of the two objects are equal.
-        /// </summary>
-        /// <param name="left">The left <see cref="ClassInfoEx"/> to compare.</param>
-        /// <param name="right">The right <see cref="ClassInfoEx"/> to compare.</param>
-        /// <returns><value>true</value> if the values of left and right are equal; otherwise, <value>false</value>.</returns>
         public static bool operator ==(ClassInfoEx left, ClassInfoEx right)
         {
             return left.Equals(right);
         }
 
-        /// <summary>
-        /// Compares two <see cref="ClassInfoEx"/> objects. The result specifies whether the values of the two objects are unequal.
-        /// </summary>
-        /// <param name="left">The left <see cref="ClassInfoEx"/> to compare.</param>
-        /// <param name="right">The right <see cref="ClassInfoEx"/> to compare.</param>
-        /// <returns><value>true</value> if the values of left and right differ; otherwise, <value>false</value>.</returns>
         public static bool operator !=(ClassInfoEx left, ClassInfoEx right)
         {
             return !(left == right);
         }
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="obj">The object to compare with the current object.</param>
-        /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
         public override bool Equals(object? obj)
         {
-            if (obj is not ClassInfoEx)
-            {
-                return false;
-            }
-
-            return this.Equals((ClassInfoEx)obj);
+            return obj is ClassInfoEx ex && Equals(ex);
         }
 
-        /// <summary>
-        /// Determines whether the specified object is equal to the current object.
-        /// </summary>
-        /// <param name="other">The object to compare with the current object.</param>
-        /// <returns><value>true</value> if the specified object is equal to the current object; otherwise, <value>false</value>.</returns>
         public bool Equals(ClassInfoEx other)
         {
-            return this.size == other.size
-                && this.style == other.style
-                && this.windowProcedure == other.windowProcedure
-                && this.classExtra == other.classExtra
-                && this.windowExtra == other.windowExtra
-                && this.instance == other.instance
-                && this.icon == other.icon
-                && this.cursor == other.cursor
-                && this.brushBackground == other.brushBackground
-                && this.menuName == other.menuName
-                && this.className == other.className
-                && this.iconSmall == other.iconSmall;
+            return size == other.size &&
+                   style == other.style &&
+                   EqualityComparer<IntPtr>.Default.Equals(windowProcedure, other.windowProcedure) &&
+                   classExtra == other.classExtra &&
+                   windowExtra == other.windowExtra &&
+                   instance == other.instance &&
+                   icon == other.icon &&
+                   cursor == other.cursor &&
+                   brushBackground == other.brushBackground &&
+                   menuName == other.menuName &&
+                   className == other.className &&
+                   iconSmall == other.iconSmall;
         }
 
-        /// <summary>
-        /// Returns the hash code for this instance.
-        /// </summary>
-        /// <returns>A 32-bit signed integer that is the hash code for this instance.</returns>
         public override int GetHashCode()
         {
-            return new
-            {
-                this.size,
-                this.style,
-                this.windowProcedure,
-                this.classExtra,
-                this.windowExtra,
-                this.instance,
-                this.icon,
-                this.cursor,
-                this.brushBackground,
-                this.menuName,
-                this.className,
-                this.iconSmall
-            }
-            .GetHashCode();
+            int hashCode = 1466023840;
+            hashCode = hashCode * -1521134295 + size.GetHashCode();
+            hashCode = hashCode * -1521134295 + style.GetHashCode();
+            hashCode = hashCode * -1521134295 + windowProcedure.GetHashCode();
+            hashCode = hashCode * -1521134295 + classExtra.GetHashCode();
+            hashCode = hashCode * -1521134295 + windowExtra.GetHashCode();
+            hashCode = hashCode * -1521134295 + instance.GetHashCode();
+            hashCode = hashCode * -1521134295 + icon.GetHashCode();
+            hashCode = hashCode * -1521134295 + cursor.GetHashCode();
+            hashCode = hashCode * -1521134295 + brushBackground.GetHashCode();
+            hashCode = hashCode * -1521134295 + ((nint)menuName).GetHashCode();
+            hashCode = hashCode * -1521134295 + ((nint)className).GetHashCode();
+            hashCode = hashCode * -1521134295 + iconSmall.GetHashCode();
+            return hashCode;
         }
     }
 }

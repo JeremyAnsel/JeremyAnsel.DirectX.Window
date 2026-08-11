@@ -22,6 +22,12 @@
     <PackageTags>DirectX Window Game</PackageTags>
     <PackageProjectUrl>https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window</PackageProjectUrl>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsAotCompatible>
+    <VerifyReferenceAotCompatibility>true</VerifyReferenceAotCompatibility>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <NoWarn>CA1416;CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -54,6 +60,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="ZString" Version="2.6.0" />
   </ItemGroup>
 
   <ItemGroup>

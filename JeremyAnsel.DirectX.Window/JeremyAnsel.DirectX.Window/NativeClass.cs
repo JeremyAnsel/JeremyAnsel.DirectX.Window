@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 
 namespace JeremyAnsel.DirectX.Window
 {
-    internal sealed class NativeClass : IDisposable
+    internal unsafe sealed class NativeClass : IDisposable
     {
         private delegate IntPtr WindowProcedure(IntPtr hWnd, WindowMessageType msg, IntPtr wParam, IntPtr lParam);
 
@@ -29,19 +29,24 @@ namespace JeremyAnsel.DirectX.Window
             this.windowProcedure = new WindowProcedure(this.Callback);
             var windowProcedurePtr = Marshal.GetFunctionPointerForDelegate(this.windowProcedure);
 
-            ClassInfoEx windowClass = new ClassInfoEx(
-                ClassStyles.HorizontalRedraw | ClassStyles.VerticalRedraw,
-                windowProcedurePtr,
-                IntPtr.Zero,
-                icon != IntPtr.Zero ? icon : NativeMethods.LoadIcon(IntPtr.Zero, new IntPtr(32512)),
-                NativeMethods.LoadCursor(IntPtr.Zero, new IntPtr(32512)),
-                IntPtr.Zero,
-                null,
-                typeof(NativeClass).FullName!,
-                IntPtr.Zero);
+            string className = "JeremyAnsel.DirectX.Window.NativeClass";
 
-            ushort atom = NativeMethods.RegisterClassEx(ref windowClass);
-            this.atom = new IntPtr(atom);
+            fixed (char* classNamePtr = className)
+            {
+                ClassInfoEx windowClass = new ClassInfoEx(
+                    ClassStyles.HorizontalRedraw | ClassStyles.VerticalRedraw,
+                    windowProcedurePtr,
+                    IntPtr.Zero,
+                    icon != IntPtr.Zero ? icon : NativeMethods.LoadIcon(IntPtr.Zero, new IntPtr(32512)),
+                    NativeMethods.LoadCursor(IntPtr.Zero, new IntPtr(32512)),
+                    IntPtr.Zero,
+                    null,
+                    classNamePtr,
+                    IntPtr.Zero);
+
+                ushort atom = NativeMethods.RegisterClassEx(ref windowClass);
+                this.atom = new IntPtr(atom);
+            }
         }
 
         ~NativeClass()

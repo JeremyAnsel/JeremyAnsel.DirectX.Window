@@ -8,7 +8,6 @@ using JeremyAnsel.DirectX.DWrite;
 using JeremyAnsel.DirectX.DXCommon;
 using JeremyAnsel.DirectX.Dxgi;
 using JeremyAnsel.DirectX.Window;
-using System.Text;
 
 namespace JeremyAnsel.DirectX.GameWindow
 {
@@ -28,15 +27,11 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         private DWriteTextLayout? textLayout;
 
-        private readonly StringBuilder text;
-
         private bool isInitialized;
 
         public FpsTextRenderer(WindowPerformanceTime? performanceTime)
         {
             this.performanceTime = performanceTime ?? throw new ArgumentNullException(nameof(performanceTime));
-
-            this.text = new StringBuilder();
 
             this.IsEnabled = true;
             this.ShowTime = true;
@@ -109,7 +104,8 @@ namespace JeremyAnsel.DirectX.GameWindow
             var time = timer.TotalTime;
             uint fps = timer.FramesPerSecond;
 
-            text.Clear();
+            var text = Cysharp.Text.ZString.CreateStringBuilder();
+            Span<char> byteSizeBuffer = stackalloc char[32];
 
             if (this.ShowPerformanceTime)
             {
@@ -159,7 +155,8 @@ namespace JeremyAnsel.DirectX.GameWindow
                 }
 
                 text.Append("Allocated ");
-                text.Append(DXUtils.StrFormatByteSize(_allocatedMemoryCurrent));
+                DXUtils.StrFormatByteSize(_allocatedMemoryCurrent, byteSizeBuffer);
+                text.Append(byteSizeBuffer);
                 text.Append("\n");
 #endif
             }
@@ -172,10 +169,12 @@ namespace JeremyAnsel.DirectX.GameWindow
                     DxgiQueryVideoMemoryInfo gpuMemoryInfo = dxgiAdapter4.QueryVideoMemoryInfo();
 
                     text.Append("RAM ");
-                    text.Append(DXUtils.StrFormatByteSize((long)cpuMemoryInfo.WorkingSetSize));
+                    DXUtils.StrFormatByteSize((long)cpuMemoryInfo.WorkingSetSize, byteSizeBuffer);
+                    text.Append(byteSizeBuffer);
                     text.Append("\n");
                     text.Append("GPU ");
-                    text.Append(DXUtils.StrFormatByteSize((long)gpuMemoryInfo.CurrentUsage));
+                    DXUtils.StrFormatByteSize((long)gpuMemoryInfo.CurrentUsage, byteSizeBuffer);
+                    text.Append(byteSizeBuffer);
                     text.Append("\n");
                 }
             }
@@ -183,7 +182,7 @@ namespace JeremyAnsel.DirectX.GameWindow
             DXUtils.DisposeAndNull(ref this.textLayout);
 
             this.textLayout = this.deviceResources?.DWriteFactory?.CreateTextLayout(
-                text.ToString(),
+                text.AsSpan(),
                 this.textFormat,
                 this.deviceResources.ConvertPixelsToDipsX(600),
                 this.deviceResources.ConvertPixelsToDipsY(400));

@@ -15,7 +15,7 @@ namespace JeremyAnsel.DirectX.Window
                 return false;
             }
 
-            return NativeMethods.IsProcessDPIAware();
+            return NativeMethods.IsProcessDPIAware() != 0;
         }
 
         public static bool SetDpiAware()
@@ -36,7 +36,7 @@ namespace JeremyAnsel.DirectX.Window
             {
                 try
                 {
-                    if (NativeMethods.SetProcessDpiAwarenessContext(NativeMethods.DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE))
+                    if (NativeMethods.SetProcessDpiAwarenessContext(NativeMethods.DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE) != 0)
                     {
                         isDpiSet = true;
                     }
@@ -64,7 +64,7 @@ namespace JeremyAnsel.DirectX.Window
             {
                 try
                 {
-                    if (NativeMethods.SetProcessDPIAware())
+                    if (NativeMethods.SetProcessDPIAware() != 0)
                     {
                         isDpiSet = true;
                     }

@@ -22,6 +22,13 @@
     <PackageTags>DirectX Window</PackageTags>
     <PackageProjectUrl>https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window</PackageProjectUrl>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsAotCompatible>
+    <VerifyReferenceAotCompatibility>true</VerifyReferenceAotCompatibility>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <NoWarn>CA1416;CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

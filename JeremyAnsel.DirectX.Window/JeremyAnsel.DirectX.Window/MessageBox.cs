@@ -4,7 +4,7 @@
 
 namespace JeremyAnsel.DirectX.Window
 {
-    public static class MessageBox
+    public unsafe static class MessageBox
     {
         public static MessageBoxResult Show(string? text)
         {
@@ -53,7 +53,11 @@ namespace JeremyAnsel.DirectX.Window
 
         public static MessageBoxResult Show(IntPtr handle, string? text, string? caption, MessageBoxButton button, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton)
         {
-            return NativeMethods.MessageBox(handle, text, caption, (uint)button | (uint)icon | (uint)defaultButton);
+            fixed (char* textPtr = text)
+            fixed (char* captionPtr = caption)
+            {
+                return NativeMethods.MessageBox(handle, textPtr, captionPtr, (uint)button | (uint)icon | (uint)defaultButton);
+            }
         }
     }
 }
