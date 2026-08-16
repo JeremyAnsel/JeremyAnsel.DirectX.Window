@@ -115,6 +115,11 @@ namespace JeremyAnsel.DirectX.Window
             }
         }
 
+        internal void Reset()
+        {
+            this.stopwatch.Reset();
+        }
+
         internal void Start()
         {
             this.stopwatch.Restart();

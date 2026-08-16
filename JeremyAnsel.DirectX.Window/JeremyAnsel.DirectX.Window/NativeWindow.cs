@@ -282,6 +282,43 @@ namespace JeremyAnsel.DirectX.Window
                     this.window.OnKeyboardEvent((VirtualKey)wParam, (int)((ulong)lParam & 0xFFFFU), ((ulong)lParam & 0x40000000U) != 0, ((ulong)lParam & 0x80000000U) == 0);
                     break;
 
+                case WindowMessageType.SystemKeyDown:
+                case WindowMessageType.SystemKeyUp:
+                    switch ((VirtualKey)wParam)
+                    {
+                        case VirtualKey.F10:
+                            {
+                                this.window.OnKeyboardEvent((VirtualKey)wParam, (int)((ulong)lParam & 0xFFFFU), ((ulong)lParam & 0x40000000U) != 0, ((ulong)lParam & 0x80000000U) == 0);
+                                return IntPtr.Zero;
+                            }
+                    }
+
+                    return NativeMethods.DefWindowProc(hWnd, msg, wParam, lParam);
+
+                case WindowMessageType.PowerBroadcast:
+                    switch ((int)wParam)
+                    {
+                        case 0:
+                            // PBT_APMQUERYSUSPEND
+                            // At this point, the app should save any data for open
+                            // network connections, files, etc., and prepare to go into
+                            // a suspended mode.  The app can use the MsgProc callback
+                            // to handle this if desired.
+                            return NativeMethods.DefWindowProc(hWnd, msg, wParam, lParam);
+
+                        case 7:
+                            // PBT_APMRESUMESUSPEND
+                            // At this point, the app should recover any data, network
+                            // connections, files, etc., and resume running from when
+                            // the app was suspended. The app can use the MsgProc callback
+                            // to handle this if desired.
+                            // QPC may lose consistency when suspending, so reset the timer
+                            // upon resume.
+                            this.PerformanceTime.Reset();
+                            return NativeMethods.DefWindowProc(hWnd, msg, wParam, lParam);
+                    }
+                    break;
+
                 default:
                     return NativeMethods.DefWindowProc(hWnd, msg, wParam, lParam);
             }
