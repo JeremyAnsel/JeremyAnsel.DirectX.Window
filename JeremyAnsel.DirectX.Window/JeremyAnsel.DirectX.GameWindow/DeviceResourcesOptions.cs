@@ -13,5 +13,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         public bool PreferMultisampling { get; set; } = false;
 
         public bool UseHighestFeatureLevel { get; set; } = true;
+
+        public bool IsVSyncEnabled { get; set; } = true;
     }
 }

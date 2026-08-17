@@ -26,9 +26,12 @@ namespace JeremyAnsel.DirectX.GameWindow
             : base(featureLevel, options)
         {
             this.window = window ?? throw new ArgumentNullException(nameof(window));
+            this.IsVSyncEnabled = options?.IsVSyncEnabled ?? true;
         }
 
         public DxgiSwapChain2? SwapChain { get { return this.swapChain; } }
+
+        public bool IsVSyncEnabled { get; set; } = true;
 
         protected override void OnReleaseBackBuffer()
         {
@@ -155,7 +158,8 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected override void OnPresent()
         {
-            this.swapChain?.Present(1, DxgiPresentOptions.None);
+            uint syncInterval = this.IsVSyncEnabled ? 1u : 0u;
+            this.swapChain?.Present(syncInterval, DxgiPresentOptions.None);
         }
     }
 }

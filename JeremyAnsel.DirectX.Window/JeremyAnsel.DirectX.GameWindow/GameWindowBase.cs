@@ -203,6 +203,14 @@ namespace JeremyAnsel.DirectX.GameWindow
 
                         break;
 
+                    case VirtualKey.F10:
+                        if (this.DeviceResources is not null)
+                        {
+                            this.DeviceResources.IsVSyncEnabled = !this.DeviceResources.IsVSyncEnabled;
+                        }
+
+                        break;
+
                     case VirtualKey.F11:
                         this.doFullscreenSwitch = true;
                         break;
