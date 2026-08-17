@@ -277,6 +277,14 @@ namespace JeremyAnsel.DirectX.Window
             }
         }
 
+        protected internal virtual void OnPowerSuspend()
+        {
+        }
+
+        protected internal virtual void OnPowerResume()
+        {
+        }
+
         public void Show(ShowWindow cmdShow)
         {
             NativeMethods.ShowWindow(this.Handle, cmdShow);

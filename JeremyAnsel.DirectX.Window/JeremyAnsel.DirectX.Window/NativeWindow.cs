@@ -304,6 +304,7 @@ namespace JeremyAnsel.DirectX.Window
                             // network connections, files, etc., and prepare to go into
                             // a suspended mode.  The app can use the MsgProc callback
                             // to handle this if desired.
+                            this.window.OnPowerSuspend();
                             return NativeMethods.DefWindowProc(hWnd, msg, wParam, lParam);
 
                         case 7:
@@ -315,6 +316,7 @@ namespace JeremyAnsel.DirectX.Window
                             // QPC may lose consistency when suspending, so reset the timer
                             // upon resume.
                             this.PerformanceTime.Reset();
+                            this.window.OnPowerResume();
                             return NativeMethods.DefWindowProc(hWnd, msg, wParam, lParam);
                     }
                     break;
