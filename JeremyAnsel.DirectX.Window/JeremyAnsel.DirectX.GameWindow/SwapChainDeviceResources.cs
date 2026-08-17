@@ -54,7 +54,7 @@ namespace JeremyAnsel.DirectX.GameWindow
             {
                 try
                 {
-                    this.swapChain!.ResizeBuffers(3, 0, 0, DxgiFormat.Unknown, DxgiSwapChainOptions.None);
+                    this.swapChain!.ResizeBuffers(3, 0, 0, DxgiFormat.Unknown, DxgiSwapChainOptions.AllowTearing);
                 }
                 catch (Exception ex)
                 {
@@ -83,7 +83,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                     Scaling = DxgiScaling.None,
                     SwapEffect = DxgiSwapEffect.FlipSequential,
                     AlphaMode = DxgiAlphaMode.Ignore,
-                    Options = DxgiSwapChainOptions.None
+                    Options = DxgiSwapChainOptions.AllowTearing
                 };
 
                 if (this.D3DFeatureLevel >= D3D11FeatureLevel.FeatureLevel110)
@@ -159,7 +159,10 @@ namespace JeremyAnsel.DirectX.GameWindow
         protected override void OnPresent()
         {
             uint syncInterval = this.IsVSyncEnabled ? 1u : 0u;
-            this.swapChain?.Present(syncInterval, DxgiPresentOptions.None);
+            bool isFullscreen = this.swapChain?.GetFullscreenState() ?? false;
+            DxgiPresentOptions options = syncInterval == 0 && !isFullscreen ? DxgiPresentOptions.AllowTearing : DxgiPresentOptions.None;
+
+            this.swapChain?.Present(syncInterval, options);
         }
     }
 }
