@@ -498,6 +498,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.ForceWarp
   nameWithType: DeviceResourcesOptions.ForceWarp
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.IsVSyncEnabled
+  name: IsVSyncEnabled
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_IsVSyncEnabled
+  commentId: P:JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.IsVSyncEnabled
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.IsVSyncEnabled
+  nameWithType: DeviceResourcesOptions.IsVSyncEnabled
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.IsVSyncEnabled*
+  name: IsVSyncEnabled
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_IsVSyncEnabled_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.IsVSyncEnabled
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.IsVSyncEnabled
+  nameWithType: DeviceResourcesOptions.IsVSyncEnabled
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.PreferMultisampling
   name: PreferMultisampling
   href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_PreferMultisampling
@@ -1543,6 +1556,19 @@ references:
   fullName.vb: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.New
   nameWithType: SwapChainDeviceResources.SwapChainDeviceResources
   nameWithType.vb: SwapChainDeviceResources.New
+- uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.IsVSyncEnabled
+  name: IsVSyncEnabled
+  href: api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html#JeremyAnsel_DirectX_GameWindow_SwapChainDeviceResources_IsVSyncEnabled
+  commentId: P:JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.IsVSyncEnabled
+  fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.IsVSyncEnabled
+  nameWithType: SwapChainDeviceResources.IsVSyncEnabled
+- uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.IsVSyncEnabled*
+  name: IsVSyncEnabled
+  href: api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html#JeremyAnsel_DirectX_GameWindow_SwapChainDeviceResources_IsVSyncEnabled_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.IsVSyncEnabled
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.IsVSyncEnabled
+  nameWithType: SwapChainDeviceResources.IsVSyncEnabled
 - uid: JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.OnCreateBackBuffer
   name: OnCreateBackBuffer()
   href: api/JeremyAnsel.DirectX.GameWindow.SwapChainDeviceResources.html#JeremyAnsel_DirectX_GameWindow_SwapChainDeviceResources_OnCreateBackBuffer
@@ -3218,6 +3244,32 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.Window.WindowBase.OnKeyboardEvent
   nameWithType: WindowBase.OnKeyboardEvent
+- uid: JeremyAnsel.DirectX.Window.WindowBase.OnPowerResume
+  name: OnPowerResume()
+  href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_OnPowerResume
+  commentId: M:JeremyAnsel.DirectX.Window.WindowBase.OnPowerResume
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.OnPowerResume()
+  nameWithType: WindowBase.OnPowerResume()
+- uid: JeremyAnsel.DirectX.Window.WindowBase.OnPowerResume*
+  name: OnPowerResume
+  href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_OnPowerResume_
+  commentId: Overload:JeremyAnsel.DirectX.Window.WindowBase.OnPowerResume
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.OnPowerResume
+  nameWithType: WindowBase.OnPowerResume
+- uid: JeremyAnsel.DirectX.Window.WindowBase.OnPowerSuspend
+  name: OnPowerSuspend()
+  href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_OnPowerSuspend
+  commentId: M:JeremyAnsel.DirectX.Window.WindowBase.OnPowerSuspend
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.OnPowerSuspend()
+  nameWithType: WindowBase.OnPowerSuspend()
+- uid: JeremyAnsel.DirectX.Window.WindowBase.OnPowerSuspend*
+  name: OnPowerSuspend
+  href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_OnPowerSuspend_
+  commentId: Overload:JeremyAnsel.DirectX.Window.WindowBase.OnPowerSuspend
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.OnPowerSuspend
+  nameWithType: WindowBase.OnPowerSuspend
 - uid: JeremyAnsel.DirectX.Window.WindowBase.OnWindowSizeChanged
   name: OnWindowSizeChanged()
   href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_OnWindowSizeChanged
