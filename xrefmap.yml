@@ -453,6 +453,22 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.ScreenViewport
   nameWithType: DeviceResources.ScreenViewport
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetWarpState(System.Boolean)
+  name: SetWarpState(bool)
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources_SetWarpState_System_Boolean_
+  commentId: M:JeremyAnsel.DirectX.GameWindow.DeviceResources.SetWarpState(System.Boolean)
+  name.vb: SetWarpState(Boolean)
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetWarpState(bool)
+  fullName.vb: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetWarpState(Boolean)
+  nameWithType: DeviceResources.SetWarpState(bool)
+  nameWithType.vb: DeviceResources.SetWarpState(Boolean)
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetWarpState*
+  name: SetWarpState
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources_SetWarpState_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.DeviceResources.SetWarpState
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetWarpState
+  nameWithType: DeviceResources.SetWarpState
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.ValidateDevice
   name: ValidateDevice()
   href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources_ValidateDevice
@@ -524,6 +540,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.PreferMultisampling
   nameWithType: DeviceResourcesOptions.PreferMultisampling
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.StartInFullscreenState
+  name: StartInFullscreenState
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_StartInFullscreenState
+  commentId: P:JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.StartInFullscreenState
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.StartInFullscreenState
+  nameWithType: DeviceResourcesOptions.StartInFullscreenState
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.StartInFullscreenState*
+  name: StartInFullscreenState
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_StartInFullscreenState_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.StartInFullscreenState
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.StartInFullscreenState
+  nameWithType: DeviceResourcesOptions.StartInFullscreenState
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.UseHighestFeatureLevel
   name: UseHighestFeatureLevel
   href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_UseHighestFeatureLevel
@@ -1133,6 +1162,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.Update
   nameWithType: GameWindowBase.Update
+- uid: JeremyAnsel.DirectX.GameWindow.GameWindowBase.UseControlShiftFunctionKeys
+  name: UseControlShiftFunctionKeys
+  href: api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html#JeremyAnsel_DirectX_GameWindow_GameWindowBase_UseControlShiftFunctionKeys
+  commentId: P:JeremyAnsel.DirectX.GameWindow.GameWindowBase.UseControlShiftFunctionKeys
+  fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.UseControlShiftFunctionKeys
+  nameWithType: GameWindowBase.UseControlShiftFunctionKeys
+- uid: JeremyAnsel.DirectX.GameWindow.GameWindowBase.UseControlShiftFunctionKeys*
+  name: UseControlShiftFunctionKeys
+  href: api/JeremyAnsel.DirectX.GameWindow.GameWindowBase.html#JeremyAnsel_DirectX_GameWindow_GameWindowBase_UseControlShiftFunctionKeys_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.GameWindowBase.UseControlShiftFunctionKeys
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.GameWindowBase.UseControlShiftFunctionKeys
+  nameWithType: GameWindowBase.UseControlShiftFunctionKeys
 - uid: JeremyAnsel.DirectX.GameWindow.IDeviceNotify
   name: IDeviceNotify
   href: api/JeremyAnsel.DirectX.GameWindow.IDeviceNotify.html
@@ -1697,6 +1739,129 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.Window.Avalonia.WindowHost.Window
   nameWithType: WindowHost.Window
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers
+  name: KeyboardModifiers
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html
+  commentId: T:JeremyAnsel.DirectX.Window.KeyboardModifiers
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers
+  nameWithType: KeyboardModifiers
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsAltDown
+  name: IsAltDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsAltDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsAltDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsAltDown
+  nameWithType: KeyboardModifiers.IsAltDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsAltDown*
+  name: IsAltDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsAltDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsAltDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsAltDown
+  nameWithType: KeyboardModifiers.IsAltDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsControlDown
+  name: IsControlDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsControlDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsControlDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsControlDown
+  nameWithType: KeyboardModifiers.IsControlDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsControlDown*
+  name: IsControlDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsControlDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsControlDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsControlDown
+  nameWithType: KeyboardModifiers.IsControlDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftAltDown
+  name: IsLeftAltDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsLeftAltDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftAltDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftAltDown
+  nameWithType: KeyboardModifiers.IsLeftAltDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftAltDown*
+  name: IsLeftAltDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsLeftAltDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftAltDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftAltDown
+  nameWithType: KeyboardModifiers.IsLeftAltDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftControlDown
+  name: IsLeftControlDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsLeftControlDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftControlDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftControlDown
+  nameWithType: KeyboardModifiers.IsLeftControlDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftControlDown*
+  name: IsLeftControlDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsLeftControlDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftControlDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftControlDown
+  nameWithType: KeyboardModifiers.IsLeftControlDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftShiftDown
+  name: IsLeftShiftDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsLeftShiftDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftShiftDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftShiftDown
+  nameWithType: KeyboardModifiers.IsLeftShiftDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftShiftDown*
+  name: IsLeftShiftDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsLeftShiftDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftShiftDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsLeftShiftDown
+  nameWithType: KeyboardModifiers.IsLeftShiftDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightAltDown
+  name: IsRightAltDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsRightAltDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightAltDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightAltDown
+  nameWithType: KeyboardModifiers.IsRightAltDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightAltDown*
+  name: IsRightAltDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsRightAltDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightAltDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightAltDown
+  nameWithType: KeyboardModifiers.IsRightAltDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightControlDown
+  name: IsRightControlDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsRightControlDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightControlDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightControlDown
+  nameWithType: KeyboardModifiers.IsRightControlDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightControlDown*
+  name: IsRightControlDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsRightControlDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightControlDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightControlDown
+  nameWithType: KeyboardModifiers.IsRightControlDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightShiftDown
+  name: IsRightShiftDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsRightShiftDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightShiftDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightShiftDown
+  nameWithType: KeyboardModifiers.IsRightShiftDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightShiftDown*
+  name: IsRightShiftDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsRightShiftDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightShiftDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsRightShiftDown
+  nameWithType: KeyboardModifiers.IsRightShiftDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsShiftDown
+  name: IsShiftDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsShiftDown
+  commentId: P:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsShiftDown
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsShiftDown
+  nameWithType: KeyboardModifiers.IsShiftDown
+- uid: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsShiftDown*
+  name: IsShiftDown
+  href: api/JeremyAnsel.DirectX.Window.KeyboardModifiers.html#JeremyAnsel_DirectX_Window_KeyboardModifiers_IsShiftDown_
+  commentId: Overload:JeremyAnsel.DirectX.Window.KeyboardModifiers.IsShiftDown
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.KeyboardModifiers.IsShiftDown
+  nameWithType: KeyboardModifiers.IsShiftDown
 - uid: JeremyAnsel.DirectX.Window.MessageBox
   name: MessageBox
   href: api/JeremyAnsel.DirectX.Window.MessageBox.html
