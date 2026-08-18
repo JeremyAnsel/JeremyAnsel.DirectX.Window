@@ -179,6 +179,11 @@ namespace JeremyAnsel.DirectX.GameWindow
                 }
             }
 
+            if (this.deviceResources!.D3DDriverType == D3D11DriverType.Warp)
+            {
+                text.Append("WARP\n");
+            }
+
             DXUtils.DisposeAndNull(ref this.textLayout);
 
             this.textLayout = this.deviceResources?.DWriteFactory?.CreateTextLayout(

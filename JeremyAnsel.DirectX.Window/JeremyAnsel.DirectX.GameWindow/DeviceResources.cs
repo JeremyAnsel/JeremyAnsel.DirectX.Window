@@ -194,6 +194,12 @@ namespace JeremyAnsel.DirectX.GameWindow
             }
         }
 
+        public void SetWarpState(bool warp)
+        {
+            this.options.ForceWarp = warp;
+            this.HandleDeviceLost();
+        }
+
         public void OnSizeChanged()
         {
             this.ReleaseWindowSizeDependentResources();

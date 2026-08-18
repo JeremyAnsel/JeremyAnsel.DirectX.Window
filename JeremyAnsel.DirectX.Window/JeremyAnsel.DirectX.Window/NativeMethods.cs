@@ -107,6 +107,15 @@ namespace JeremyAnsel.DirectX.Window
             IntPtr handle, IntPtr rect);
 
 #if NET8_0_OR_GREATER
+        [LibraryImport("user32.dll", EntryPoint = "GetKeyState")]
+        public static partial short GetKeyState(
+#else
+        [DllImport("user32.dll", EntryPoint = "GetKeyState")]
+        public static extern short GetKeyState(
+#endif
+            int nVirtKey);
+
+#if NET8_0_OR_GREATER
         [LibraryImport("user32.dll", EntryPoint = "GetMessageW")]
         public static partial int GetMessage(
 #else

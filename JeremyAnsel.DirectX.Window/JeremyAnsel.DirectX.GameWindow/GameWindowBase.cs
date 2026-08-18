@@ -13,6 +13,8 @@ namespace JeremyAnsel.DirectX.GameWindow
     {
         private bool doHandleDeviceLost = false;
 
+        private bool? doWarpSwitch = null;
+
         private bool doFullscreenSwitch = false;
 
         protected GameWindowBase()
@@ -22,6 +24,8 @@ namespace JeremyAnsel.DirectX.GameWindow
 
             this.Timer = new StepTimer();
         }
+
+        public bool UseControlShiftFunctionKeys { get; set; } = false;
 
         protected D3D11FeatureLevel RequestedD3DFeatureLevel { get; set; }
 
@@ -86,6 +90,11 @@ namespace JeremyAnsel.DirectX.GameWindow
 
         protected override void Init()
         {
+            if (this.DeviceResourcesOptions.StartInFullscreenState)
+            {
+                this.doFullscreenSwitch = true;
+            }
+
             this.FpsTextRenderer = this.CheckMinimalFeatureLevel(new FpsTextRenderer(this.PerformanceTime));
 
             this.DeviceResources = new SwapChainDeviceResources(this, this.RequestedD3DFeatureLevel, this.DeviceResourcesOptions);
@@ -156,7 +165,24 @@ namespace JeremyAnsel.DirectX.GameWindow
             if (this.doHandleDeviceLost)
             {
                 this.DeviceResources.HandleDeviceLost();
+                this.Title = this.DefaultTitle;
                 this.doHandleDeviceLost = false;
+                return;
+            }
+
+            if (this.doWarpSwitch is not null)
+            {
+                if (this.DeviceResources.SwapChain is not null)
+                {
+                    bool fullscreen = this.DeviceResources.SwapChain.GetFullscreenState();
+                    if (fullscreen)
+                    {
+                        this.DeviceResources.SwapChain.SetFullscreenState(false);
+                    }
+                }
+                this.DeviceResources.SetWarpState(this.doWarpSwitch.Value);
+                this.Title = this.DefaultTitle;
+                this.doWarpSwitch = null;
                 return;
             }
 
@@ -167,7 +193,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                     bool fullscreen = this.DeviceResources.SwapChain.GetFullscreenState();
                     this.DeviceResources.SwapChain.SetFullscreenState(!fullscreen);
                 }
-
+                this.Title = this.DefaultTitle;
                 this.doFullscreenSwitch = false;
                 return;
             }
@@ -191,7 +217,9 @@ namespace JeremyAnsel.DirectX.GameWindow
         {
             base.OnKeyboardEvent(key, repeatCount, wasDown, isDown);
 
-            if (isDown && !wasDown)
+            bool checkFunctionKeys = !this.UseControlShiftFunctionKeys || (KeyboardModifiers.IsControlDown && KeyboardModifiers.IsShiftDown);
+
+            if (checkFunctionKeys && isDown && !wasDown)
             {
                 switch (key)
                 {
@@ -217,6 +245,13 @@ namespace JeremyAnsel.DirectX.GameWindow
 
                     case VirtualKey.F9:
                         this.doHandleDeviceLost = true;
+                        break;
+
+                    case VirtualKey.F8:
+                        if (this.DeviceResources is not null)
+                        {
+                            this.doWarpSwitch = this.DeviceResources.D3DDriverType != D3D11DriverType.Warp;
+                        }
                         break;
                 }
             }

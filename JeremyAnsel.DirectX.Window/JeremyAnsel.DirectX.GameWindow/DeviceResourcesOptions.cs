@@ -15,5 +15,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         public bool UseHighestFeatureLevel { get; set; } = true;
 
         public bool IsVSyncEnabled { get; set; } = true;
+
+        public bool StartInFullscreenState { get; set; } = false;
     }
 }
