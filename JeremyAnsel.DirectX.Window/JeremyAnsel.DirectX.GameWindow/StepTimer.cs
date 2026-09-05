@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace JeremyAnsel.DirectX.GameWindow
 {
-    public sealed class StepTimer : ITimer
+    public sealed class StepTimer : IGameTimer
     {
         private const double MaxDelta = .25;
 

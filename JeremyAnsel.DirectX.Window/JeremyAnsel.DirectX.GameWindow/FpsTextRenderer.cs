@@ -89,7 +89,7 @@ namespace JeremyAnsel.DirectX.GameWindow
             DXUtils.DisposeAndNull(ref this.whiteBrush);
         }
 
-        public void Update(ITimer? timer)
+        public void Update(IGameTimer? timer)
         {
             if (!this.IsEnabled)
             {
