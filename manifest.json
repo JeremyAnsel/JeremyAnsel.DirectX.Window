@@ -110,16 +110,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.ITimer.yml",
+      "source_relative_path": "api/JeremyAnsel.DirectX.GameWindow.IGameTimer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.ITimer.html"
+          "relative_path": "api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "JeremyAnsel.DirectX.GameWindow.ITimer",
+      "Title": "JeremyAnsel.DirectX.GameWindow.IGameTimer",
       "Summary": null
     },
     {

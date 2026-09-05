@@ -865,15 +865,15 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.ShowTime
   nameWithType: FpsTextRenderer.ShowTime
-- uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  name: Update(ITimer?)
-  href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_Update_JeremyAnsel_DirectX_GameWindow_ITimer_
-  commentId: M:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  name.vb: Update(ITimer)
-  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer?)
-  fullName.vb: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  nameWithType: FpsTextRenderer.Update(ITimer?)
-  nameWithType.vb: FpsTextRenderer.Update(ITimer)
+- uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.IGameTimer)
+  name: Update(IGameTimer?)
+  href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_Update_JeremyAnsel_DirectX_GameWindow_IGameTimer_
+  commentId: M:JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.IGameTimer)
+  name.vb: Update(IGameTimer)
+  fullName: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.IGameTimer?)
+  fullName.vb: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update(JeremyAnsel.DirectX.GameWindow.IGameTimer)
+  nameWithType: FpsTextRenderer.Update(IGameTimer?)
+  nameWithType.vb: FpsTextRenderer.Update(IGameTimer)
 - uid: JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.Update*
   name: Update
   href: api/JeremyAnsel.DirectX.GameWindow.FpsTextRenderer.html#JeremyAnsel_DirectX_GameWindow_FpsTextRenderer_Update_
@@ -1291,12 +1291,12 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.IGameComponent.Render
   nameWithType: IGameComponent.Render
-- uid: JeremyAnsel.DirectX.GameWindow.IGameComponent.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  name: Update(ITimer)
-  href: api/JeremyAnsel.DirectX.GameWindow.IGameComponent.html#JeremyAnsel_DirectX_GameWindow_IGameComponent_Update_JeremyAnsel_DirectX_GameWindow_ITimer_
-  commentId: M:JeremyAnsel.DirectX.GameWindow.IGameComponent.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  fullName: JeremyAnsel.DirectX.GameWindow.IGameComponent.Update(JeremyAnsel.DirectX.GameWindow.ITimer)
-  nameWithType: IGameComponent.Update(ITimer)
+- uid: JeremyAnsel.DirectX.GameWindow.IGameComponent.Update(JeremyAnsel.DirectX.GameWindow.IGameTimer)
+  name: Update(IGameTimer)
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameComponent.html#JeremyAnsel_DirectX_GameWindow_IGameComponent_Update_JeremyAnsel_DirectX_GameWindow_IGameTimer_
+  commentId: M:JeremyAnsel.DirectX.GameWindow.IGameComponent.Update(JeremyAnsel.DirectX.GameWindow.IGameTimer)
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameComponent.Update(JeremyAnsel.DirectX.GameWindow.IGameTimer)
+  nameWithType: IGameComponent.Update(IGameTimer)
 - uid: JeremyAnsel.DirectX.GameWindow.IGameComponent.Update*
   name: Update
   href: api/JeremyAnsel.DirectX.GameWindow.IGameComponent.html#JeremyAnsel_DirectX_GameWindow_IGameComponent_Update_
@@ -1304,77 +1304,77 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.IGameComponent.Update
   nameWithType: IGameComponent.Update
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer
-  name: ITimer
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html
-  commentId: T:JeremyAnsel.DirectX.GameWindow.ITimer
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer
-  nameWithType: ITimer
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.ElapsedSeconds
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer
+  name: IGameTimer
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html
+  commentId: T:JeremyAnsel.DirectX.GameWindow.IGameTimer
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer
+  nameWithType: IGameTimer
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds
   name: ElapsedSeconds
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_ElapsedSeconds
-  commentId: P:JeremyAnsel.DirectX.GameWindow.ITimer.ElapsedSeconds
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.ElapsedSeconds
-  nameWithType: ITimer.ElapsedSeconds
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.ElapsedSeconds*
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_ElapsedSeconds
+  commentId: P:JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds
+  nameWithType: IGameTimer.ElapsedSeconds
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds*
   name: ElapsedSeconds
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_ElapsedSeconds_
-  commentId: Overload:JeremyAnsel.DirectX.GameWindow.ITimer.ElapsedSeconds
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_ElapsedSeconds_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds
   isSpec: "True"
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.ElapsedSeconds
-  nameWithType: ITimer.ElapsedSeconds
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.FrameCount
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds
+  nameWithType: IGameTimer.ElapsedSeconds
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount
   name: FrameCount
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_FrameCount
-  commentId: P:JeremyAnsel.DirectX.GameWindow.ITimer.FrameCount
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.FrameCount
-  nameWithType: ITimer.FrameCount
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.FrameCount*
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_FrameCount
+  commentId: P:JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount
+  nameWithType: IGameTimer.FrameCount
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount*
   name: FrameCount
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_FrameCount_
-  commentId: Overload:JeremyAnsel.DirectX.GameWindow.ITimer.FrameCount
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_FrameCount_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount
   isSpec: "True"
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.FrameCount
-  nameWithType: ITimer.FrameCount
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.FramesPerSecond
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount
+  nameWithType: IGameTimer.FrameCount
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond
   name: FramesPerSecond
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_FramesPerSecond
-  commentId: P:JeremyAnsel.DirectX.GameWindow.ITimer.FramesPerSecond
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.FramesPerSecond
-  nameWithType: ITimer.FramesPerSecond
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.FramesPerSecond*
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_FramesPerSecond
+  commentId: P:JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond
+  nameWithType: IGameTimer.FramesPerSecond
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond*
   name: FramesPerSecond
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_FramesPerSecond_
-  commentId: Overload:JeremyAnsel.DirectX.GameWindow.ITimer.FramesPerSecond
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_FramesPerSecond_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond
   isSpec: "True"
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.FramesPerSecond
-  nameWithType: ITimer.FramesPerSecond
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.TotalSeconds
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond
+  nameWithType: IGameTimer.FramesPerSecond
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds
   name: TotalSeconds
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_TotalSeconds
-  commentId: P:JeremyAnsel.DirectX.GameWindow.ITimer.TotalSeconds
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.TotalSeconds
-  nameWithType: ITimer.TotalSeconds
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.TotalSeconds*
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalSeconds
+  commentId: P:JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds
+  nameWithType: IGameTimer.TotalSeconds
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds*
   name: TotalSeconds
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_TotalSeconds_
-  commentId: Overload:JeremyAnsel.DirectX.GameWindow.ITimer.TotalSeconds
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalSeconds_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds
   isSpec: "True"
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.TotalSeconds
-  nameWithType: ITimer.TotalSeconds
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.TotalTime
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds
+  nameWithType: IGameTimer.TotalSeconds
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime
   name: TotalTime
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_TotalTime
-  commentId: P:JeremyAnsel.DirectX.GameWindow.ITimer.TotalTime
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.TotalTime
-  nameWithType: ITimer.TotalTime
-- uid: JeremyAnsel.DirectX.GameWindow.ITimer.TotalTime*
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalTime
+  commentId: P:JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime
+  nameWithType: IGameTimer.TotalTime
+- uid: JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime*
   name: TotalTime
-  href: api/JeremyAnsel.DirectX.GameWindow.ITimer.html#JeremyAnsel_DirectX_GameWindow_ITimer_TotalTime_
-  commentId: Overload:JeremyAnsel.DirectX.GameWindow.ITimer.TotalTime
+  href: api/JeremyAnsel.DirectX.GameWindow.IGameTimer.html#JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalTime_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime
   isSpec: "True"
-  fullName: JeremyAnsel.DirectX.GameWindow.ITimer.TotalTime
-  nameWithType: ITimer.TotalTime
+  fullName: JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime
+  nameWithType: IGameTimer.TotalTime
 - uid: JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources
   name: RenderTargetDeviceResources
   href: api/JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.html

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Enum MessageBoxButton </title>
+      <title>Interface IGameTimer </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Enum MessageBoxButton ">
+      <meta name="title" content="Interface IGameTimer ">
     
     
       <link rel="shortcut icon" href="../favicon.ico">
@@ -116,8 +116,8 @@
                           <li class="">
                             <a href="JeremyAnsel.DirectX.GameWindow.IGameComponent.html" title="IGameComponent" class="">IGameComponent</a>
                           </li>
-                          <li class="">
-                            <a href="JeremyAnsel.DirectX.GameWindow.IGameTimer.html" title="IGameTimer" class="">IGameTimer</a>
+                          <li class="active">
+                            <a href="JeremyAnsel.DirectX.GameWindow.IGameTimer.html" title="IGameTimer" class="active">IGameTimer</a>
                           </li>
                           <li class="">
                             <a href="JeremyAnsel.DirectX.GameWindow.RenderTargetDeviceResources.html" title="RenderTargetDeviceResources" class="">RenderTargetDeviceResources</a>
@@ -141,8 +141,8 @@
                           <li class="">
                             <a href="JeremyAnsel.DirectX.Window.MessageBox.html" title="MessageBox" class="">MessageBox</a>
                           </li>
-                          <li class="active">
-                            <a href="JeremyAnsel.DirectX.Window.MessageBoxButton.html" title="MessageBoxButton" class="active">MessageBoxButton</a>
+                          <li class="">
+                            <a href="JeremyAnsel.DirectX.Window.MessageBoxButton.html" title="MessageBoxButton" class="">MessageBoxButton</a>
                           </li>
                           <li class="">
                             <a href="JeremyAnsel.DirectX.Window.MessageBoxDefaultButton.html" title="MessageBoxDefaultButton" class="">MessageBoxDefaultButton</a>
@@ -207,60 +207,172 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.Window.MessageBoxButton">
+            <article class="content wrap" id="_content" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer">
 
 
 
-
-  <h1 id="JeremyAnsel_DirectX_Window_MessageBoxButton" data-uid="JeremyAnsel.DirectX.Window.MessageBoxButton" class="text-break">Enum MessageBoxButton</h1>
+  <h1 id="JeremyAnsel_DirectX_GameWindow_IGameTimer" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer" class="text-break">Interface IGameTimer</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.html">JeremyAnsel</a>.<a class="xref" href="JeremyAnsel.DirectX.html">DirectX</a>.<a class="xref" href="JeremyAnsel.DirectX.Window.html">Window</a></h6>
-  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.Window.dll</h6>
-  <h5 id="JeremyAnsel_DirectX_Window_MessageBoxButton_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="JeremyAnsel.html">JeremyAnsel</a>.<a class="xref" href="JeremyAnsel.DirectX.html">DirectX</a>.<a class="xref" href="JeremyAnsel.DirectX.GameWindow.html">GameWindow</a></h6>
+  <h6><strong>Assembly</strong>: JeremyAnsel.DirectX.GameWindow.dll</h6>
+  <h5 id="JeremyAnsel_DirectX_GameWindow_IGameTimer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum MessageBoxButton</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IGameTimer</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
 </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_IGameTimer_ElapsedSeconds.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/IGameTimer.cs/#L15">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_GameWindow_IGameTimer_ElapsedSeconds_" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds*"></a>
+  <h4 id="JeremyAnsel_DirectX_GameWindow_IGameTimer_ElapsedSeconds" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.ElapsedSeconds">ElapsedSeconds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double ElapsedSeconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
-    <thead>
-    </thead></thead><tbody>
+    </thead>
+    <tbody>
       <tr>
-        <td id="JeremyAnsel_DirectX_Window_MessageBoxButton_AbortRetryIgnore">AbortRetryIgnore</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_Window_MessageBoxButton_Cancel">Cancel</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_Window_MessageBoxButton_CancelTryContinue">CancelTryContinue</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_Window_MessageBoxButton_Ok">Ok</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_Window_MessageBoxButton_RetryCancel">RetryCancel</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_Window_MessageBoxButton_YesNo">YesNo</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td id="JeremyAnsel_DirectX_Window_MessageBoxButton_YesNoCancel">YesNoCancel</td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_IGameTimer_FrameCount.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/IGameTimer.cs/#L9">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_GameWindow_IGameTimer_FrameCount_" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount*"></a>
+  <h4 id="JeremyAnsel_DirectX_GameWindow_IGameTimer_FrameCount" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.FrameCount">FrameCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">uint FrameCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_IGameTimer_FramesPerSecond.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/IGameTimer.cs/#L11">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_GameWindow_IGameTimer_FramesPerSecond_" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond*"></a>
+  <h4 id="JeremyAnsel_DirectX_GameWindow_IGameTimer_FramesPerSecond" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.FramesPerSecond">FramesPerSecond</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">uint FramesPerSecond { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalSeconds.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/IGameTimer.cs/#L13">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalSeconds_" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds*"></a>
+  <h4 id="JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalSeconds" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalSeconds">TotalSeconds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double TotalSeconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalTime.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/IGameTimer.cs/#L17">View Source</a>
+  </span>
+  <a id="JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalTime_" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime*"></a>
+  <h4 id="JeremyAnsel_DirectX_GameWindow_IGameTimer_TotalTime" data-uid="JeremyAnsel.DirectX.GameWindow.IGameTimer.TotalTime">TotalTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeSpan TotalTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
 </article>
           </div>
 
@@ -269,10 +381,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_Window_MessageBoxButton.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.Window.MessageBoxButton%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/new/master/apiSpec/new?filename=JeremyAnsel_DirectX_GameWindow_IGameTimer.md&amp;value=---%0Auid%3A%20JeremyAnsel.DirectX.GameWindow.IGameTimer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.Window/MessageBoxButton.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/JeremyAnsel/JeremyAnsel.DirectX.Window/blob/master/JeremyAnsel.DirectX.Window/JeremyAnsel.DirectX.GameWindow/IGameTimer.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
