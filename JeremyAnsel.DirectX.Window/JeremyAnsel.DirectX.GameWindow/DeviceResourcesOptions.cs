@@ -2,6 +2,8 @@
 // Copyright (c) 2015-2026 Jérémy Ansel
 // </copyright>
 
+using JeremyAnsel.DirectX.Dxgi;
+
 namespace JeremyAnsel.DirectX.GameWindow
 {
     public sealed class DeviceResourcesOptions
@@ -17,5 +19,7 @@ namespace JeremyAnsel.DirectX.GameWindow
         public bool IsVSyncEnabled { get; set; } = true;
 
         public bool StartInFullscreenState { get; set; } = false;
+
+        public DxgiFormat DepthStencilFormat { get; set; } = DxgiFormat.D24UNormS8UInt;
     }
 }

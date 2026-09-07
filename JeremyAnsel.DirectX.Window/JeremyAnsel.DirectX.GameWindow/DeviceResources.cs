@@ -200,6 +200,12 @@ namespace JeremyAnsel.DirectX.GameWindow
             this.HandleDeviceLost();
         }
 
+        public void SetDepthStencilFormat(DxgiFormat format)
+        {
+            this.options.DepthStencilFormat = format;
+            OnSizeChanged();
+        }
+
         public void OnSizeChanged()
         {
             this.ReleaseWindowSizeDependentResources();
@@ -541,7 +547,7 @@ namespace JeremyAnsel.DirectX.GameWindow
                 Height = this.backBufferHeight,
                 MipLevels = 1,
                 ArraySize = 1,
-                Format = DxgiFormat.D24UNormS8UInt,
+                Format = options.DepthStencilFormat,
                 SampleDesc = this.d3dSampleDesc,
                 Usage = D3D11Usage.Default,
                 BindOptions = D3D11BindOptions.DepthStencil,
