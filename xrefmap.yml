@@ -453,6 +453,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.ScreenViewport
   nameWithType: DeviceResources.ScreenViewport
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetDepthStencilFormat(JeremyAnsel.DirectX.Dxgi.DxgiFormat)
+  name: SetDepthStencilFormat(DxgiFormat)
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources_SetDepthStencilFormat_JeremyAnsel_DirectX_Dxgi_DxgiFormat_
+  commentId: M:JeremyAnsel.DirectX.GameWindow.DeviceResources.SetDepthStencilFormat(JeremyAnsel.DirectX.Dxgi.DxgiFormat)
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetDepthStencilFormat(JeremyAnsel.DirectX.Dxgi.DxgiFormat)
+  nameWithType: DeviceResources.SetDepthStencilFormat(DxgiFormat)
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetDepthStencilFormat*
+  name: SetDepthStencilFormat
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources_SetDepthStencilFormat_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.DeviceResources.SetDepthStencilFormat
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetDepthStencilFormat
+  nameWithType: DeviceResources.SetDepthStencilFormat
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResources.SetWarpState(System.Boolean)
   name: SetWarpState(bool)
   href: api/JeremyAnsel.DirectX.GameWindow.DeviceResources.html#JeremyAnsel_DirectX_GameWindow_DeviceResources_SetWarpState_System_Boolean_
@@ -501,6 +514,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.Debug
   nameWithType: DeviceResourcesOptions.Debug
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.DepthStencilFormat
+  name: DepthStencilFormat
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_DepthStencilFormat
+  commentId: P:JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.DepthStencilFormat
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.DepthStencilFormat
+  nameWithType: DeviceResourcesOptions.DepthStencilFormat
+- uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.DepthStencilFormat*
+  name: DepthStencilFormat
+  href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_DepthStencilFormat_
+  commentId: Overload:JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.DepthStencilFormat
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.DepthStencilFormat
+  nameWithType: DeviceResourcesOptions.DepthStencilFormat
 - uid: JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.ForceWarp
   name: ForceWarp
   href: api/JeremyAnsel.DirectX.GameWindow.DeviceResourcesOptions.html#JeremyAnsel_DirectX_GameWindow_DeviceResourcesOptions_ForceWarp
