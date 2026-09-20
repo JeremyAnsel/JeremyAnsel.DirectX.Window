@@ -3,6 +3,7 @@
 // </copyright>
 
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Runtime.CompilerServices;
@@ -35,7 +36,7 @@ namespace JeremyAnsel.DirectX.Window
 
         protected virtual string DefaultTitle
         {
-            get { return string.Format(CultureInfo.InvariantCulture, "{0}, {1} bits", AppDomain.CurrentDomain.FriendlyName, Environment.Is64BitProcess ? 64 : 32); }
+            get { return string.Format(CultureInfo.InvariantCulture, "{0}, {1} bits", Process.GetCurrentProcess().ProcessName, Environment.Is64BitProcess ? 64 : 32); }
         }
 
         public IntPtr Handle
