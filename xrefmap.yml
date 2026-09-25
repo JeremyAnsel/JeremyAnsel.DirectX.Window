@@ -3270,6 +3270,28 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.Window.WindowBase.Destroy
   nameWithType: WindowBase.Destroy
+- uid: JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist
+  name: DoesSingletonWindowExist()
+  href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_DoesSingletonWindowExist
+  commentId: M:JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist()
+  nameWithType: WindowBase.DoesSingletonWindowExist()
+- uid: JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist(System.String)
+  name: DoesSingletonWindowExist(string)
+  href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_DoesSingletonWindowExist_System_String_
+  commentId: M:JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist(System.String)
+  name.vb: DoesSingletonWindowExist(String)
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist(string)
+  fullName.vb: JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist(String)
+  nameWithType: WindowBase.DoesSingletonWindowExist(string)
+  nameWithType.vb: WindowBase.DoesSingletonWindowExist(String)
+- uid: JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist*
+  name: DoesSingletonWindowExist
+  href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_DoesSingletonWindowExist_
+  commentId: Overload:JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist
+  isSpec: "True"
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.DoesSingletonWindowExist
+  nameWithType: WindowBase.DoesSingletonWindowExist
 - uid: JeremyAnsel.DirectX.Window.WindowBase.Exit
   name: Exit()
   href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_Exit
@@ -3545,6 +3567,12 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.DirectX.Window.WindowBase.Show
   nameWithType: WindowBase.Show
+- uid: JeremyAnsel.DirectX.Window.WindowBase.SingletonWindowKey
+  name: SingletonWindowKey
+  href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_SingletonWindowKey
+  commentId: F:JeremyAnsel.DirectX.Window.WindowBase.SingletonWindowKey
+  fullName: JeremyAnsel.DirectX.Window.WindowBase.SingletonWindowKey
+  nameWithType: WindowBase.SingletonWindowKey
 - uid: JeremyAnsel.DirectX.Window.WindowBase.Title
   name: Title
   href: api/JeremyAnsel.DirectX.Window.WindowBase.html#JeremyAnsel_DirectX_Window_WindowBase_Title
