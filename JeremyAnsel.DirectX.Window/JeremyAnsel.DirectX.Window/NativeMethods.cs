@@ -98,6 +98,34 @@ namespace JeremyAnsel.DirectX.Window
         }
 
 #if NET8_0_OR_GREATER
+        [LibraryImport("user32.dll", EntryPoint = "FindWindowW")]
+        private static partial IntPtr FindWindowW(
+#else
+        [DllImport("user32.dll", EntryPoint = "FindWindowW")]
+        private static extern IntPtr FindWindowW(
+#endif
+            void* lpClassName,
+            void* lpWindowName);
+
+        public static IntPtr FindWindow(string className)
+        {
+            if (string.IsNullOrEmpty(className))
+            {
+                return IntPtr.Zero;
+            }
+
+            char* name = stackalloc char[className.Length + 1];
+            for (int i = 0; i < className.Length; i++)
+            {
+                name[i] = className[i];
+            }
+            name[className.Length] = '\0';
+
+            IntPtr hWnd = FindWindowW(name, null);
+            return hWnd;
+        }
+
+#if NET8_0_OR_GREATER
         [LibraryImport("user32.dll", EntryPoint = "GetClientRect")]
         public static partial int GetClientRect(
 #else
@@ -211,6 +239,15 @@ namespace JeremyAnsel.DirectX.Window
 #else
         [DllImport("user32.dll", EntryPoint = "SetFocus")]
         public static extern IntPtr SetFocus(
+#endif
+            IntPtr hWnd);
+
+#if NET8_0_OR_GREATER
+        [LibraryImport("user32.dll", EntryPoint = "SetForegroundWindow")]
+        public static partial int SetForegroundWindow(
+#else
+        [DllImport("user32.dll", EntryPoint = "SetForegroundWindow")]
+        public static extern int SetForegroundWindow(
 #endif
             IntPtr hWnd);
 

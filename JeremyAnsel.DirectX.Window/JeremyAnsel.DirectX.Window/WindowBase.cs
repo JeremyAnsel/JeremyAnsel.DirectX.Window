@@ -12,6 +12,29 @@ namespace JeremyAnsel.DirectX.Window
 {
     public abstract class WindowBase : INotifyPropertyChanged
     {
+        public static string? SingletonWindowKey;
+
+        public static bool DoesSingletonWindowExist(string singletonWindowKey)
+        {
+            SingletonWindowKey = singletonWindowKey;
+            return DoesSingletonWindowExist();
+        }
+
+        public static bool DoesSingletonWindowExist()
+        {
+            IntPtr hWnd = NativeMethods.FindWindow(NativeClass.ClassName);
+
+            if (hWnd == IntPtr.Zero)
+            {
+                return false;
+            }
+
+            NativeMethods.ShowWindow(hWnd, ShowWindow.Restore);
+            NativeMethods.SetForegroundWindow(hWnd);
+
+            return true;
+        }
+
         private NativeWindow? window;
 
         private int width;

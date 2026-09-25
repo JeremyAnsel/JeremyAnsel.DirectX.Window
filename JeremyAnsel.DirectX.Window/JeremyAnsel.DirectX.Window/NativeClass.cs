@@ -22,6 +22,21 @@ namespace JeremyAnsel.DirectX.Window
             get { return NativeClass.WindowClass.atom; }
         }
 
+        public static string ClassName
+        {
+            get
+            {
+                string className = "JeremyAnsel.DirectX.Window.NativeClass";
+
+                if (WindowBase.SingletonWindowKey is not null)
+                {
+                    className += "." + WindowBase.SingletonWindowKey;
+                }
+
+                return className;
+            }
+        }
+
         private NativeClass()
         {
             this.LoadIcon();
@@ -29,7 +44,7 @@ namespace JeremyAnsel.DirectX.Window
             this.windowProcedure = new WindowProcedure(this.Callback);
             var windowProcedurePtr = Marshal.GetFunctionPointerForDelegate(this.windowProcedure);
 
-            string className = "JeremyAnsel.DirectX.Window.NativeClass";
+            string className = ClassName;
 
             fixed (char* classNamePtr = className)
             {
